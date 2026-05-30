@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/continuedev/continue/main/extensions/vscode/config_schema.json",
+  "models": [
+    {
+      "title": "Qwen2.5-Coder-1.5B",
+      "provider": "ollama",
+      "model": "qwen2.5-coder:1.5b",
+      "apiBase": "http://127.0.0.1:11434",
+      "contextLength": 4096,
+      "systemMessage": "You are a local coding assistant optimized for concise, correct code generation."
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "DeepSeek-Coder-1.3B",
+    "provider": "ollama",
+    "model": "deepseek-coder:1.3b",
+    "apiBase": "http://127.0.0.1:11434",
+    "contextLength": 2048
+  },
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text",
+    "apiBase": "http://127.0.0.1:11434"
+  }
+}

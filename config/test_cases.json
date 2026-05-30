@@ -1,0 +1,23 @@
+[
+  {
+    "id": "python-fibonacci-cli",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Write a Python CLI program that prints the first 10 Fibonacci numbers, one per line, using a main guard.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "javascript-array-sum",
+    "language": "javascript",
+    "file_extension": ".js",
+    "prompt": "Write a JavaScript function named sumArray that returns the sum of all numeric values in an input array and export it with module.exports.",
+    "validation_command": "node --check {file_path}"
+  },
+  {
+    "id": "go-http-server",
+    "language": "go",
+    "file_extension": ".go",
+    "prompt": "Write a minimal Go HTTP server that responds with 'ok' on GET /health and listens on port 8080.",
+    "validation_command": "gofmt -e {file_path}"
+  }
+]

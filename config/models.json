@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Qwen2.5-Coder-1.5B",
+    "ollama_tag": "qwen2.5-coder:1.5b",
+    "role": "chat",
+    "context_window": 4096,
+    "parameters": {
+      "temperature": 0.2,
+      "num_predict": 256
+    }
+  },
+  {
+    "name": "DeepSeek-Coder-1.3B",
+    "ollama_tag": "deepseek-coder:1.3b",
+    "role": "autocomplete",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 128
+    }
+  },
+  {
+    "name": "Granite-3.0-8B-Code-IQ2",
+    "ollama_tag": "granite3.0:8b-code-instruct-q2_K",
+    "role": "compressed_candidate",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 256
+    }
+  }
+]
