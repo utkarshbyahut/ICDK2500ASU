@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import json
 import shlex
 import subprocess
@@ -37,7 +38,7 @@ def validate_generated_code(output_text: str, test_case: Dict[str, Any]) -> Dict
         handle.write(output_text)
         file_path = handle.name
 
-    command = shlex.split(command_template.format(file_path=file_path))
+    command = shlex.split(command_template.format(file_path=file_path), posix=os.name != "nt")
     try:
         completed = subprocess.run(command, capture_output=True, text=True, check=False)
     except FileNotFoundError as exc:
@@ -113,6 +114,8 @@ def run_generation(
         "model": model["name"],
         "ollama_tag": model["ollama_tag"],
         "test_case": test_case["id"],
+        "scenario": test_case.get("scenario"),
+        "skill_focus": test_case.get("skill_focus"),
         "language": test_case.get("language"),
         "prompt": test_case["prompt"],
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
@@ -145,6 +148,8 @@ def benchmark(models: Iterable[Dict[str, Any]], test_cases: Iterable[Dict[str, A
                         "model": model["name"],
                         "ollama_tag": model["ollama_tag"],
                         "test_case": test_case["id"],
+                        "scenario": test_case.get("scenario"),
+                        "skill_focus": test_case.get("skill_focus"),
                         "language": test_case.get("language"),
                         "prompt": test_case["prompt"],
                         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
@@ -158,6 +163,8 @@ def benchmark(models: Iterable[Dict[str, Any]], test_cases: Iterable[Dict[str, A
                         "model": model["name"],
                         "ollama_tag": model["ollama_tag"],
                         "test_case": test_case["id"],
+                        "scenario": test_case.get("scenario"),
+                        "skill_focus": test_case.get("skill_focus"),
                         "language": test_case.get("language"),
                         "prompt": test_case["prompt"],
                         "timestamp_utc": datetime.now(timezone.utc).isoformat(),

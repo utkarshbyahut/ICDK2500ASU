@@ -1,23 +1,56 @@
 [
   {
-    "id": "python-fibonacci-cli",
+    "id": "pololu-drive-forward",
+    "scenario": "movement-basics",
+    "skill_focus": "motor control",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "Write a Python CLI program that prints the first 10 Fibonacci numbers, one per line, using a main guard.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named drive_forward that takes speed and seconds, validates both inputs, and returns a simple command string that would make the robot move forward safely.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
-    "id": "javascript-array-sum",
-    "language": "javascript",
-    "file_extension": ".js",
-    "prompt": "Write a JavaScript function named sumArray that returns the sum of all numeric values in an input array and export it with module.exports.",
-    "validation_command": "node --check {file_path}"
+    "id": "pololu-turn-left",
+    "scenario": "movement-basics",
+    "skill_focus": "direction change",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named turn_left that accepts a turn angle and returns code that would rotate the robot left in a controlled way.",
+    "validation_command": "python -m py_compile {file_path}"
   },
   {
-    "id": "go-http-server",
-    "language": "go",
-    "file_extension": ".go",
-    "prompt": "Write a minimal Go HTTP server that responds with 'ok' on GET /health and listens on port 8080.",
-    "validation_command": "gofmt -e {file_path}"
+    "id": "pololu-obstacle-stop",
+    "scenario": "sensor-response",
+    "skill_focus": "ultrasonic sensing",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named stop_if_obstacle_detected that takes a distance reading and returns whether the robot should stop before collision.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-line-following",
+    "scenario": "sensor-response",
+    "skill_focus": "line tracking",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named follow_line that takes left and right reflectance sensor values and returns the next motion instruction for the robot.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-led-status",
+    "scenario": "student-feedback",
+    "skill_focus": "status signaling",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named update_status_led that chooses LED colors for idle, moving, and error states.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-button-control",
+    "scenario": "student-feedback",
+    "skill_focus": "human interaction",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named toggle_run_mode that switches between pause and run when a button is pressed and returns the new mode.",
+    "validation_command": "python -m py_compile {file_path}"
   }
 ]

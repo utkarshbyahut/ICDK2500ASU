@@ -11,6 +11,19 @@ class ConfigurationFileTests(unittest.TestCase):
         self.assertTrue(models)
         self.assertTrue(all(model["context_window"] <= 4096 for model in models))
 
+    def test_robot_benchmark_cases_cover_six_k_12_tasks(self) -> None:
+        test_cases = json.loads((REPO_ROOT / "config" / "test_cases.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(test_cases), 6)
+        self.assertEqual({case["language"] for case in test_cases}, {"python"})
+        self.assertEqual(
+            {case["scenario"] for case in test_cases},
+            {"movement-basics", "sensor-response", "student-feedback"},
+        )
+        for case in test_cases:
+            self.assertIn("Pololu", case["prompt"])
+            self.assertIn("validation_command", case)
+            self.assertIn("file_extension", case)
+
     def test_continue_template_has_dual_model_setup(self) -> None:
         template = json.loads(
             (REPO_ROOT / "templates" / "continue_config_template.json").read_text(encoding="utf-8")

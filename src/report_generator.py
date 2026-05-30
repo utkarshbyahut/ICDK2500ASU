@@ -99,6 +99,7 @@ def render_markdown(entries: List[Dict[str, Any]]) -> str:
             {
                 "Model": entry.get("model"),
                 "Case": entry.get("test_case"),
+                "Scenario": entry.get("scenario", "-"),
                 "TTFT (s)": entry.get("ttft_seconds", "-"),
                 "Tokens/s": entry.get("tokens_per_second", "-"),
                 "Peak RAM (GiB)": entry.get("resource_summary", {}).get("max_ram_gib", "-"),
