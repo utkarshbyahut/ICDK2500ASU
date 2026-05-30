@@ -1,0 +1,1679 @@
+{
+  "generated_at": "2026-05-30T15:28:09.050913+00:00",
+  "results": [
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-drive-forward-template",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef drive_forward(speed, seconds):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate both inputs and return one string command.",
+      "timestamp_utc": "2026-05-30T15:27:38.103336+00:00",
+      "ttft_seconds": 6.453,
+      "tokens_per_second": 27.157,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 44,
+        "max_ram_bytes": 6116487168,
+        "max_ram_gib": 5.696,
+        "avg_cpu_percent": 17.409,
+        "peak_cpu_percent": 29.3,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmphdacaifs.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 9029066300,
+        "load_duration_ns": 5612506100,
+        "prompt_eval_count": 54,
+        "prompt_eval_duration_ns": 829604800
+      },
+      "samples": [
+        {
+          "timestamp": 1780154848.9828234,
+          "used_memory_bytes": 5431390208,
+          "memory_percent": 66.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154849.170773,
+          "used_memory_bytes": 5432709120,
+          "memory_percent": 66.9,
+          "cpu_percent": 3.1
+        },
+        {
+          "timestamp": 1780154849.3710742,
+          "used_memory_bytes": 5436497920,
+          "memory_percent": 66.9,
+          "cpu_percent": 15.1
+        },
+        {
+          "timestamp": 1780154849.5864446,
+          "used_memory_bytes": 5449351168,
+          "memory_percent": 67.1,
+          "cpu_percent": 21.9
+        },
+        {
+          "timestamp": 1780154849.7867393,
+          "used_memory_bytes": 5457940480,
+          "memory_percent": 67.2,
+          "cpu_percent": 12.5
+        },
+        {
+          "timestamp": 1780154849.9928446,
+          "used_memory_bytes": 5448081408,
+          "memory_percent": 67.1,
+          "cpu_percent": 10.1
+        },
+        {
+          "timestamp": 1780154850.2032864,
+          "used_memory_bytes": 5467529216,
+          "memory_percent": 67.3,
+          "cpu_percent": 14.7
+        },
+        {
+          "timestamp": 1780154850.403918,
+          "used_memory_bytes": 5465452544,
+          "memory_percent": 67.3,
+          "cpu_percent": 11.4
+        },
+        {
+          "timestamp": 1780154850.61829,
+          "used_memory_bytes": 5455691776,
+          "memory_percent": 67.2,
+          "cpu_percent": 16.4
+        },
+        {
+          "timestamp": 1780154850.8207357,
+          "used_memory_bytes": 5457129472,
+          "memory_percent": 67.2,
+          "cpu_percent": 15.8
+        },
+        {
+          "timestamp": 1780154851.0365584,
+          "used_memory_bytes": 5444038656,
+          "memory_percent": 67.0,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780154851.2378676,
+          "used_memory_bytes": 5446389760,
+          "memory_percent": 67.1,
+          "cpu_percent": 9.9
+        },
+        {
+          "timestamp": 1780154851.4380379,
+          "used_memory_bytes": 5448486912,
+          "memory_percent": 67.1,
+          "cpu_percent": 15.5
+        },
+        {
+          "timestamp": 1780154851.6542501,
+          "used_memory_bytes": 5456134144,
+          "memory_percent": 67.2,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780154851.8703458,
+          "used_memory_bytes": 5445644288,
+          "memory_percent": 67.0,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780154852.0710554,
+          "used_memory_bytes": 5456084992,
+          "memory_percent": 67.2,
+          "cpu_percent": 11.6
+        },
+        {
+          "timestamp": 1780154852.2729652,
+          "used_memory_bytes": 5594841088,
+          "memory_percent": 68.9,
+          "cpu_percent": 15.8
+        },
+        {
+          "timestamp": 1780154852.4731073,
+          "used_memory_bytes": 5690597376,
+          "memory_percent": 70.1,
+          "cpu_percent": 5.0
+        },
+        {
+          "timestamp": 1780154852.6880784,
+          "used_memory_bytes": 5673619456,
+          "memory_percent": 69.9,
+          "cpu_percent": 13.0
+        },
+        {
+          "timestamp": 1780154852.8879042,
+          "used_memory_bytes": 5755514880,
+          "memory_percent": 70.9,
+          "cpu_percent": 9.4
+        },
+        {
+          "timestamp": 1780154853.0894337,
+          "used_memory_bytes": 5833859072,
+          "memory_percent": 71.8,
+          "cpu_percent": 22.0
+        },
+        {
+          "timestamp": 1780154853.290741,
+          "used_memory_bytes": 5888802816,
+          "memory_percent": 72.5,
+          "cpu_percent": 9.6
+        },
+        {
+          "timestamp": 1780154853.491273,
+          "used_memory_bytes": 5943492608,
+          "memory_percent": 73.2,
+          "cpu_percent": 9.3
+        },
+        {
+          "timestamp": 1780154853.7064853,
+          "used_memory_bytes": 5917921280,
+          "memory_percent": 72.9,
+          "cpu_percent": 14.3
+        },
+        {
+          "timestamp": 1780154853.907423,
+          "used_memory_bytes": 5940822016,
+          "memory_percent": 73.1,
+          "cpu_percent": 20.0
+        },
+        {
+          "timestamp": 1780154854.1236942,
+          "used_memory_bytes": 5969281024,
+          "memory_percent": 73.5,
+          "cpu_percent": 17.6
+        },
+        {
+          "timestamp": 1780154854.3291073,
+          "used_memory_bytes": 6034255872,
+          "memory_percent": 74.3,
+          "cpu_percent": 7.4
+        },
+        {
+          "timestamp": 1780154854.540661,
+          "used_memory_bytes": 6116487168,
+          "memory_percent": 75.3,
+          "cpu_percent": 9.3
+        },
+        {
+          "timestamp": 1780154854.7412558,
+          "used_memory_bytes": 6062653440,
+          "memory_percent": 74.6,
+          "cpu_percent": 24.2
+        },
+        {
+          "timestamp": 1780154854.9424198,
+          "used_memory_bytes": 6053183488,
+          "memory_percent": 74.5,
+          "cpu_percent": 18.2
+        },
+        {
+          "timestamp": 1780154855.1572978,
+          "used_memory_bytes": 6038798336,
+          "memory_percent": 74.4,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780154855.3597958,
+          "used_memory_bytes": 6038790144,
+          "memory_percent": 74.4,
+          "cpu_percent": 18.1
+        },
+        {
+          "timestamp": 1780154855.5738919,
+          "used_memory_bytes": 6039998464,
+          "memory_percent": 74.4,
+          "cpu_percent": 23.0
+        },
+        {
+          "timestamp": 1780154855.7740426,
+          "used_memory_bytes": 6047379456,
+          "memory_percent": 74.5,
+          "cpu_percent": 29.3
+        },
+        {
+          "timestamp": 1780154855.9751549,
+          "used_memory_bytes": 6047424512,
+          "memory_percent": 74.5,
+          "cpu_percent": 27.2
+        },
+        {
+          "timestamp": 1780154856.1903214,
+          "used_memory_bytes": 6046060544,
+          "memory_percent": 74.4,
+          "cpu_percent": 25.8
+        },
+        {
+          "timestamp": 1780154856.3913636,
+          "used_memory_bytes": 6045753344,
+          "memory_percent": 74.4,
+          "cpu_percent": 25.1
+        },
+        {
+          "timestamp": 1780154856.5938897,
+          "used_memory_bytes": 6045753344,
+          "memory_percent": 74.4,
+          "cpu_percent": 27.2
+        },
+        {
+          "timestamp": 1780154856.807595,
+          "used_memory_bytes": 6045306880,
+          "memory_percent": 74.4,
+          "cpu_percent": 27.9
+        },
+        {
+          "timestamp": 1780154857.0107734,
+          "used_memory_bytes": 6045294592,
+          "memory_percent": 74.4,
+          "cpu_percent": 28.0
+        },
+        {
+          "timestamp": 1780154857.2112896,
+          "used_memory_bytes": 6045310976,
+          "memory_percent": 74.4,
+          "cpu_percent": 27.4
+        },
+        {
+          "timestamp": 1780154857.4263911,
+          "used_memory_bytes": 6045106176,
+          "memory_percent": 74.4,
+          "cpu_percent": 28.0
+        },
+        {
+          "timestamp": 1780154857.6275506,
+          "used_memory_bytes": 6044704768,
+          "memory_percent": 74.4,
+          "cpu_percent": 25.3
+        },
+        {
+          "timestamp": 1780154857.8424067,
+          "used_memory_bytes": 6044471296,
+          "memory_percent": 74.4,
+          "cpu_percent": 26.3
+        }
+      ],
+      "output": "\n\n## 10.2.3.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2"
+    },
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-turn-left-template",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef turn_left(angle):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate input and return one string command.",
+      "timestamp_utc": "2026-05-30T15:27:41.418543+00:00",
+      "ttft_seconds": 0.69,
+      "tokens_per_second": 31.111,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 16,
+        "max_ram_bytes": 6055395328,
+        "max_ram_gib": 5.64,
+        "avg_cpu_percent": 25.363,
+        "peak_cpu_percent": 30.3,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpndfxa66q.py\", line 5\n    Write a function that takes a number as an argument and returns the square root of that number.\n          ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpndfxa66q.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3240057800,
+        "load_duration_ns": 106680600,
+        "prompt_eval_count": 51,
+        "prompt_eval_duration_ns": 564209500
+      },
+      "samples": [
+        {
+          "timestamp": 1780154858.1037607,
+          "used_memory_bytes": 6055018496,
+          "memory_percent": 74.5,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154858.2951925,
+          "used_memory_bytes": 6055395328,
+          "memory_percent": 74.6,
+          "cpu_percent": 26.3
+        },
+        {
+          "timestamp": 1780154858.5105567,
+          "used_memory_bytes": 6039592960,
+          "memory_percent": 74.4,
+          "cpu_percent": 24.9
+        },
+        {
+          "timestamp": 1780154858.7263768,
+          "used_memory_bytes": 6034948096,
+          "memory_percent": 74.3,
+          "cpu_percent": 26.9
+        },
+        {
+          "timestamp": 1780154858.9291012,
+          "used_memory_bytes": 6035705856,
+          "memory_percent": 74.3,
+          "cpu_percent": 25.6
+        },
+        {
+          "timestamp": 1780154859.1297612,
+          "used_memory_bytes": 6036852736,
+          "memory_percent": 74.3,
+          "cpu_percent": 26.1
+        },
+        {
+          "timestamp": 1780154859.3444936,
+          "used_memory_bytes": 6032654336,
+          "memory_percent": 74.3,
+          "cpu_percent": 25.5
+        },
+        {
+          "timestamp": 1780154859.5457978,
+          "used_memory_bytes": 6033317888,
+          "memory_percent": 74.3,
+          "cpu_percent": 27.5
+        },
+        {
+          "timestamp": 1780154859.7465172,
+          "used_memory_bytes": 6038552576,
+          "memory_percent": 74.3,
+          "cpu_percent": 30.3
+        },
+        {
+          "timestamp": 1780154859.9619384,
+          "used_memory_bytes": 6037774336,
+          "memory_percent": 74.3,
+          "cpu_percent": 28.9
+        },
+        {
+          "timestamp": 1780154860.1749938,
+          "used_memory_bytes": 6035582976,
+          "memory_percent": 74.3,
+          "cpu_percent": 29.1
+        },
+        {
+          "timestamp": 1780154860.3797429,
+          "used_memory_bytes": 6033846272,
+          "memory_percent": 74.3,
+          "cpu_percent": 25.1
+        },
+        {
+          "timestamp": 1780154860.595538,
+          "used_memory_bytes": 6031732736,
+          "memory_percent": 74.3,
+          "cpu_percent": 26.8
+        },
+        {
+          "timestamp": 1780154860.7970264,
+          "used_memory_bytes": 6031892480,
+          "memory_percent": 74.3,
+          "cpu_percent": 26.8
+        },
+        {
+          "timestamp": 1780154861.012674,
+          "used_memory_bytes": 6032777216,
+          "memory_percent": 74.3,
+          "cpu_percent": 27.6
+        },
+        {
+          "timestamp": 1780154861.2140362,
+          "used_memory_bytes": 6032478208,
+          "memory_percent": 74.3,
+          "cpu_percent": 28.4
+        }
+      ],
+      "output": "\n\n## 2.10.3\n\n### 2.10.3.1\n\nWrite a function that takes a number as an argument and returns the square root of that number.\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block"
+    },
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-obstacle-stop-template",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return True when robot should stop, else False.",
+      "timestamp_utc": "2026-05-30T15:27:44.826232+00:00",
+      "ttft_seconds": 0.807,
+      "tokens_per_second": 30.742,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 17,
+        "max_ram_bytes": 6039654400,
+        "max_ram_gib": 5.625,
+        "avg_cpu_percent": 24.318,
+        "peak_cpu_percent": 29.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpl_grz13t.py\", line 3\n    The function `stop_if_obstacle_detected` is called by the `main()` function in the `main.py` file. It checks whether there is an obstacle detected and returns True when there is,\n        ^^^^^^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpl_grz13t.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3336697400,
+        "load_duration_ns": 95274400,
+        "prompt_eval_count": 60,
+        "prompt_eval_duration_ns": 697425100
+      },
+      "samples": [
+        {
+          "timestamp": 1780154861.418876,
+          "used_memory_bytes": 6033612800,
+          "memory_percent": 74.3,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154861.6146374,
+          "used_memory_bytes": 6039654400,
+          "memory_percent": 74.4,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780154861.8290803,
+          "used_memory_bytes": 6036426752,
+          "memory_percent": 74.3,
+          "cpu_percent": 23.4
+        },
+        {
+          "timestamp": 1780154862.030007,
+          "used_memory_bytes": 6031114240,
+          "memory_percent": 74.3,
+          "cpu_percent": 25.9
+        },
+        {
+          "timestamp": 1780154862.2318952,
+          "used_memory_bytes": 6030176256,
+          "memory_percent": 74.2,
+          "cpu_percent": 26.5
+        },
+        {
+          "timestamp": 1780154862.431808,
+          "used_memory_bytes": 6026850304,
+          "memory_percent": 74.2,
+          "cpu_percent": 25.8
+        },
+        {
+          "timestamp": 1780154862.6469407,
+          "used_memory_bytes": 6033883136,
+          "memory_percent": 74.3,
+          "cpu_percent": 26.8
+        },
+        {
+          "timestamp": 1780154862.8477798,
+          "used_memory_bytes": 6032084992,
+          "memory_percent": 74.3,
+          "cpu_percent": 24.4
+        },
+        {
+          "timestamp": 1780154863.0489419,
+          "used_memory_bytes": 6030819328,
+          "memory_percent": 74.3,
+          "cpu_percent": 24.7
+        },
+        {
+          "timestamp": 1780154863.2492294,
+          "used_memory_bytes": 6029111296,
+          "memory_percent": 74.2,
+          "cpu_percent": 25.3
+        },
+        {
+          "timestamp": 1780154863.4498146,
+          "used_memory_bytes": 6019338240,
+          "memory_percent": 74.1,
+          "cpu_percent": 29.8
+        },
+        {
+          "timestamp": 1780154863.6649704,
+          "used_memory_bytes": 6022819840,
+          "memory_percent": 74.2,
+          "cpu_percent": 29.1
+        },
+        {
+          "timestamp": 1780154863.8662279,
+          "used_memory_bytes": 6021681152,
+          "memory_percent": 74.1,
+          "cpu_percent": 25.7
+        },
+        {
+          "timestamp": 1780154864.0667493,
+          "used_memory_bytes": 6019563520,
+          "memory_percent": 74.1,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780154864.2821555,
+          "used_memory_bytes": 6018125824,
+          "memory_percent": 74.1,
+          "cpu_percent": 27.5
+        },
+        {
+          "timestamp": 1780154864.4987316,
+          "used_memory_bytes": 6014636032,
+          "memory_percent": 74.1,
+          "cpu_percent": 24.1
+        },
+        {
+          "timestamp": 1780154864.7002232,
+          "used_memory_bytes": 6012272640,
+          "memory_percent": 74.0,
+          "cpu_percent": 28.7
+        }
+      ],
+      "output": "\n\n### 2.1.3.1.4. Stop if obstacle detected\n\nThe function `stop_if_obstacle_detected` is called by the `main()` function in the `main.py` file. It checks whether there is an obstacle detected and returns True when there is,"
+    },
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-line-following-template",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef follow_line(left_sensor, right_sensor):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one motion command string.",
+      "timestamp_utc": "2026-05-30T15:27:48.170944+00:00",
+      "ttft_seconds": 0.748,
+      "tokens_per_second": 31.146,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 17,
+        "max_ram_bytes": 6020833280,
+        "max_ram_gib": 5.607,
+        "avg_cpu_percent": 19.653,
+        "peak_cpu_percent": 26.1,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpxzqton4b.py\", line 3\n    The following table shows the possible motion commands and their corresponding values for the left and right sensors.\n        ^^^^^^^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpxzqton4b.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3272503800,
+        "load_duration_ns": 98241500,
+        "prompt_eval_count": 55,
+        "prompt_eval_duration_ns": 638729200
+      },
+      "samples": [
+        {
+          "timestamp": 1780154864.8265843,
+          "used_memory_bytes": 6014275584,
+          "memory_percent": 74.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154865.0171704,
+          "used_memory_bytes": 6016978944,
+          "memory_percent": 74.1,
+          "cpu_percent": 22.5
+        },
+        {
+          "timestamp": 1780154865.2319758,
+          "used_memory_bytes": 6020833280,
+          "memory_percent": 74.1,
+          "cpu_percent": 26.1
+        },
+        {
+          "timestamp": 1780154865.4330406,
+          "used_memory_bytes": 6018764800,
+          "memory_percent": 74.1,
+          "cpu_percent": 21.3
+        },
+        {
+          "timestamp": 1780154865.634722,
+          "used_memory_bytes": 6006648832,
+          "memory_percent": 74.0,
+          "cpu_percent": 23.1
+        },
+        {
+          "timestamp": 1780154865.8346796,
+          "used_memory_bytes": 5991002112,
+          "memory_percent": 73.8,
+          "cpu_percent": 24.7
+        },
+        {
+          "timestamp": 1780154866.0349486,
+          "used_memory_bytes": 5988438016,
+          "memory_percent": 73.7,
+          "cpu_percent": 13.7
+        },
+        {
+          "timestamp": 1780154866.2356248,
+          "used_memory_bytes": 5988663296,
+          "memory_percent": 73.7,
+          "cpu_percent": 21.0
+        },
+        {
+          "timestamp": 1780154866.450689,
+          "used_memory_bytes": 5988818944,
+          "memory_percent": 73.7,
+          "cpu_percent": 20.5
+        },
+        {
+          "timestamp": 1780154866.6508899,
+          "used_memory_bytes": 5986619392,
+          "memory_percent": 73.7,
+          "cpu_percent": 19.9
+        },
+        {
+          "timestamp": 1780154866.8531985,
+          "used_memory_bytes": 5986607104,
+          "memory_percent": 73.7,
+          "cpu_percent": 21.2
+        },
+        {
+          "timestamp": 1780154867.0677278,
+          "used_memory_bytes": 5985579008,
+          "memory_percent": 73.7,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780154867.268061,
+          "used_memory_bytes": 5985542144,
+          "memory_percent": 73.7,
+          "cpu_percent": 16.0
+        },
+        {
+          "timestamp": 1780154867.4702857,
+          "used_memory_bytes": 5985546240,
+          "memory_percent": 73.7,
+          "cpu_percent": 19.7
+        },
+        {
+          "timestamp": 1780154867.6849415,
+          "used_memory_bytes": 6001541120,
+          "memory_percent": 73.9,
+          "cpu_percent": 20.6
+        },
+        {
+          "timestamp": 1780154867.8862798,
+          "used_memory_bytes": 6001070080,
+          "memory_percent": 73.9,
+          "cpu_percent": 21.1
+        },
+        {
+          "timestamp": 1780154868.0870998,
+          "used_memory_bytes": 5996781568,
+          "memory_percent": 73.8,
+          "cpu_percent": 21.2
+        }
+      ],
+      "output": "\n\n### 10.2.3. Motion commands\n\nThe following table shows the possible motion commands and their corresponding values for the left and right sensors.\n\n| Command | Value |\n| --- | --- |\n| `L` | Left |\n| `R` | Right |\n"
+    },
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-led-status-template",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef update_status_led(state):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one color string for idle, moving, or error.",
+      "timestamp_utc": "2026-05-30T15:27:51.567310+00:00",
+      "ttft_seconds": 0.786,
+      "tokens_per_second": 31.016,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 17,
+        "max_ram_bytes": 5999509504,
+        "max_ram_gib": 5.587,
+        "avg_cpu_percent": 19.059,
+        "peak_cpu_percent": 35.6,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmplrt4cgg9.py\", line 5\n    The LED is on when the robot is in a state that requires it to be.\n        ^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmplrt4cgg9.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3320706400,
+        "load_duration_ns": 99422500,
+        "prompt_eval_count": 57,
+        "prompt_eval_duration_ns": 679897700
+      },
+      "samples": [
+        {
+          "timestamp": 1780154868.1712987,
+          "used_memory_bytes": 5991763968,
+          "memory_percent": 73.8,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154868.370493,
+          "used_memory_bytes": 5990842368,
+          "memory_percent": 73.8,
+          "cpu_percent": 15.4
+        },
+        {
+          "timestamp": 1780154868.5704694,
+          "used_memory_bytes": 5990346752,
+          "memory_percent": 73.8,
+          "cpu_percent": 19.3
+        },
+        {
+          "timestamp": 1780154868.7848575,
+          "used_memory_bytes": 5987704832,
+          "memory_percent": 73.7,
+          "cpu_percent": 15.7
+        },
+        {
+          "timestamp": 1780154868.986067,
+          "used_memory_bytes": 5986545664,
+          "memory_percent": 73.7,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780154869.188045,
+          "used_memory_bytes": 5987065856,
+          "memory_percent": 73.7,
+          "cpu_percent": 19.2
+        },
+        {
+          "timestamp": 1780154869.402725,
+          "used_memory_bytes": 5987495936,
+          "memory_percent": 73.7,
+          "cpu_percent": 20.8
+        },
+        {
+          "timestamp": 1780154869.6049685,
+          "used_memory_bytes": 5999509504,
+          "memory_percent": 73.9,
+          "cpu_percent": 20.9
+        },
+        {
+          "timestamp": 1780154869.8199804,
+          "used_memory_bytes": 5998989312,
+          "memory_percent": 73.9,
+          "cpu_percent": 21.1
+        },
+        {
+          "timestamp": 1780154870.022247,
+          "used_memory_bytes": 5998063616,
+          "memory_percent": 73.8,
+          "cpu_percent": 18.8
+        },
+        {
+          "timestamp": 1780154870.2371147,
+          "used_memory_bytes": 5996781568,
+          "memory_percent": 73.8,
+          "cpu_percent": 18.3
+        },
+        {
+          "timestamp": 1780154870.4384246,
+          "used_memory_bytes": 5993914368,
+          "memory_percent": 73.8,
+          "cpu_percent": 35.6
+        },
+        {
+          "timestamp": 1780154870.6478293,
+          "used_memory_bytes": 5992263680,
+          "memory_percent": 73.8,
+          "cpu_percent": 21.1
+        },
+        {
+          "timestamp": 1780154870.854302,
+          "used_memory_bytes": 5991276544,
+          "memory_percent": 73.8,
+          "cpu_percent": 21.6
+        },
+        {
+          "timestamp": 1780154871.0555627,
+          "used_memory_bytes": 5990522880,
+          "memory_percent": 73.8,
+          "cpu_percent": 18.3
+        },
+        {
+          "timestamp": 1780154871.271258,
+          "used_memory_bytes": 5919498240,
+          "memory_percent": 72.9,
+          "cpu_percent": 23.1
+        },
+        {
+          "timestamp": 1780154871.4714699,
+          "used_memory_bytes": 5923766272,
+          "memory_percent": 72.9,
+          "cpu_percent": 15.0
+        }
+      ],
+      "output": "\n\n## 10.2.3.5.1.a\n\n### 10.2.3.5.1.a.i\n\nThe LED is on when the robot is in a state that requires it to be.\n\n### 10.2.3."
+    },
+    {
+      "model": "StarCoder-1B",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "pololu-button-control-template",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return either 'run' or 'pause'.",
+      "timestamp_utc": "2026-05-30T15:27:55.114908+00:00",
+      "ttft_seconds": 0.871,
+      "tokens_per_second": 29.509,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 17,
+        "max_ram_bytes": 5928665088,
+        "max_ram_gib": 5.521,
+        "avg_cpu_percent": 17.706,
+        "peak_cpu_percent": 24.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdni7_qfp.py\", line 3\n    The run mode is the default mode. It runs the code in a separate thread and prints the output to the console. The user can press the button to switch between the two modes.\n        ^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdni7_qfp.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3464158200,
+        "load_duration_ns": 95663900,
+        "prompt_eval_count": 62,
+        "prompt_eval_duration_ns": 755784900
+      },
+      "samples": [
+        {
+          "timestamp": 1780154871.5676808,
+          "used_memory_bytes": 5918400512,
+          "memory_percent": 72.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154871.7717288,
+          "used_memory_bytes": 5919072256,
+          "memory_percent": 72.9,
+          "cpu_percent": 15.0
+        },
+        {
+          "timestamp": 1780154871.9737744,
+          "used_memory_bytes": 5919195136,
+          "memory_percent": 72.9,
+          "cpu_percent": 15.7
+        },
+        {
+          "timestamp": 1780154872.1881058,
+          "used_memory_bytes": 5928665088,
+          "memory_percent": 73.0,
+          "cpu_percent": 18.7
+        },
+        {
+          "timestamp": 1780154872.388596,
+          "used_memory_bytes": 5927710720,
+          "memory_percent": 73.0,
+          "cpu_percent": 20.1
+        },
+        {
+          "timestamp": 1780154872.5892298,
+          "used_memory_bytes": 5923921920,
+          "memory_percent": 72.9,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780154872.7915792,
+          "used_memory_bytes": 5919985664,
+          "memory_percent": 72.9,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780154873.006089,
+          "used_memory_bytes": 5919092736,
+          "memory_percent": 72.9,
+          "cpu_percent": 22.8
+        },
+        {
+          "timestamp": 1780154873.2072654,
+          "used_memory_bytes": 5924417536,
+          "memory_percent": 72.9,
+          "cpu_percent": 14.9
+        },
+        {
+          "timestamp": 1780154873.407549,
+          "used_memory_bytes": 5923540992,
+          "memory_percent": 72.9,
+          "cpu_percent": 17.6
+        },
+        {
+          "timestamp": 1780154873.6082554,
+          "used_memory_bytes": 5924147200,
+          "memory_percent": 72.9,
+          "cpu_percent": 24.5
+        },
+        {
+          "timestamp": 1780154873.8098402,
+          "used_memory_bytes": 5923303424,
+          "memory_percent": 72.9,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780154874.0238082,
+          "used_memory_bytes": 5922385920,
+          "memory_percent": 72.9,
+          "cpu_percent": 22.7
+        },
+        {
+          "timestamp": 1780154874.2394996,
+          "used_memory_bytes": 5921529856,
+          "memory_percent": 72.9,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780154874.4404314,
+          "used_memory_bytes": 5920604160,
+          "memory_percent": 72.9,
+          "cpu_percent": 14.8
+        },
+        {
+          "timestamp": 1780154874.6428783,
+          "used_memory_bytes": 5923782656,
+          "memory_percent": 72.9,
+          "cpu_percent": 13.9
+        },
+        {
+          "timestamp": 1780154874.8429794,
+          "used_memory_bytes": 5922930688,
+          "memory_percent": 72.9,
+          "cpu_percent": 21.0
+        }
+      ],
+      "output": "\n\n### 2.1.3.2. Run mode\n\nThe run mode is the default mode. It runs the code in a separate thread and prints the output to the console. The user can press the button to switch between the two modes.\n\nRules: no markdown, no explanation text,"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-drive-forward-template",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef drive_forward(speed, seconds):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate both inputs and return one string command.",
+      "timestamp_utc": "2026-05-30T15:28:00.127332+00:00",
+      "ttft_seconds": 3.277,
+      "tokens_per_second": 41.592,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 24,
+        "max_ram_bytes": 6424616960,
+        "max_ram_gib": 5.983,
+        "avg_cpu_percent": 21.754,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5nof10kt.py\", line 6\n    return f\"Move forward at {speed} meters in {time:.2\n                                                       ^\nSyntaxError: f-string: newlines are not allowed in format specifiers for single quoted f-strings",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5nof10kt.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 4906971600,
+        "load_duration_ns": 2765967500,
+        "prompt_eval_count": 77,
+        "prompt_eval_duration_ns": 501459100
+      },
+      "samples": [
+        {
+          "timestamp": 1780154875.1152697,
+          "used_memory_bytes": 5917413376,
+          "memory_percent": 72.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154875.3219044,
+          "used_memory_bytes": 5919584256,
+          "memory_percent": 72.9,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780154875.5238743,
+          "used_memory_bytes": 5941829632,
+          "memory_percent": 73.2,
+          "cpu_percent": 14.1
+        },
+        {
+          "timestamp": 1780154875.726024,
+          "used_memory_bytes": 5953343488,
+          "memory_percent": 73.3,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780154875.9407914,
+          "used_memory_bytes": 5976506368,
+          "memory_percent": 73.6,
+          "cpu_percent": 10.3
+        },
+        {
+          "timestamp": 1780154876.1418145,
+          "used_memory_bytes": 5999046656,
+          "memory_percent": 73.9,
+          "cpu_percent": 3.7
+        },
+        {
+          "timestamp": 1780154876.343568,
+          "used_memory_bytes": 6076076032,
+          "memory_percent": 74.8,
+          "cpu_percent": 20.0
+        },
+        {
+          "timestamp": 1780154876.5577457,
+          "used_memory_bytes": 6219386880,
+          "memory_percent": 76.6,
+          "cpu_percent": 12.6
+        },
+        {
+          "timestamp": 1780154876.7584121,
+          "used_memory_bytes": 6175461376,
+          "memory_percent": 76.0,
+          "cpu_percent": 7.5
+        },
+        {
+          "timestamp": 1780154876.9601138,
+          "used_memory_bytes": 6217900032,
+          "memory_percent": 76.6,
+          "cpu_percent": 8.9
+        },
+        {
+          "timestamp": 1780154877.1603863,
+          "used_memory_bytes": 6276665344,
+          "memory_percent": 77.3,
+          "cpu_percent": 4.7
+        },
+        {
+          "timestamp": 1780154877.374679,
+          "used_memory_bytes": 6342053888,
+          "memory_percent": 78.1,
+          "cpu_percent": 10.9
+        },
+        {
+          "timestamp": 1780154877.5764346,
+          "used_memory_bytes": 6398996480,
+          "memory_percent": 78.8,
+          "cpu_percent": 10.0
+        },
+        {
+          "timestamp": 1780154877.7764602,
+          "used_memory_bytes": 6424616960,
+          "memory_percent": 79.1,
+          "cpu_percent": 21.2
+        },
+        {
+          "timestamp": 1780154877.976921,
+          "used_memory_bytes": 6418382848,
+          "memory_percent": 79.0,
+          "cpu_percent": 13.0
+        },
+        {
+          "timestamp": 1780154878.1790507,
+          "used_memory_bytes": 6418169856,
+          "memory_percent": 79.0,
+          "cpu_percent": 21.0
+        },
+        {
+          "timestamp": 1780154878.3937316,
+          "used_memory_bytes": 6413619200,
+          "memory_percent": 79.0,
+          "cpu_percent": 25.9
+        },
+        {
+          "timestamp": 1780154878.6076488,
+          "used_memory_bytes": 6415663104,
+          "memory_percent": 79.0,
+          "cpu_percent": 20.1
+        },
+        {
+          "timestamp": 1780154878.811303,
+          "used_memory_bytes": 6415241216,
+          "memory_percent": 79.0,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780154879.0135603,
+          "used_memory_bytes": 6414774272,
+          "memory_percent": 79.0,
+          "cpu_percent": 21.0
+        },
+        {
+          "timestamp": 1780154879.216607,
+          "used_memory_bytes": 6414409728,
+          "memory_percent": 79.0,
+          "cpu_percent": 20.1
+        },
+        {
+          "timestamp": 1780154879.426948,
+          "used_memory_bytes": 6414127104,
+          "memory_percent": 79.0,
+          "cpu_percent": 20.3
+        },
+        {
+          "timestamp": 1780154879.6278734,
+          "used_memory_bytes": 6419001344,
+          "memory_percent": 79.0,
+          "cpu_percent": 17.5
+        },
+        {
+          "timestamp": 1780154879.8290472,
+          "used_memory_bytes": 6418370560,
+          "memory_percent": 79.0,
+          "cpu_percent": 20.3
+        }
+      ],
+      "output": "```python\ndef drive_forward(speed, seconds):\n    # Calculate the time taken to travel the given distance\n    time = speed * seconds\n    \n    # Return a command to move forward at the specified speed for the given number of seconds\n    return f\"Move forward at {speed} meters in {time:.2"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-turn-left-template",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef turn_left(angle):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate input and return one string command.",
+      "timestamp_utc": "2026-05-30T15:28:01.560282+00:00",
+      "ttft_seconds": 0.577,
+      "tokens_per_second": 52.346,
+      "generated_tokens": 30,
+      "resource_summary": {
+        "sample_count": 7,
+        "max_ram_bytes": 6424805376,
+        "max_ram_gib": 5.984,
+        "avg_cpu_percent": 16.886,
+        "peak_cpu_percent": 23.6,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmprd561qp2.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 1334657600,
+        "load_duration_ns": 269272000,
+        "prompt_eval_count": 74,
+        "prompt_eval_duration_ns": 296227400
+      },
+      "samples": [
+        {
+          "timestamp": 1780154880.1276875,
+          "used_memory_bytes": 6423875584,
+          "memory_percent": 79.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154880.3286655,
+          "used_memory_bytes": 6424109056,
+          "memory_percent": 79.1,
+          "cpu_percent": 18.0
+        },
+        {
+          "timestamp": 1780154880.5299761,
+          "used_memory_bytes": 6424096768,
+          "memory_percent": 79.1,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780154880.731462,
+          "used_memory_bytes": 6424805376,
+          "memory_percent": 79.1,
+          "cpu_percent": 23.6
+        },
+        {
+          "timestamp": 1780154880.9467785,
+          "used_memory_bytes": 6424322048,
+          "memory_percent": 79.1,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780154881.1629367,
+          "used_memory_bytes": 6420934656,
+          "memory_percent": 79.1,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780154881.3792622,
+          "used_memory_bytes": 6420672512,
+          "memory_percent": 79.1,
+          "cpu_percent": 17.6
+        }
+      ],
+      "output": "```python\ndef turn_left(angle):\n    # Implement the logic to turn the robot left by the given angle in degrees\n    pass\n```"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-obstacle-stop-template",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return True when robot should stop, else False.",
+      "timestamp_utc": "2026-05-30T15:28:03.931696+00:00",
+      "ttft_seconds": 0.591,
+      "tokens_per_second": 54.831,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 11,
+        "max_ram_bytes": 6424784896,
+        "max_ram_gib": 5.984,
+        "avg_cpu_percent": 17.991,
+        "peak_cpu_percent": 25.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpkle13qmp.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 2253282100,
+        "load_duration_ns": 251849400,
+        "prompt_eval_count": 80,
+        "prompt_eval_duration_ns": 331373500
+      },
+      "samples": [
+        {
+          "timestamp": 1780154881.5606382,
+          "used_memory_bytes": 6421561344,
+          "memory_percent": 79.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154881.7679079,
+          "used_memory_bytes": 6421778432,
+          "memory_percent": 79.1,
+          "cpu_percent": 25.0
+        },
+        {
+          "timestamp": 1780154881.980356,
+          "used_memory_bytes": 6421422080,
+          "memory_percent": 79.1,
+          "cpu_percent": 17.3
+        },
+        {
+          "timestamp": 1780154882.1815293,
+          "used_memory_bytes": 6421241856,
+          "memory_percent": 79.1,
+          "cpu_percent": 21.4
+        },
+        {
+          "timestamp": 1780154882.396914,
+          "used_memory_bytes": 6419480576,
+          "memory_percent": 79.0,
+          "cpu_percent": 22.1
+        },
+        {
+          "timestamp": 1780154882.6139445,
+          "used_memory_bytes": 6424784896,
+          "memory_percent": 79.1,
+          "cpu_percent": 17.6
+        },
+        {
+          "timestamp": 1780154882.814098,
+          "used_memory_bytes": 6424604672,
+          "memory_percent": 79.1,
+          "cpu_percent": 17.9
+        },
+        {
+          "timestamp": 1780154883.0161467,
+          "used_memory_bytes": 6424293376,
+          "memory_percent": 79.1,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780154883.2299356,
+          "used_memory_bytes": 6423658496,
+          "memory_percent": 79.1,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780154883.4309866,
+          "used_memory_bytes": 6423134208,
+          "memory_percent": 79.1,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780154883.632506,
+          "used_memory_bytes": 6424641536,
+          "memory_percent": 79.1,
+          "cpu_percent": 19.4
+        }
+      ],
+      "output": "```python\nimport time\n\ndef stop_if_obstacle_detected(distance_cm):\n    # Simulate obstacle detection by checking if the distance is greater than a certain threshold\n    return distance_cm > 100  # Example threshold for obstacle detection\n```\n\nThis function checks if the distance from the robot to an obstacle"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-line-following-template",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef follow_line(left_sensor, right_sensor):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one motion command string.",
+      "timestamp_utc": "2026-05-30T15:28:05.016121+00:00",
+      "ttft_seconds": 0.539,
+      "tokens_per_second": 52.558,
+      "generated_tokens": 18,
+      "resource_summary": {
+        "sample_count": 5,
+        "max_ram_bytes": 6425694208,
+        "max_ram_gib": 5.984,
+        "avg_cpu_percent": 31.4,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp0xqa83am.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 991741700,
+        "load_duration_ns": 223931300,
+        "prompt_eval_count": 76,
+        "prompt_eval_duration_ns": 307573500
+      },
+      "samples": [
+        {
+          "timestamp": 1780154883.9324446,
+          "used_memory_bytes": 6425153536,
+          "memory_percent": 79.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154884.133237,
+          "used_memory_bytes": 6425694208,
+          "memory_percent": 79.1,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780154884.337033,
+          "used_memory_bytes": 6424842240,
+          "memory_percent": 79.1,
+          "cpu_percent": 18.5
+        },
+        {
+          "timestamp": 1780154884.5487661,
+          "used_memory_bytes": 6424842240,
+          "memory_percent": 79.1,
+          "cpu_percent": 15.5
+        },
+        {
+          "timestamp": 1780154884.7506812,
+          "used_memory_bytes": 6424842240,
+          "memory_percent": 79.1,
+          "cpu_percent": 23.0
+        }
+      ],
+      "output": "```python\nfollow_line = lambda left_sensor, right_sensor: \"forward\"\n```"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-led-status-template",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef update_status_led(state):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one color string for idle, moving, or error.",
+      "timestamp_utc": "2026-05-30T15:28:07.398331+00:00",
+      "ttft_seconds": 0.587,
+      "tokens_per_second": 46.508,
+      "generated_tokens": 64,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 6425837568,
+        "max_ram_gib": 5.985,
+        "avg_cpu_percent": 19.733,
+        "peak_cpu_percent": 29.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpha6zmm0u.py\", line 10\n    elif state == 'moving\n                  ^\nSyntaxError: unterminated string literal (detected at line 10)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpha6zmm0u.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2291018500,
+        "load_duration_ns": 261790300,
+        "prompt_eval_count": 79,
+        "prompt_eval_duration_ns": 315963200
+      },
+      "samples": [
+        {
+          "timestamp": 1780154885.0167024,
+          "used_memory_bytes": 6425464832,
+          "memory_percent": 79.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154885.217677,
+          "used_memory_bytes": 6424678400,
+          "memory_percent": 79.1,
+          "cpu_percent": 6.5
+        },
+        {
+          "timestamp": 1780154885.4324687,
+          "used_memory_bytes": 6424408064,
+          "memory_percent": 79.1,
+          "cpu_percent": 16.5
+        },
+        {
+          "timestamp": 1780154885.6347392,
+          "used_memory_bytes": 6425534464,
+          "memory_percent": 79.1,
+          "cpu_percent": 21.6
+        },
+        {
+          "timestamp": 1780154885.849113,
+          "used_memory_bytes": 6424588288,
+          "memory_percent": 79.1,
+          "cpu_percent": 10.1
+        },
+        {
+          "timestamp": 1780154886.0502844,
+          "used_memory_bytes": 6424076288,
+          "memory_percent": 79.1,
+          "cpu_percent": 22.9
+        },
+        {
+          "timestamp": 1780154886.2522862,
+          "used_memory_bytes": 6424231936,
+          "memory_percent": 79.1,
+          "cpu_percent": 27.5
+        },
+        {
+          "timestamp": 1780154886.4669342,
+          "used_memory_bytes": 6423588864,
+          "memory_percent": 79.1,
+          "cpu_percent": 26.0
+        },
+        {
+          "timestamp": 1780154886.6824784,
+          "used_memory_bytes": 6425837568,
+          "memory_percent": 79.1,
+          "cpu_percent": 29.5
+        },
+        {
+          "timestamp": 1780154886.8842592,
+          "used_memory_bytes": 6425333760,
+          "memory_percent": 79.1,
+          "cpu_percent": 25.4
+        },
+        {
+          "timestamp": 1780154887.0998464,
+          "used_memory_bytes": 6425387008,
+          "memory_percent": 79.1,
+          "cpu_percent": 27.5
+        },
+        {
+          "timestamp": 1780154887.3009503,
+          "used_memory_bytes": 6425534464,
+          "memory_percent": 79.1,
+          "cpu_percent": 23.3
+        }
+      ],
+      "output": "```python\n# Import necessary libraries\nimport time\n\n# Define the function to update status LED\ndef update_status_led(state):\n    # Check if the state is 'idle'\n    if state == 'idle':\n        return \"Idle\"\n    # Check if the state is 'moving'\n    elif state == 'moving"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "pololu-button-control-template",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Return only Python code. Define exactly one function:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return either 'run' or 'pause'.",
+      "timestamp_utc": "2026-05-30T15:28:09.050384+00:00",
+      "ttft_seconds": 0.612,
+      "tokens_per_second": 46.745,
+      "generated_tokens": 36,
+      "resource_summary": {
+        "sample_count": 8,
+        "max_ram_bytes": 6439890944,
+        "max_ram_gib": 5.998,
+        "avg_cpu_percent": 23.163,
+        "peak_cpu_percent": 31.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmphlc7t3o3.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 1549622300,
+        "load_duration_ns": 243292500,
+        "prompt_eval_count": 80,
+        "prompt_eval_duration_ns": 355695800
+      },
+      "samples": [
+        {
+          "timestamp": 1780154887.3987176,
+          "used_memory_bytes": 6437662720,
+          "memory_percent": 79.3,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780154887.6005046,
+          "used_memory_bytes": 6439890944,
+          "memory_percent": 79.3,
+          "cpu_percent": 20.5
+        },
+        {
+          "timestamp": 1780154887.801606,
+          "used_memory_bytes": 6435667968,
+          "memory_percent": 79.2,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780154888.0032907,
+          "used_memory_bytes": 6434639872,
+          "memory_percent": 79.2,
+          "cpu_percent": 25.5
+        },
+        {
+          "timestamp": 1780154888.2041135,
+          "used_memory_bytes": 6434713600,
+          "memory_percent": 79.2,
+          "cpu_percent": 25.4
+        },
+        {
+          "timestamp": 1780154888.4039707,
+          "used_memory_bytes": 6434484224,
+          "memory_percent": 79.2,
+          "cpu_percent": 29.5
+        },
+        {
+          "timestamp": 1780154888.6189945,
+          "used_memory_bytes": 6434721792,
+          "memory_percent": 79.2,
+          "cpu_percent": 31.4
+        },
+        {
+          "timestamp": 1780154888.8207488,
+          "used_memory_bytes": 6433705984,
+          "memory_percent": 79.2,
+          "cpu_percent": 29.0
+        }
+      ],
+      "output": "```python\ndef toggle_run_mode(current_mode, button_pressed):\n    if current_mode == \"running\":\n        return \"paused\"\n    else:\n        return \"running\"\n```"
+    }
+  ]
+}

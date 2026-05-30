@@ -10,6 +10,29 @@
 | Task set size | 6 Pololu robot-kit tasks |
 | Exploratory outcomes | 30 |
 
+## Rerun Log (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Rerun result file | results/benchmark_results_targeted_tiny_rerun_20260530.json |
+| Command | `python -m src.benchmark_runner --models config/models_targeted_tiny.json --test-cases config/test_cases_targeted_tiny.json --results results/benchmark_results_targeted_tiny_rerun_20260530.json` |
+| Report refresh command | `python -m src.report_generator --results-dir results --output results/benchmark_report.md` |
+| Total outcomes | 12 |
+| Models in rerun | StarCoder-1B, Qwen2.5-Coder-0.5B |
+
+### Rerun Metrics
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---:|---:|---:|---:|---:|---:|
+| Qwen2.5-Coder-0.5B | 6 | 4/6 | 1.030 | 49.097 | 5.986 | 0 |
+| StarCoder-1B | 6 | 1/6 | 1.726 | 30.114 | 5.613 | 0 |
+
+### Rerun Interpretation
+
+1. Qwen2.5-Coder-0.5B remained strong and repeated a high pass-rate result (4/6).
+2. StarCoder-1B performance regressed relative to the prior targeted run (from 2/6 to 1/6).
+3. The rerun supports selecting Qwen2.5-Coder-0.5B as the default workshop model under this strict-template regime.
+
 ## Targeted Tiny Results (Strict Template Prompts)
 
 | Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Notes |
@@ -47,8 +70,8 @@
 
 | Priority | Recommendation | Why |
 |---:|---|---|
-| 1 | Use StarCoder-1B as the primary tiny-model candidate | It is the only tiny model in the newest run with any syntax-valid output while staying within memory limits. |
-| 2 | Promote Qwen2.5-Coder-0.5B to the primary candidate for this use case | In the targeted strict-template run, it achieved 4/6 syntax-valid outputs with the best latency profile. |
+| 1 | Use Qwen2.5-Coder-0.5B as the primary tiny-model candidate | In two targeted strict-template runs, it repeatedly produced the highest pass-rate result (4/6) with excellent latency. |
+| 2 | Keep StarCoder-1B as the fallback tiny model | It still produces some valid outputs (1/6 in rerun) and maintains manageable memory usage. |
 | 3 | Keep CodeGemma-2B as a secondary quality candidate | It also produced syntax-valid output in the earlier exploratory run, though slower and heavier than StarCoder-1B. |
 | 4 | De-prioritize DeepSeek-Coder-1.3B and Qwen2.5-Coder-1.5B for this exact profile | They showed memory-threshold abort behavior in the tiny-focus run. |
 | 5 | Continue prompt and output-shape tuning | Correctness (pass-rate) remains the main limiting factor for classroom usefulness. |
@@ -59,4 +82,5 @@
 2. Exploratory run results: results/benchmark_results_exploratory_fast.json
 3. Tiny-focus run results: results/benchmark_results_tiny_focus.json
 4. Targeted strict-template run results: results/benchmark_results_targeted_tiny.json
-5. Aggregated report: results/benchmark_report.md
+5. Targeted strict-template rerun results: results/benchmark_results_targeted_tiny_rerun_20260530.json
+6. Aggregated report: results/benchmark_report.md
