@@ -5,10 +5,17 @@
 | Item | Result |
 |---|---:|
 | Repository unit tests | 12 passed / 12 total |
-| Live benchmark runs completed | 3 |
+| Live benchmark runs completed | 4 |
 | Exploratory model set size | 5 models |
 | Task set size | 6 Pololu robot-kit tasks |
 | Exploratory outcomes | 30 |
+
+## Targeted Tiny Results (Strict Template Prompts)
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Notes |
+|---|---:|---:|---:|---:|---:|---|
+| Qwen2.5-Coder-0.5B | 6 | 4/6 | 1.006 | 50.198 | 6.008 | Best current balance for meaningful suggestions under strict function-template prompting. |
+| StarCoder-1B | 6 | 2/6 | 1.200 | 29.923 | 5.655 | Solid fallback with better syntax pass-rate than earlier sweeps. |
 
 ## Tiny-Focus Results (Newest Run)
 
@@ -41,7 +48,7 @@
 | Priority | Recommendation | Why |
 |---:|---|---|
 | 1 | Use StarCoder-1B as the primary tiny-model candidate | It is the only tiny model in the newest run with any syntax-valid output while staying within memory limits. |
-| 2 | Use Qwen2.5-Coder-0.5B as the low-latency fallback | It is the fastest model and has the smallest RAM footprint, useful when responsiveness is the top constraint. |
+| 2 | Promote Qwen2.5-Coder-0.5B to the primary candidate for this use case | In the targeted strict-template run, it achieved 4/6 syntax-valid outputs with the best latency profile. |
 | 3 | Keep CodeGemma-2B as a secondary quality candidate | It also produced syntax-valid output in the earlier exploratory run, though slower and heavier than StarCoder-1B. |
 | 4 | De-prioritize DeepSeek-Coder-1.3B and Qwen2.5-Coder-1.5B for this exact profile | They showed memory-threshold abort behavior in the tiny-focus run. |
 | 5 | Continue prompt and output-shape tuning | Correctness (pass-rate) remains the main limiting factor for classroom usefulness. |
@@ -51,4 +58,5 @@
 1. Main run results: results/benchmark_results.json
 2. Exploratory run results: results/benchmark_results_exploratory_fast.json
 3. Tiny-focus run results: results/benchmark_results_tiny_focus.json
-4. Aggregated report: results/benchmark_report.md
+4. Targeted strict-template run results: results/benchmark_results_targeted_tiny.json
+5. Aggregated report: results/benchmark_report.md

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "StarCoder-1B",
+    "ollama_tag": "starcoder:1b",
+    "role": "tiny_quality_candidate",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.05,
+      "num_predict": 64
+    }
+  },
+  {
+    "name": "Qwen2.5-Coder-0.5B",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "tiny_latency_candidate",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.05,
+      "num_predict": 64
+    }
+  }
+]
