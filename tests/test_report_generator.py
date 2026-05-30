@@ -28,6 +28,8 @@ class ReportGeneratorTests(unittest.TestCase):
         summaries = summarize_models(entries)
         self.assertEqual(summaries[0]["Model"], "Model A")
         self.assertGreater(summaries[0]["Overall Score"], summaries[1]["Overall Score"])
+        self.assertEqual(summaries[0]["Passes"], "1/1")
+        self.assertEqual(summaries[1]["Passes"], "0/1")
         self.assertIn("Overfit Pass %", summaries[0])
 
     def test_load_and_render_report_from_results_directory(self) -> None:
@@ -40,8 +42,10 @@ class ReportGeneratorTests(unittest.TestCase):
             entries = load_result_entries(Path(tmpdir))
             report = render_markdown(entries)
         self.assertIn("# Benchmark Report", report)
+        self.assertIn("Core Assumptions and PM Cues", report)
         self.assertIn("Model Ranking", report)
         self.assertIn("Model A", report)
+        self.assertIn("Passes", report)
         self.assertIn("Overfit Pass %", report)
 
 

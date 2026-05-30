@@ -88,6 +88,7 @@ def summarize_models(entries: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
             {
                 "Model": model,
                 "Runs": data["runs"],
+                "Passes": f"{data['validation_passes']}/{data['runs']}",
                 "Avg TTFT (s)": round(avg_ttft[model], 3),
                 "Avg Tokens/s": round(avg_tps[model], 3),
                 "Avg Peak RAM (GiB)": round(avg_ram[model], 3),
@@ -125,6 +126,12 @@ def render_markdown(entries: List[Dict[str, Any]]) -> str:
     detail_table = tabulate(detail_rows, headers="keys", tablefmt="github")
     return (
         "# Benchmark Report\n\n"
+        "## Core Assumptions and PM Cues\n\n"
+        "1. This report blends speed and code validity. Overall Score is weighted 50% efficiency and 50% compilation pass-rate.\n"
+        "2. Compilation Pass % indicates syntax-valid Python output only; it does not guarantee classroom-ready behavior quality.\n"
+        "3. Overfit Pass % is computed from template-like or explicitly overfit-tagged cases and reflects performance on narrow, constrained prompts.\n"
+        "4. Runs with memory-threshold aborts are excluded from ranking averages and appear in Detailed Runs with aborted status.\n"
+        "5. Compare models first by pass metrics for reliability, then by TTFT/Tokens/s/RAM for deployment fit on this hardware.\n\n"
         "## Model Ranking\n\n"
         f"{ranking_table}\n\n"
         "## Detailed Runs\n\n"

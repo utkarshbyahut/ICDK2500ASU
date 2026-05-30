@@ -1,16 +1,25 @@
 # Benchmark Report
 
+## Core Assumptions and PM Cues
+
+1. This report blends speed and code validity. Overall Score is weighted 50% efficiency and 50% compilation pass-rate.
+2. Compilation Pass % indicates syntax-valid Python output only; it does not guarantee classroom-ready behavior quality.
+3. Overfit Pass % is computed from template-like or explicitly overfit-tagged cases and reflects performance on narrow, constrained prompts.
+4. Runs with memory-threshold aborts are excluded from ranking averages and appear in Detailed Runs with aborted status.
+5. Compare models first by pass metrics for reliability, then by TTFT/Tokens/s/RAM for deployment fit on this hardware.
+
 ## Model Ranking
 
-| Model               |   Runs |   Avg TTFT (s) |   Avg Tokens/s |   Avg Peak RAM (GiB) |   Compilation Pass % |   Overfit Pass % |   Efficiency Score |   Overall Score |
-|---------------------|--------|----------------|----------------|----------------------|----------------------|------------------|--------------------|-----------------|
-| Qwen2.5-Coder-0.5B  |     24 |          1.045 |         48.677 |                5.466 |                33.33 |            66.67 |              98.41 |           65.87 |
-| StarCoder-1B        |     18 |          1.282 |         28.8   |                5.576 |                22.22 |            25    |              70.84 |           46.53 |
-| TinyLlama-1.1B      |      6 |          1.147 |         28.947 |                6.049 |                 0    |             0    |              63.71 |           31.86 |
-| Qwen2.5-Coder-1.5B  |     14 |          1.638 |         21.16  |                5.401 |                 0    |             0    |              57.08 |           28.54 |
-| DeepSeek-Coder-1.3B |     12 |          1.687 |         21.31  |                5.711 |                 0    |             0    |              48.07 |           24.04 |
-| CodeGemma-2B        |      6 |          2.088 |         12.785 |                6.745 |                16.67 |             0    |               2.59 |            9.63 |
-| Stable-Code-3B      |      1 |          1.742 |         10.398 |                6.766 |                 0    |             0    |              11.05 |            5.53 |
+| Model               |   Runs | Passes   |   Avg TTFT (s) |   Avg Tokens/s |   Avg Peak RAM (GiB) |   Compilation Pass % |   Overfit Pass % |   Efficiency Score |   Overall Score |
+|---------------------|--------|----------|----------------|----------------|----------------------|----------------------|------------------|--------------------|-----------------|
+| Qwen2.5-Coder-0.5B  |     24 | 8/24     |          1.045 |         48.677 |                5.466 |                33.33 |            66.67 |              98.41 |           65.87 |
+| StarCoder-1B        |     18 | 4/18     |          1.282 |         28.8   |                5.576 |                22.22 |            25    |              73.87 |           48.05 |
+| TinyLlama-1.1B      |      6 | 0/6      |          1.147 |         28.947 |                6.049 |                 0    |             0    |              65.02 |           32.51 |
+| Qwen2.5-Coder-1.5B  |     14 | 0/14     |          1.638 |         21.16  |                5.401 |                 0    |             0    |              64.65 |           32.33 |
+| DeepSeek-Coder-1.3B |     12 | 0/12     |          1.687 |         21.31  |                5.711 |                 0    |             0    |              56.27 |           28.14 |
+| CodeGemma-2B        |      6 | 1/6      |          2.088 |         12.785 |                6.745 |                16.67 |             0    |              15.9  |           16.29 |
+| Stable-Code-3B      |      1 | 0/1      |          1.742 |         10.398 |                6.766 |                 0    |             0    |              19.95 |            9.97 |
+| Phi (phi:latest)    |      6 | 0/6      |          2.781 |         12.483 |                6.632 |                 0    |             0    |               5.08 |            2.54 |
 
 ## Detailed Runs
 
@@ -64,6 +73,18 @@
 | Stable-Code-3B          | pololu-line-following          | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json             |
 | Stable-Code-3B          | pololu-led-status              | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json             |
 | Stable-Code-3B          | pololu-button-control          | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json             |
+| Phi (phi:latest)        | pololu-drive-forward           | movement-basics  | 11.105     | 11.346     | 6.679            | 14.174      | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Phi (phi:latest)        | pololu-turn-left               | movement-basics  | 0.882      | 13.169     | 6.622            | 22.387      | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Phi (phi:latest)        | pololu-obstacle-stop           | sensor-response  | 1.245      | 13.156     | 6.629            | 23.31       | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Phi (phi:latest)        | pololu-line-following          | sensor-response  | 1.083      | 12.557     | 6.621            | 23.333      | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Phi (phi:latest)        | pololu-led-status              | student-feedback | 1.084      | 12.386     | 6.621            | 23.667      | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Phi (phi:latest)        | pololu-button-control          | student-feedback | 1.289      | 12.286     | 6.621            | 19.52       | failed                   | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-drive-forward           | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-turn-left               | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-obstacle-stop           | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-line-following          | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-led-status              | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
+| Gemma 4B (gemma3:4b)    | pololu-button-control          | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_phi_gemma4_20260530.json          |
 | StarCoder-1B            | pololu-drive-forward-template  | movement-basics  | 3.487      | 29.214     | 5.808            | 16.121      | passed                   | benchmark_results_targeted_tiny.json                |
 | StarCoder-1B            | pololu-turn-left-template      | movement-basics  | 0.638      | 29.452     | 5.666            | 18.327      | passed                   | benchmark_results_targeted_tiny.json                |
 | StarCoder-1B            | pololu-obstacle-stop-template  | sensor-response  | 0.785      | 31.862     | 5.617            | 18.244      | failed                   | benchmark_results_targeted_tiny.json                |

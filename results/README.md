@@ -20,6 +20,23 @@
 | Total outcomes | 12 |
 | Models in rerun | StarCoder-1B, Qwen2.5-Coder-0.5B |
 
+## Phi/Gemma Probe Log (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Probe result file | results/benchmark_results_phi_gemma4_20260530.json |
+| Model request | "phi-1" and "gemma 4" |
+| Resolved Ollama tags | phi:latest and gemma3:4b |
+| Note on phi tag | `phi:1` is not available in Ollama manifest; `phi:latest` was used. |
+| Total outcomes | 12 |
+
+### Phi/Gemma Probe Metrics
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---:|---:|---:|---:|---:|---:|
+| Phi (phi:latest) | 6 | 0/6 | 2.781 | 12.483 | 6.632 | 0 |
+| Gemma 4B (gemma3:4b) | 0 | 0/0 | - | - | - | 6 |
+
 ### Rerun Metrics
 
 | Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
