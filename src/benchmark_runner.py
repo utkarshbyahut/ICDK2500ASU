@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import os
 import json
+import re
 import shlex
 import subprocess
 import tempfile
@@ -28,14 +29,34 @@ def estimate_token_count(text: str) -> int:
     return max(len(text.split()), 1) if text.strip() else 0
 
 
+def extract_code_for_validation(output_text: str, file_extension: str) -> str:
+    if file_extension != ".py":
+        return output_text
+
+    # Prefer fenced python blocks when the model wraps output in markdown.
+    fenced = re.findall(r"```(?:python|py)?\s*(.*?)```", output_text, flags=re.IGNORECASE | re.DOTALL)
+    if fenced:
+        return "\n\n".join(block.strip() for block in fenced if block.strip()) or output_text
+
+    # If no fences are present, strip leading prose by finding first python-like line.
+    lines = output_text.splitlines()
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith(("import ", "from ", "def ", "class ", "if __name__", "#")):
+            return "\n".join(lines[index:]).strip() or output_text
+
+    return output_text
+
+
 def validate_generated_code(output_text: str, test_case: Dict[str, Any]) -> Dict[str, Any]:
     command_template = test_case.get("validation_command")
     if not command_template:
         return {"status": "not_configured", "passed": None, "details": "No validation command configured."}
 
     suffix = test_case.get("file_extension", ".txt")
+    candidate_text = extract_code_for_validation(output_text, suffix)
     with tempfile.NamedTemporaryFile("w", suffix=suffix, delete=False, encoding="utf-8") as handle:
-        handle.write(output_text)
+        handle.write(candidate_text)
         file_path = handle.name
 
     command = shlex.split(command_template.format(file_path=file_path), posix=os.name != "nt")

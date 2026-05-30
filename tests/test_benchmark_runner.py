@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.benchmark_runner import estimate_token_count, validate_generated_code, write_results
+from src.benchmark_runner import extract_code_for_validation, estimate_token_count, validate_generated_code, write_results
 
 
 class BenchmarkRunnerTests(unittest.TestCase):
@@ -18,6 +18,22 @@ class BenchmarkRunnerTests(unittest.TestCase):
 
         self.assertEqual(result["status"], "passed")
         self.assertTrue(result["passed"])
+
+    def test_extract_code_for_validation_prefers_python_fence(self) -> None:
+        output_text = "Here is the function:\n```python\ndef drive_forward(speed, seconds):\n    return speed * seconds\n```"
+
+        extracted = extract_code_for_validation(output_text, ".py")
+
+        self.assertIn("def drive_forward", extracted)
+        self.assertNotIn("Here is the function", extracted)
+
+    def test_extract_code_for_validation_strips_leading_prose(self) -> None:
+        output_text = "This should help your robot.\nUse the function below.\ndef turn_left(angle):\n    return angle\n"
+
+        extracted = extract_code_for_validation(output_text, ".py")
+
+        self.assertTrue(extracted.startswith("def turn_left"))
+        self.assertNotIn("This should help", extracted)
 
     def test_validate_generated_code_fails_for_invalid_python(self) -> None:
         output_text = "def drive_forward(:\n    pass\n"

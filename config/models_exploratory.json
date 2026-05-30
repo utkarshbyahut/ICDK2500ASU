@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Qwen2.5-Coder-0.5B",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "ultra_light",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 24
+    }
+  },
+  {
+    "name": "DeepSeek-Coder-1.3B",
+    "ollama_tag": "deepseek-coder:1.3b",
+    "role": "baseline_small",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 24
+    }
+  },
+  {
+    "name": "Qwen2.5-Coder-1.5B",
+    "ollama_tag": "qwen2.5-coder:1.5b",
+    "role": "baseline_mid",
+    "context_window": 4096,
+    "parameters": {
+      "temperature": 0.2,
+      "num_predict": 24
+    }
+  },
+  {
+    "name": "CodeGemma-2B",
+    "ollama_tag": "codegemma:2b",
+    "role": "candidate_mid",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 24
+    }
+  },
+  {
+    "name": "Stable-Code-3B",
+    "ollama_tag": "stable-code:3b",
+    "role": "candidate_mid",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 24
+    }
+  },
+  {
+    "name": "Granite-Code-8B",
+    "ollama_tag": "granite-code:8b",
+    "role": "stress_test",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 24
+    }
+  }
+]

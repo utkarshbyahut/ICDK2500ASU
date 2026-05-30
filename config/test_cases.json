@@ -5,7 +5,7 @@
     "skill_focus": "motor control",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named drive_forward that takes speed and seconds, validates both inputs, and returns a simple command string that would make the robot move forward safely.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
@@ -14,7 +14,7 @@
     "skill_focus": "direction change",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named turn_left that accepts a turn angle and returns code that would rotate the robot left in a controlled way.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
@@ -23,7 +23,7 @@
     "skill_focus": "ultrasonic sensing",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named stop_if_obstacle_detected that takes a distance reading and returns whether the robot should stop before collision.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
@@ -32,7 +32,7 @@
     "skill_focus": "line tracking",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named follow_line that takes left and right reflectance sensor values and returns the next motion instruction for the robot.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
@@ -41,7 +41,7 @@
     "skill_focus": "status signaling",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named update_status_led that chooses LED colors for idle, moving, and error states.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
     "validation_command": "python -m py_compile {file_path}"
   },
   {
@@ -50,7 +50,7 @@
     "skill_focus": "human interaction",
     "language": "python",
     "file_extension": ".py",
-    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named toggle_run_mode that switches between pause and run when a button is pressed and returns the new mode.",
+    "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
     "validation_command": "python -m py_compile {file_path}"
   }
 ]

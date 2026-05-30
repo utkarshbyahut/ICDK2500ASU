@@ -1,44 +1,43 @@
 # Decision Summary
 
-## Live Benchmark Status
+## Latest Benchmark Status
 
 | Item | Result |
 |---|---:|
-| Repository unit tests | 11 passed / 11 total |
-| Benchmark result files written | 1 |
-| Live inference run | Completed on this machine |
-| Models benchmarked | 3 configured models |
-| Test cases executed | 6 Pololu robot-kit tasks |
-| Total benchmark outcomes | 18 |
+| Repository unit tests | 12 passed / 12 total |
+| Live benchmark runs completed | 2 |
+| Exploratory model set size | 5 models |
+| Task set size | 6 Pololu robot-kit tasks |
+| Exploratory outcomes | 30 |
 
-## Benchmark Coverage
+## Exploratory Results (Fast Sweep)
 
-| Model | Status | Notes |
-|---|---|---|
-| `Qwen2.5-Coder-1.5B` | Completed | Actual local Ollama run on this machine. |
-| `DeepSeek-Coder-1.3B` | Completed | Actual local Ollama run on this machine. |
-| `Granite-3.0-8B-Code-IQ2` | Aborted | The original Granite tag was not available in Ollama; the benchmark used the closest pullable Granite code model and hit the memory threshold. |
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Notes |
+|---|---:|---:|---:|---:|---:|---|
+| Qwen2.5-Coder-0.5B | 6 | 0/6 | 1.157 | 46.327 | 5.106 | Fastest model by a large margin, but no syntax-valid outputs. |
+| DeepSeek-Coder-1.3B | 6 | 0/6 | 1.595 | 21.917 | 5.377 | Stable and memory-safe, but still no passing outputs. |
+| Qwen2.5-Coder-1.5B | 6 | 0/6 | 1.824 | 22.183 | 5.438 | Similar profile to DeepSeek with no validation wins. |
+| CodeGemma-2B | 6 | 1/6 | 2.088 | 12.785 | 6.745 | First model to produce at least one syntax-valid answer in this workload. |
+| Stable-Code-3B | 1 | 0/1 | 1.742 | 10.398 | 6.766 | 5/6 cases aborted on memory threshold; poor fit for this machine. |
 
-## Decision Metrics
+## What Changed in This Rerun
 
-| Model | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Validation Passes | Outcome |
-|---|---:|---:|---:|---:|---|
-| `Qwen2.5-Coder-1.5B` | 1.710 | 20.724 | 4.926 | 0/6 | Fastest practical model in this run, but all generated snippets failed syntax validation. |
-| `DeepSeek-Coder-1.3B` | 1.779 | 20.702 | 6.046 | 0/6 | Similar throughput to Qwen, but used more RAM and also failed validation. |
-| `Granite-3.0-8B-Code-IQ2` | N/A | N/A | N/A | 0/6 | Aborted by the emergency memory threshold, so it is not viable on this 8GB machine. |
+1. Added fenced-code extraction before validation, so markdown-wrapped code is checked more fairly.
+2. Added smaller coding models to broaden exploration beyond the original three-model set.
+3. Reduced generation length for faster iteration under 8GB memory constraints.
 
 ## Recommendation Matrix
 
-| Priority | Recommendation | Reason |
+| Priority | Recommendation | Why |
 |---:|---|---|
-| 1 | Use `Qwen2.5-Coder-1.5B` as the default local coding assistant candidate | It delivered the best responsiveness with lower memory than DeepSeek in this run. |
-| 2 | Avoid `DeepSeek-Coder-1.3B` as the primary choice for this machine | It was slightly slower and consumed more RAM without improving validation outcomes. |
-| 3 | Do not deploy the Granite 8B option on this 8GB system | It tripped the memory threshold before completing the benchmark. |
-| 4 | Keep the Pololu six-task suite as the benchmark baseline | It is a realistic student-facing workload and already exercised end-to-end. |
-| 5 | Treat syntax validation as a gate before model selection | All generated outputs failed validation in this run, so speed alone is not enough to justify adoption. |
+| 1 | Keep CodeGemma-2B in the candidate pool despite slower speed | It is the only model in this rerun with any syntax pass (1/6). |
+| 2 | Keep Qwen2.5-Coder-0.5B as the latency baseline | It is dramatically faster and useful as a responsiveness floor for comparisons. |
+| 3 | Use DeepSeek-Coder-1.3B and Qwen2.5-Coder-1.5B as balanced baselines | They are stable under memory limits and provide mid-tier latency. |
+| 4 | Exclude Stable-Code-3B for this device class | It exceeded memory limits in most cases and did not complete the suite. |
+| 5 | Next optimization target: prompt/format constraints for syntax correctness | Throughput is acceptable, but pass-rate is the current bottleneck for classroom usability. |
 
-## Decision Notes
+## Evidence Files
 
-1. The live inference data in this README came from actual Ollama models served on this machine.
-2. The Granite run used the closest pullable Granite code model because the exact tag from the original config was not available.
-3. For this workload, the current models are not yet production-ready for student code generation because validation pass rate was 0/18.
+1. Main run results: results/benchmark_results.json
+2. Exploratory run results: results/benchmark_results_exploratory_fast.json
+3. Aggregated report: results/benchmark_report.md
