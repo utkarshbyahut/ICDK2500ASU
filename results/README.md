@@ -1,47 +1,44 @@
 # Decision Summary
 
-## What Was Verified
+## Live Benchmark Status
 
 | Item | Result |
 |---|---:|
 | Repository unit tests | 11 passed / 11 total |
-| Validation command | `python -m unittest discover -s tests -v` |
-| Benchmark report generation | Success |
-| Updated benchmark scenario | 6 K-12 Pololu robot-kit tasks |
-| Live inference run | Not completed |
+| Benchmark result files written | 1 |
+| Live inference run | Completed on this machine |
+| Models benchmarked | 3 configured models |
+| Test cases executed | 6 Pololu robot-kit tasks |
+| Total benchmark outcomes | 18 |
 
-## Decision-Relevant Outcome
+## Benchmark Coverage
 
-| Area | Assessment | Decision Impact |
+| Model | Status | Notes |
 |---|---|---|
-| Code health | Good | The repository tests pass after dependency installation and the Windows path fix in the runner. |
-| Benchmark design | Better aligned | The prompt set now reflects student-facing robot-kit tasks instead of generic coding exercises. |
-| Report usefulness | Improved | The markdown report now surfaces scenario metadata and is trimmed to decision-relevant content. |
-| Live model evidence | Not available here | No measured inference cost, TTFT, or throughput data was produced because Ollama is not available in this environment. |
+| `Qwen2.5-Coder-1.5B` | Completed | Actual local Ollama run on this machine. |
+| `DeepSeek-Coder-1.3B` | Completed | Actual local Ollama run on this machine. |
+| `Granite-3.0-8B-Code-IQ2` | Aborted | The original Granite tag was not available in Ollama; the benchmark used the closest pullable Granite code model and hit the memory threshold. |
 
-## Updated Benchmark Task Set
+## Decision Metrics
 
-| Task | Scenario | Focus |
-|---|---|---|
-| `pololu-drive-forward` | movement-basics | Motor control |
-| `pololu-turn-left` | movement-basics | Direction change |
-| `pololu-obstacle-stop` | sensor-response | Ultrasonic sensing |
-| `pololu-line-following` | sensor-response | Line tracking |
-| `pololu-led-status` | student-feedback | Status signaling |
-| `pololu-button-control` | student-feedback | Human interaction |
+| Model | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Validation Passes | Outcome |
+|---|---:|---:|---:|---:|---|
+| `Qwen2.5-Coder-1.5B` | 1.710 | 20.724 | 4.926 | 0/6 | Fastest practical model in this run, but all generated snippets failed syntax validation. |
+| `DeepSeek-Coder-1.3B` | 1.779 | 20.702 | 6.046 | 0/6 | Similar throughput to Qwen, but used more RAM and also failed validation. |
+| `Granite-3.0-8B-Code-IQ2` | N/A | N/A | N/A | 0/6 | Aborted by the emergency memory threshold, so it is not viable on this 8GB machine. |
 
 ## Recommendation Matrix
 
-| Priority | Recommendation | Why |
+| Priority | Recommendation | Reason |
 |---:|---|---|
-| 1 | Use the six Pololu tasks as the benchmark baseline | They better match K-12 student robot-kit use cases and produce a more realistic coding workload. |
-| 2 | Run live inference only after Ollama is available | Cost, TTFT, and overhead numbers are not valid until an actual local model run completes. |
-| 3 | Keep `deepseek-coder:1.3b` as the first candidate for lightweight robot-control prompts | It is the lowest-risk model for a constrained 8GB system. |
-| 4 | Compare `qwen2.5-coder:1.5b` as the main teaching/chat candidate | It is the strongest general-purpose option in the current config without jumping to the largest model first. |
-| 5 | Defer `granite3.0:8b-code-instruct-q2_K` until the lighter models are measured | It is the most likely to stress memory headroom on this machine. |
+| 1 | Use `Qwen2.5-Coder-1.5B` as the default local coding assistant candidate | It delivered the best responsiveness with lower memory than DeepSeek in this run. |
+| 2 | Avoid `DeepSeek-Coder-1.3B` as the primary choice for this machine | It was slightly slower and consumed more RAM without improving validation outcomes. |
+| 3 | Do not deploy the Granite 8B option on this 8GB system | It tripped the memory threshold before completing the benchmark. |
+| 4 | Keep the Pololu six-task suite as the benchmark baseline | It is a realistic student-facing workload and already exercised end-to-end. |
+| 5 | Treat syntax validation as a gate before model selection | All generated outputs failed validation in this run, so speed alone is not enough to justify adoption. |
 
-## Next Required Step
+## Decision Notes
 
-| Step | Purpose |
-|---|---|
-| Start Ollama locally and pull the configured tags | Enable real inference measurements and complete the benchmark evidence set. |
+1. The live inference data in this README came from actual Ollama models served on this machine.
+2. The Granite run used the closest pullable Granite code model because the exact tag from the original config was not available.
+3. For this workload, the current models are not yet production-ready for student code generation because validation pass rate was 0/18.

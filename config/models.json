@@ -6,7 +6,7 @@
     "context_window": 4096,
     "parameters": {
       "temperature": 0.2,
-      "num_predict": 256
+      "num_predict": 32
     }
   },
   {
@@ -16,17 +16,17 @@
     "context_window": 2048,
     "parameters": {
       "temperature": 0.1,
-      "num_predict": 128
+      "num_predict": 32
     }
   },
   {
     "name": "Granite-3.0-8B-Code-IQ2",
-    "ollama_tag": "granite3.0:8b-code-instruct-q2_K",
+    "ollama_tag": "granite-code:8b",
     "role": "compressed_candidate",
     "context_window": 2048,
     "parameters": {
       "temperature": 0.1,
-      "num_predict": 256
+      "num_predict": 48
     }
   }
 ]

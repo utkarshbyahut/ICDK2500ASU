@@ -1,0 +1,1817 @@
+{
+  "generated_at": "2026-05-30T14:29:01.938015+00:00",
+  "results": [
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named drive_forward that takes speed and seconds, validates both inputs, and returns a simple command string that would make the robot move forward safely.",
+      "timestamp_utc": "2026-05-30T14:26:54.429562+00:00",
+      "ttft_seconds": 6.069,
+      "tokens_per_second": 20.317,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 38,
+        "max_ram_bytes": 5274144768,
+        "max_ram_gib": 4.912,
+        "avg_cpu_percent": 14.679,
+        "peak_cpu_percent": 26.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpl6hmbwkb.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpl6hmbwkb.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 7684658200,
+        "load_duration_ns": 4258789500,
+        "prompt_eval_count": 77,
+        "prompt_eval_duration_ns": 1797140800
+      },
+      "samples": [
+        {
+          "timestamp": 1780151206.6430364,
+          "used_memory_bytes": 4049473536,
+          "memory_percent": 49.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151206.8498535,
+          "used_memory_bytes": 4058836992,
+          "memory_percent": 50.0,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780151207.0509152,
+          "used_memory_bytes": 4072853504,
+          "memory_percent": 50.1,
+          "cpu_percent": 8.2
+        },
+        {
+          "timestamp": 1780151207.2511132,
+          "used_memory_bytes": 4094738432,
+          "memory_percent": 50.4,
+          "cpu_percent": 25.9
+        },
+        {
+          "timestamp": 1780151207.4517276,
+          "used_memory_bytes": 4106178560,
+          "memory_percent": 50.6,
+          "cpu_percent": 17.9
+        },
+        {
+          "timestamp": 1780151207.6663194,
+          "used_memory_bytes": 4139888640,
+          "memory_percent": 51.0,
+          "cpu_percent": 13.6
+        },
+        {
+          "timestamp": 1780151207.8670027,
+          "used_memory_bytes": 4300390400,
+          "memory_percent": 52.9,
+          "cpu_percent": 12.6
+        },
+        {
+          "timestamp": 1780151208.0681715,
+          "used_memory_bytes": 4361195520,
+          "memory_percent": 53.7,
+          "cpu_percent": 3.9
+        },
+        {
+          "timestamp": 1780151208.269304,
+          "used_memory_bytes": 4414406656,
+          "memory_percent": 54.4,
+          "cpu_percent": 5.0
+        },
+        {
+          "timestamp": 1780151208.474533,
+          "used_memory_bytes": 4394389504,
+          "memory_percent": 54.1,
+          "cpu_percent": 7.3
+        },
+        {
+          "timestamp": 1780151208.6845114,
+          "used_memory_bytes": 4479987712,
+          "memory_percent": 55.2,
+          "cpu_percent": 9.7
+        },
+        {
+          "timestamp": 1780151208.8846738,
+          "used_memory_bytes": 4547416064,
+          "memory_percent": 56.0,
+          "cpu_percent": 7.7
+        },
+        {
+          "timestamp": 1780151209.0847645,
+          "used_memory_bytes": 4616916992,
+          "memory_percent": 56.8,
+          "cpu_percent": 6.9
+        },
+        {
+          "timestamp": 1780151209.2854187,
+          "used_memory_bytes": 4680003584,
+          "memory_percent": 57.6,
+          "cpu_percent": 1.2
+        },
+        {
+          "timestamp": 1780151209.5003228,
+          "used_memory_bytes": 4763516928,
+          "memory_percent": 58.6,
+          "cpu_percent": 11.6
+        },
+        {
+          "timestamp": 1780151209.700922,
+          "used_memory_bytes": 4806955008,
+          "memory_percent": 59.2,
+          "cpu_percent": 8.3
+        },
+        {
+          "timestamp": 1780151209.901958,
+          "used_memory_bytes": 4875788288,
+          "memory_percent": 60.0,
+          "cpu_percent": 15.5
+        },
+        {
+          "timestamp": 1780151210.1032515,
+          "used_memory_bytes": 4945551360,
+          "memory_percent": 60.9,
+          "cpu_percent": 15.0
+        },
+        {
+          "timestamp": 1780151210.3181458,
+          "used_memory_bytes": 5019226112,
+          "memory_percent": 61.8,
+          "cpu_percent": 13.1
+        },
+        {
+          "timestamp": 1780151210.5200505,
+          "used_memory_bytes": 5096189952,
+          "memory_percent": 62.7,
+          "cpu_percent": 14.5
+        },
+        {
+          "timestamp": 1780151210.7329104,
+          "used_memory_bytes": 5250232320,
+          "memory_percent": 64.6,
+          "cpu_percent": 9.6
+        },
+        {
+          "timestamp": 1780151210.9365394,
+          "used_memory_bytes": 5254041600,
+          "memory_percent": 64.7,
+          "cpu_percent": 16.0
+        },
+        {
+          "timestamp": 1780151211.1379385,
+          "used_memory_bytes": 5254324224,
+          "memory_percent": 64.7,
+          "cpu_percent": 24.7
+        },
+        {
+          "timestamp": 1780151211.3523972,
+          "used_memory_bytes": 5256458240,
+          "memory_percent": 64.7,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780151211.5535853,
+          "used_memory_bytes": 5258084352,
+          "memory_percent": 64.7,
+          "cpu_percent": 18.7
+        },
+        {
+          "timestamp": 1780151211.7538934,
+          "used_memory_bytes": 5258780672,
+          "memory_percent": 64.7,
+          "cpu_percent": 15.0
+        },
+        {
+          "timestamp": 1780151211.9540884,
+          "used_memory_bytes": 5260046336,
+          "memory_percent": 64.8,
+          "cpu_percent": 26.8
+        },
+        {
+          "timestamp": 1780151212.1555932,
+          "used_memory_bytes": 5260935168,
+          "memory_percent": 64.8,
+          "cpu_percent": 20.5
+        },
+        {
+          "timestamp": 1780151212.370207,
+          "used_memory_bytes": 5260992512,
+          "memory_percent": 64.8,
+          "cpu_percent": 14.3
+        },
+        {
+          "timestamp": 1780151212.5717006,
+          "used_memory_bytes": 5262467072,
+          "memory_percent": 64.8,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780151212.772617,
+          "used_memory_bytes": 5267050496,
+          "memory_percent": 64.8,
+          "cpu_percent": 20.6
+        },
+        {
+          "timestamp": 1780151212.972888,
+          "used_memory_bytes": 5268283392,
+          "memory_percent": 64.9,
+          "cpu_percent": 14.8
+        },
+        {
+          "timestamp": 1780151213.173234,
+          "used_memory_bytes": 5269368832,
+          "memory_percent": 64.9,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780151213.3867798,
+          "used_memory_bytes": 5268545536,
+          "memory_percent": 64.9,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780151213.5887866,
+          "used_memory_bytes": 5269659648,
+          "memory_percent": 64.9,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780151213.7910798,
+          "used_memory_bytes": 5271486464,
+          "memory_percent": 64.9,
+          "cpu_percent": 19.2
+        },
+        {
+          "timestamp": 1780151214.0057487,
+          "used_memory_bytes": 5273096192,
+          "memory_percent": 64.9,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780151214.2079346,
+          "used_memory_bytes": 5274144768,
+          "memory_percent": 64.9,
+          "cpu_percent": 17.6
+        }
+      ],
+      "output": "```python\ndef drive_forward(speed, seconds):\n    # Validate input parameters\n    if not isinstance(speed, (int, float)) or not isinstance(seconds,"
+    },
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named turn_left that accepts a turn angle and returns code that would rotate the robot left in a controlled way.",
+      "timestamp_utc": "2026-05-30T14:26:57.077792+00:00",
+      "ttft_seconds": 0.943,
+      "tokens_per_second": 20.373,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 13,
+        "max_ram_bytes": 5286297600,
+        "max_ram_gib": 4.923,
+        "avg_cpu_percent": 21.277,
+        "peak_cpu_percent": 64.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp34_csny7.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp34_csny7.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2558155900,
+        "load_duration_ns": 244160300,
+        "prompt_eval_count": 71,
+        "prompt_eval_duration_ns": 690706100
+      },
+      "samples": [
+        {
+          "timestamp": 1780151214.4300241,
+          "used_memory_bytes": 5282000896,
+          "memory_percent": 65.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151214.6399243,
+          "used_memory_bytes": 5286039552,
+          "memory_percent": 65.1,
+          "cpu_percent": 64.7
+        },
+        {
+          "timestamp": 1780151214.8429065,
+          "used_memory_bytes": 5286297600,
+          "memory_percent": 65.1,
+          "cpu_percent": 23.9
+        },
+        {
+          "timestamp": 1780151215.057568,
+          "used_memory_bytes": 5276655616,
+          "memory_percent": 65.0,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780151215.257903,
+          "used_memory_bytes": 5274447872,
+          "memory_percent": 64.9,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780151215.473596,
+          "used_memory_bytes": 5270437888,
+          "memory_percent": 64.9,
+          "cpu_percent": 17.7
+        },
+        {
+          "timestamp": 1780151215.6751914,
+          "used_memory_bytes": 5269905408,
+          "memory_percent": 64.9,
+          "cpu_percent": 10.3
+        },
+        {
+          "timestamp": 1780151215.8758106,
+          "used_memory_bytes": 5269561344,
+          "memory_percent": 64.9,
+          "cpu_percent": 19.7
+        },
+        {
+          "timestamp": 1780151216.0909336,
+          "used_memory_bytes": 5272858624,
+          "memory_percent": 64.9,
+          "cpu_percent": 20.8
+        },
+        {
+          "timestamp": 1780151216.2920437,
+          "used_memory_bytes": 5272182784,
+          "memory_percent": 64.9,
+          "cpu_percent": 21.8
+        },
+        {
+          "timestamp": 1780151216.4933994,
+          "used_memory_bytes": 5270614016,
+          "memory_percent": 64.9,
+          "cpu_percent": 20.6
+        },
+        {
+          "timestamp": 1780151216.7080064,
+          "used_memory_bytes": 5269573632,
+          "memory_percent": 64.9,
+          "cpu_percent": 17.3
+        },
+        {
+          "timestamp": 1780151216.910244,
+          "used_memory_bytes": 5268905984,
+          "memory_percent": 64.9,
+          "cpu_percent": 16.9
+        }
+      ],
+      "output": "```python\ndef turn_left(turn_angle):\n    # Assuming the robot has a method to set the motor speed\n    # and a method to control the direction"
+    },
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named stop_if_obstacle_detected that takes a distance reading and returns whether the robot should stop before collision.",
+      "timestamp_utc": "2026-05-30T14:26:59.568562+00:00",
+      "ttft_seconds": 0.812,
+      "tokens_per_second": 23.058,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 5278584832,
+        "max_ram_gib": 4.916,
+        "avg_cpu_percent": 17.867,
+        "peak_cpu_percent": 27.6,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp1t8lg1nn.py\", line 3\n    \"\"\"\n    ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 7)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp1t8lg1nn.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2403584900,
+        "load_duration_ns": 224104200,
+        "prompt_eval_count": 70,
+        "prompt_eval_duration_ns": 567853500
+      },
+      "samples": [
+        {
+          "timestamp": 1780151217.0783157,
+          "used_memory_bytes": 5273989120,
+          "memory_percent": 64.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151217.2771015,
+          "used_memory_bytes": 5278584832,
+          "memory_percent": 65.0,
+          "cpu_percent": 10.6
+        },
+        {
+          "timestamp": 1780151217.4919555,
+          "used_memory_bytes": 5273759744,
+          "memory_percent": 64.9,
+          "cpu_percent": 21.9
+        },
+        {
+          "timestamp": 1780151217.6923542,
+          "used_memory_bytes": 5272748032,
+          "memory_percent": 64.9,
+          "cpu_percent": 14.9
+        },
+        {
+          "timestamp": 1780151217.893608,
+          "used_memory_bytes": 5271846912,
+          "memory_percent": 64.9,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780151218.0939608,
+          "used_memory_bytes": 5271363584,
+          "memory_percent": 64.9,
+          "cpu_percent": 20.3
+        },
+        {
+          "timestamp": 1780151218.2947433,
+          "used_memory_bytes": 5276106752,
+          "memory_percent": 65.0,
+          "cpu_percent": 20.8
+        },
+        {
+          "timestamp": 1780151218.4952755,
+          "used_memory_bytes": 5275439104,
+          "memory_percent": 65.0,
+          "cpu_percent": 22.4
+        },
+        {
+          "timestamp": 1780151218.6956952,
+          "used_memory_bytes": 5273649152,
+          "memory_percent": 64.9,
+          "cpu_percent": 22.1
+        },
+        {
+          "timestamp": 1780151218.9098685,
+          "used_memory_bytes": 5273460736,
+          "memory_percent": 64.9,
+          "cpu_percent": 16.3
+        },
+        {
+          "timestamp": 1780151219.1118844,
+          "used_memory_bytes": 5272866816,
+          "memory_percent": 64.9,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780151219.3120737,
+          "used_memory_bytes": 5272408064,
+          "memory_percent": 64.9,
+          "cpu_percent": 27.6
+        }
+      ],
+      "output": "```python\ndef stop_if_obstacle_detected(distance_reading):\n    \"\"\"\n    Determines if the robot should stop based on the distance reading.\n    \n    Args:\n   "
+    },
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named follow_line that takes left and right reflectance sensor values and returns the next motion instruction for the robot.",
+      "timestamp_utc": "2026-05-30T14:27:02.125557+00:00",
+      "ttft_seconds": 0.809,
+      "tokens_per_second": 21.098,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 13,
+        "max_ram_bytes": 5291462656,
+        "max_ram_gib": 4.928,
+        "avg_cpu_percent": 22.885,
+        "peak_cpu_percent": 42.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp2vc7nfo3.py\", line 3\n    \"\"\"\n    ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 4)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp2vc7nfo3.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2466023100,
+        "load_duration_ns": 218816700,
+        "prompt_eval_count": 71,
+        "prompt_eval_duration_ns": 570740600
+      },
+      "samples": [
+        {
+          "timestamp": 1780151219.5690455,
+          "used_memory_bytes": 5276987392,
+          "memory_percent": 65.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151219.775446,
+          "used_memory_bytes": 5280317440,
+          "memory_percent": 65.0,
+          "cpu_percent": 15.3
+        },
+        {
+          "timestamp": 1780151219.976416,
+          "used_memory_bytes": 5278859264,
+          "memory_percent": 65.0,
+          "cpu_percent": 22.0
+        },
+        {
+          "timestamp": 1780151220.1775262,
+          "used_memory_bytes": 5278121984,
+          "memory_percent": 65.0,
+          "cpu_percent": 13.3
+        },
+        {
+          "timestamp": 1780151220.3781173,
+          "used_memory_bytes": 5286727680,
+          "memory_percent": 65.1,
+          "cpu_percent": 25.2
+        },
+        {
+          "timestamp": 1780151220.58042,
+          "used_memory_bytes": 5288734720,
+          "memory_percent": 65.1,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780151220.7946434,
+          "used_memory_bytes": 5290668032,
+          "memory_percent": 65.1,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780151220.9963822,
+          "used_memory_bytes": 5291462656,
+          "memory_percent": 65.1,
+          "cpu_percent": 28.2
+        },
+        {
+          "timestamp": 1780151221.1964989,
+          "used_memory_bytes": 5284200448,
+          "memory_percent": 65.1,
+          "cpu_percent": 27.5
+        },
+        {
+          "timestamp": 1780151221.402366,
+          "used_memory_bytes": 5284626432,
+          "memory_percent": 65.1,
+          "cpu_percent": 28.5
+        },
+        {
+          "timestamp": 1780151221.6132812,
+          "used_memory_bytes": 5282897920,
+          "memory_percent": 65.0,
+          "cpu_percent": 23.3
+        },
+        {
+          "timestamp": 1780151221.8135417,
+          "used_memory_bytes": 5281755136,
+          "memory_percent": 65.0,
+          "cpu_percent": 33.6
+        },
+        {
+          "timestamp": 1780151222.0138001,
+          "used_memory_bytes": 5286879232,
+          "memory_percent": 65.1,
+          "cpu_percent": 42.5
+        }
+      ],
+      "output": "```python\ndef follow_line(left_sensor, right_sensor):\n    \"\"\"\n    Follows the line by adjusting the robot's speed based on the reflectance sensor readings"
+    },
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named update_status_led that chooses LED colors for idle, moving, and error states.",
+      "timestamp_utc": "2026-05-30T14:27:04.706542+00:00",
+      "ttft_seconds": 0.703,
+      "tokens_per_second": 20.715,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 5296492544,
+        "max_ram_gib": 4.933,
+        "avg_cpu_percent": 25.6,
+        "peak_cpu_percent": 32.3,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5uww2lma.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5uww2lma.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2432597100,
+        "load_duration_ns": 222917700,
+        "prompt_eval_count": 66,
+        "prompt_eval_duration_ns": 463642100
+      },
+      "samples": [
+        {
+          "timestamp": 1780151222.1259549,
+          "used_memory_bytes": 5294059520,
+          "memory_percent": 65.2,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151222.3345819,
+          "used_memory_bytes": 5290954752,
+          "memory_percent": 65.1,
+          "cpu_percent": 21.4
+        },
+        {
+          "timestamp": 1780151222.5458097,
+          "used_memory_bytes": 5294157824,
+          "memory_percent": 65.2,
+          "cpu_percent": 30.3
+        },
+        {
+          "timestamp": 1780151222.7468243,
+          "used_memory_bytes": 5292691456,
+          "memory_percent": 65.2,
+          "cpu_percent": 28.0
+        },
+        {
+          "timestamp": 1780151222.9476037,
+          "used_memory_bytes": 5296492544,
+          "memory_percent": 65.2,
+          "cpu_percent": 29.1
+        },
+        {
+          "timestamp": 1780151223.1622925,
+          "used_memory_bytes": 5295063040,
+          "memory_percent": 65.2,
+          "cpu_percent": 32.3
+        },
+        {
+          "timestamp": 1780151223.3645847,
+          "used_memory_bytes": 5295509504,
+          "memory_percent": 65.2,
+          "cpu_percent": 23.9
+        },
+        {
+          "timestamp": 1780151223.5654294,
+          "used_memory_bytes": 5293117440,
+          "memory_percent": 65.2,
+          "cpu_percent": 25.7
+        },
+        {
+          "timestamp": 1780151223.7655015,
+          "used_memory_bytes": 5294366720,
+          "memory_percent": 65.2,
+          "cpu_percent": 29.9
+        },
+        {
+          "timestamp": 1780151223.9655716,
+          "used_memory_bytes": 5292617728,
+          "memory_percent": 65.2,
+          "cpu_percent": 29.5
+        },
+        {
+          "timestamp": 1780151224.1822126,
+          "used_memory_bytes": 5293432832,
+          "memory_percent": 65.2,
+          "cpu_percent": 29.5
+        },
+        {
+          "timestamp": 1780151224.3977811,
+          "used_memory_bytes": 5291896832,
+          "memory_percent": 65.2,
+          "cpu_percent": 27.6
+        }
+      ],
+      "output": "```python\ndef update_status_led():\n    # Define the colors for each state\n    idle_color = (0, 0, 255)"
+    },
+    {
+      "model": "Qwen2.5-Coder-1.5B",
+      "ollama_tag": "qwen2.5-coder:1.5b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named toggle_run_mode that switches between pause and run when a button is pressed and returns the new mode.",
+      "timestamp_utc": "2026-05-30T14:27:07.492377+00:00",
+      "ttft_seconds": 0.923,
+      "tokens_per_second": 18.781,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 13,
+        "max_ram_bytes": 5305257984,
+        "max_ram_gib": 4.941,
+        "avg_cpu_percent": 28.223,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp3gr97d_7.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp3gr97d_7.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2688353000,
+        "load_duration_ns": 245857400,
+        "prompt_eval_count": 70,
+        "prompt_eval_duration_ns": 674224100
+      },
+      "samples": [
+        {
+          "timestamp": 1780151224.707083,
+          "used_memory_bytes": 5286187008,
+          "memory_percent": 65.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151224.9137304,
+          "used_memory_bytes": 5302456320,
+          "memory_percent": 65.3,
+          "cpu_percent": 11.4
+        },
+        {
+          "timestamp": 1780151225.1164832,
+          "used_memory_bytes": 5302145024,
+          "memory_percent": 65.3,
+          "cpu_percent": 29.4
+        },
+        {
+          "timestamp": 1780151225.3170562,
+          "used_memory_bytes": 5300035584,
+          "memory_percent": 65.3,
+          "cpu_percent": 19.3
+        },
+        {
+          "timestamp": 1780151225.5321155,
+          "used_memory_bytes": 5301129216,
+          "memory_percent": 65.3,
+          "cpu_percent": 26.0
+        },
+        {
+          "timestamp": 1780151225.7337458,
+          "used_memory_bytes": 5301633024,
+          "memory_percent": 65.3,
+          "cpu_percent": 27.6
+        },
+        {
+          "timestamp": 1780151225.948983,
+          "used_memory_bytes": 5305257984,
+          "memory_percent": 65.3,
+          "cpu_percent": 54.1
+        },
+        {
+          "timestamp": 1780151226.1503906,
+          "used_memory_bytes": 5304373248,
+          "memory_percent": 65.3,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780151226.365648,
+          "used_memory_bytes": 5304418304,
+          "memory_percent": 65.3,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780151226.566299,
+          "used_memory_bytes": 5303738368,
+          "memory_percent": 65.3,
+          "cpu_percent": 15.6
+        },
+        {
+          "timestamp": 1780151226.782844,
+          "used_memory_bytes": 5302628352,
+          "memory_percent": 65.3,
+          "cpu_percent": 20.2
+        },
+        {
+          "timestamp": 1780151226.998831,
+          "used_memory_bytes": 5303517184,
+          "memory_percent": 65.3,
+          "cpu_percent": 20.9
+        },
+        {
+          "timestamp": 1780151227.2009854,
+          "used_memory_bytes": 5303574528,
+          "memory_percent": 65.3,
+          "cpu_percent": 100.0
+        }
+      ],
+      "output": "```python\n# Import necessary libraries\nimport time\n\n# Define the toggle_run_mode function\ndef toggle_run_mode():\n    # Assume the button is connected to"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named drive_forward that takes speed and seconds, validates both inputs, and returns a simple command string that would make the robot move forward safely.",
+      "timestamp_utc": "2026-05-30T14:27:16.260116+00:00",
+      "ttft_seconds": 6.707,
+      "tokens_per_second": 19.256,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 42,
+        "max_ram_bytes": 6808735744,
+        "max_ram_gib": 6.341,
+        "avg_cpu_percent": 18.481,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp9nff31d0.py\", line 1\n    Sure! Here's an example of how you might implement this in python using ROS (Robot Operating System) for controlling Pololu Robots\n              ^\nSyntaxError: unterminated string literal (detected at line 1)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp9nff31d0.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 8558524400,
+        "load_duration_ns": 3078455900,
+        "prompt_eval_count": 120,
+        "prompt_eval_duration_ns": 3613239100
+      },
+      "samples": [
+        {
+          "timestamp": 1780151227.4928513,
+          "used_memory_bytes": 5308383232,
+          "memory_percent": 65.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151227.6983695,
+          "used_memory_bytes": 5306007552,
+          "memory_percent": 65.3,
+          "cpu_percent": 14.0
+        },
+        {
+          "timestamp": 1780151227.9002512,
+          "used_memory_bytes": 5389901824,
+          "memory_percent": 66.4,
+          "cpu_percent": 12.7
+        },
+        {
+          "timestamp": 1780151228.1021051,
+          "used_memory_bytes": 5417537536,
+          "memory_percent": 66.7,
+          "cpu_percent": 6.9
+        },
+        {
+          "timestamp": 1780151228.3022614,
+          "used_memory_bytes": 5470785536,
+          "memory_percent": 67.4,
+          "cpu_percent": 1.7
+        },
+        {
+          "timestamp": 1780151228.5165536,
+          "used_memory_bytes": 5539667968,
+          "memory_percent": 68.2,
+          "cpu_percent": 12.8
+        },
+        {
+          "timestamp": 1780151228.7181911,
+          "used_memory_bytes": 5603528704,
+          "memory_percent": 69.0,
+          "cpu_percent": 4.2
+        },
+        {
+          "timestamp": 1780151228.934998,
+          "used_memory_bytes": 5675425792,
+          "memory_percent": 69.9,
+          "cpu_percent": 8.9
+        },
+        {
+          "timestamp": 1780151229.1500928,
+          "used_memory_bytes": 5745242112,
+          "memory_percent": 70.7,
+          "cpu_percent": 6.8
+        },
+        {
+          "timestamp": 1780151229.3509226,
+          "used_memory_bytes": 5746368512,
+          "memory_percent": 70.7,
+          "cpu_percent": 8.2
+        },
+        {
+          "timestamp": 1780151229.551943,
+          "used_memory_bytes": 5810249728,
+          "memory_percent": 71.5,
+          "cpu_percent": 3.9
+        },
+        {
+          "timestamp": 1780151229.7519357,
+          "used_memory_bytes": 5890297856,
+          "memory_percent": 72.5,
+          "cpu_percent": 3.8
+        },
+        {
+          "timestamp": 1780151229.9528875,
+          "used_memory_bytes": 5946171392,
+          "memory_percent": 73.2,
+          "cpu_percent": 7.7
+        },
+        {
+          "timestamp": 1780151230.1692605,
+          "used_memory_bytes": 6167261184,
+          "memory_percent": 75.9,
+          "cpu_percent": 7.7
+        },
+        {
+          "timestamp": 1780151230.3703113,
+          "used_memory_bytes": 6808735744,
+          "memory_percent": 83.8,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780151230.5844812,
+          "used_memory_bytes": 6782017536,
+          "memory_percent": 83.5,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780151230.787805,
+          "used_memory_bytes": 6754328576,
+          "memory_percent": 83.2,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780151231.0020475,
+          "used_memory_bytes": 6754263040,
+          "memory_percent": 83.2,
+          "cpu_percent": 15.7
+        },
+        {
+          "timestamp": 1780151231.2023785,
+          "used_memory_bytes": 6754414592,
+          "memory_percent": 83.2,
+          "cpu_percent": 18.5
+        },
+        {
+          "timestamp": 1780151231.4037743,
+          "used_memory_bytes": 6754480128,
+          "memory_percent": 83.2,
+          "cpu_percent": 22.2
+        },
+        {
+          "timestamp": 1780151231.604911,
+          "used_memory_bytes": 6752759808,
+          "memory_percent": 83.1,
+          "cpu_percent": 44.1
+        },
+        {
+          "timestamp": 1780151231.819198,
+          "used_memory_bytes": 6752415744,
+          "memory_percent": 83.1,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780151232.0211241,
+          "used_memory_bytes": 6752456704,
+          "memory_percent": 83.1,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780151232.2223332,
+          "used_memory_bytes": 6752387072,
+          "memory_percent": 83.1,
+          "cpu_percent": 13.7
+        },
+        {
+          "timestamp": 1780151232.4375827,
+          "used_memory_bytes": 6752247808,
+          "memory_percent": 83.1,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780151232.6392963,
+          "used_memory_bytes": 6752075776,
+          "memory_percent": 83.1,
+          "cpu_percent": 22.7
+        },
+        {
+          "timestamp": 1780151232.8392127,
+          "used_memory_bytes": 6751862784,
+          "memory_percent": 83.1,
+          "cpu_percent": 18.1
+        },
+        {
+          "timestamp": 1780151233.0393548,
+          "used_memory_bytes": 6751858688,
+          "memory_percent": 83.1,
+          "cpu_percent": 18.4
+        },
+        {
+          "timestamp": 1780151233.2409701,
+          "used_memory_bytes": 6751608832,
+          "memory_percent": 83.1,
+          "cpu_percent": 17.0
+        },
+        {
+          "timestamp": 1780151233.4551086,
+          "used_memory_bytes": 6751686656,
+          "memory_percent": 83.1,
+          "cpu_percent": 48.7
+        },
+        {
+          "timestamp": 1780151233.6569722,
+          "used_memory_bytes": 6751698944,
+          "memory_percent": 83.1,
+          "cpu_percent": 17.0
+        },
+        {
+          "timestamp": 1780151233.871252,
+          "used_memory_bytes": 6751191040,
+          "memory_percent": 83.1,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780151234.0724323,
+          "used_memory_bytes": 6751166464,
+          "memory_percent": 83.1,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780151234.2743611,
+          "used_memory_bytes": 6751260672,
+          "memory_percent": 83.1,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780151234.4897704,
+          "used_memory_bytes": 6763540480,
+          "memory_percent": 83.3,
+          "cpu_percent": 35.7
+        },
+        {
+          "timestamp": 1780151234.6911347,
+          "used_memory_bytes": 6763130880,
+          "memory_percent": 83.3,
+          "cpu_percent": 18.1
+        },
+        {
+          "timestamp": 1780151234.9053912,
+          "used_memory_bytes": 6762991616,
+          "memory_percent": 83.3,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780151235.1062381,
+          "used_memory_bytes": 6762659840,
+          "memory_percent": 83.3,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780151235.3067045,
+          "used_memory_bytes": 6762655744,
+          "memory_percent": 83.3,
+          "cpu_percent": 21.2
+        },
+        {
+          "timestamp": 1780151235.5072095,
+          "used_memory_bytes": 6762450944,
+          "memory_percent": 83.3,
+          "cpu_percent": 23.9
+        },
+        {
+          "timestamp": 1780151235.7236829,
+          "used_memory_bytes": 6762196992,
+          "memory_percent": 83.3,
+          "cpu_percent": 17.5
+        },
+        {
+          "timestamp": 1780151235.9239643,
+          "used_memory_bytes": 6761472000,
+          "memory_percent": 83.2,
+          "cpu_percent": 6.9
+        }
+      ],
+      "output": "Sure! Here's an example of how you might implement this in python using ROS (Robot Operating System) for controlling Pololu Robots"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named turn_left that accepts a turn angle and returns code that would rotate the robot left in a controlled way.",
+      "timestamp_utc": "2026-05-30T14:27:19.146578+00:00",
+      "ttft_seconds": 1.091,
+      "tokens_per_second": 21.672,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 14,
+        "max_ram_bytes": 6791061504,
+        "max_ram_gib": 6.325,
+        "avg_cpu_percent": 18.071,
+        "peak_cpu_percent": 24.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp89egmw77.py\", line 1\n    Sure! Here's an example of how you might implement this using Raspberry Pi GPIO pins to control motors on your Robot Kit, which uses Polol\n              ^\nSyntaxError: unterminated string literal (detected at line 1)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp89egmw77.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2716614400,
+        "load_duration_ns": 69076100,
+        "prompt_eval_count": 113,
+        "prompt_eval_duration_ns": 1003758700
+      },
+      "samples": [
+        {
+          "timestamp": 1780151236.260675,
+          "used_memory_bytes": 6775771136,
+          "memory_percent": 83.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151236.4734604,
+          "used_memory_bytes": 6779572224,
+          "memory_percent": 83.5,
+          "cpu_percent": 17.6
+        },
+        {
+          "timestamp": 1780151236.6743884,
+          "used_memory_bytes": 6787936256,
+          "memory_percent": 83.6,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780151236.8764474,
+          "used_memory_bytes": 6791061504,
+          "memory_percent": 83.6,
+          "cpu_percent": 24.5
+        },
+        {
+          "timestamp": 1780151237.0760345,
+          "used_memory_bytes": 6787686400,
+          "memory_percent": 83.6,
+          "cpu_percent": 16.3
+        },
+        {
+          "timestamp": 1780151237.27619,
+          "used_memory_bytes": 6786195456,
+          "memory_percent": 83.6,
+          "cpu_percent": 18.2
+        },
+        {
+          "timestamp": 1780151237.4915962,
+          "used_memory_bytes": 6783889408,
+          "memory_percent": 83.5,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780151237.6944537,
+          "used_memory_bytes": 6783811584,
+          "memory_percent": 83.5,
+          "cpu_percent": 17.7
+        },
+        {
+          "timestamp": 1780151237.908968,
+          "used_memory_bytes": 6783832064,
+          "memory_percent": 83.5,
+          "cpu_percent": 14.9
+        },
+        {
+          "timestamp": 1780151238.125984,
+          "used_memory_bytes": 6783131648,
+          "memory_percent": 83.5,
+          "cpu_percent": 17.9
+        },
+        {
+          "timestamp": 1780151238.3280485,
+          "used_memory_bytes": 6782259200,
+          "memory_percent": 83.5,
+          "cpu_percent": 23.0
+        },
+        {
+          "timestamp": 1780151238.5428874,
+          "used_memory_bytes": 6787620864,
+          "memory_percent": 83.6,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780151238.7445679,
+          "used_memory_bytes": 6786842624,
+          "memory_percent": 83.6,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780151238.9448924,
+          "used_memory_bytes": 6785687552,
+          "memory_percent": 83.5,
+          "cpu_percent": 21.9
+        }
+      ],
+      "output": "Sure! Here's an example of how you might implement this using Raspberry Pi GPIO pins to control motors on your Robot Kit, which uses Polol"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named stop_if_obstacle_detected that takes a distance reading and returns whether the robot should stop before collision.",
+      "timestamp_utc": "2026-05-30T14:27:21.625990+00:00",
+      "ttft_seconds": 0.727,
+      "tokens_per_second": 21.8,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 6792581120,
+        "max_ram_gib": 6.326,
+        "avg_cpu_percent": 19.192,
+        "peak_cpu_percent": 24.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpfqhce5py.py\", line 1\n    Sure, here is an example of how you might implement this in python using Raspberry Pi GPIO pins to detect obstructions (in your case it would be something\n                     ^^^^^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpfqhce5py.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2369177300,
+        "load_duration_ns": 67908300,
+        "prompt_eval_count": 116,
+        "prompt_eval_duration_ns": 645195700
+      },
+      "samples": [
+        {
+          "timestamp": 1780151239.1470232,
+          "used_memory_bytes": 6789103616,
+          "memory_percent": 83.6,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151239.3447146,
+          "used_memory_bytes": 6789275648,
+          "memory_percent": 83.6,
+          "cpu_percent": 16.5
+        },
+        {
+          "timestamp": 1780151239.5449576,
+          "used_memory_bytes": 6792581120,
+          "memory_percent": 83.6,
+          "cpu_percent": 24.7
+        },
+        {
+          "timestamp": 1780151239.7450829,
+          "used_memory_bytes": 6789472256,
+          "memory_percent": 83.6,
+          "cpu_percent": 21.9
+        },
+        {
+          "timestamp": 1780151239.9606936,
+          "used_memory_bytes": 6787182592,
+          "memory_percent": 83.6,
+          "cpu_percent": 23.2
+        },
+        {
+          "timestamp": 1780151240.162766,
+          "used_memory_bytes": 6786498560,
+          "memory_percent": 83.6,
+          "cpu_percent": 19.2
+        },
+        {
+          "timestamp": 1780151240.377579,
+          "used_memory_bytes": 6785847296,
+          "memory_percent": 83.5,
+          "cpu_percent": 15.1
+        },
+        {
+          "timestamp": 1780151240.5778751,
+          "used_memory_bytes": 6788354048,
+          "memory_percent": 83.6,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780151240.7779343,
+          "used_memory_bytes": 6787555328,
+          "memory_percent": 83.6,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780151240.979996,
+          "used_memory_bytes": 6786904064,
+          "memory_percent": 83.6,
+          "cpu_percent": 22.0
+        },
+        {
+          "timestamp": 1780151241.1799517,
+          "used_memory_bytes": 6786498560,
+          "memory_percent": 83.6,
+          "cpu_percent": 21.4
+        },
+        {
+          "timestamp": 1780151241.380285,
+          "used_memory_bytes": 6786396160,
+          "memory_percent": 83.6,
+          "cpu_percent": 20.6
+        }
+      ],
+      "output": "Sure, here is an example of how you might implement this in python using Raspberry Pi GPIO pins to detect obstructions (in your case it would be something"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named follow_line that takes left and right reflectance sensor values and returns the next motion instruction for the robot.",
+      "timestamp_utc": "2026-05-30T14:27:24.204451+00:00",
+      "ttft_seconds": 0.774,
+      "tokens_per_second": 19.293,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 13,
+        "max_ram_bytes": 6694871040,
+        "max_ram_gib": 6.235,
+        "avg_cpu_percent": 25.638,
+        "peak_cpu_percent": 30.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpa_v6n8rt.py\", line 1\n    In order to implement this, we need some knowledge of how our sensors work in real world scenarios (e.g., distance measurements from ultrasonic or\n       ^^^^^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpa_v6n8rt.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2483866800,
+        "load_duration_ns": 69908200,
+        "prompt_eval_count": 113,
+        "prompt_eval_duration_ns": 698733600
+      },
+      "samples": [
+        {
+          "timestamp": 1780151241.6263578,
+          "used_memory_bytes": 6694871040,
+          "memory_percent": 82.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151241.8300338,
+          "used_memory_bytes": 6692507648,
+          "memory_percent": 82.4,
+          "cpu_percent": 25.7
+        },
+        {
+          "timestamp": 1780151242.0443382,
+          "used_memory_bytes": 6566387712,
+          "memory_percent": 80.8,
+          "cpu_percent": 29.6
+        },
+        {
+          "timestamp": 1780151242.2458708,
+          "used_memory_bytes": 6568972288,
+          "memory_percent": 80.9,
+          "cpu_percent": 28.6
+        },
+        {
+          "timestamp": 1780151242.4461596,
+          "used_memory_bytes": 6404890624,
+          "memory_percent": 78.9,
+          "cpu_percent": 30.1
+        },
+        {
+          "timestamp": 1780151242.6463358,
+          "used_memory_bytes": 6404485120,
+          "memory_percent": 78.9,
+          "cpu_percent": 26.0
+        },
+        {
+          "timestamp": 1780151242.8483858,
+          "used_memory_bytes": 6343348224,
+          "memory_percent": 78.1,
+          "cpu_percent": 23.3
+        },
+        {
+          "timestamp": 1780151243.0632415,
+          "used_memory_bytes": 6285836288,
+          "memory_percent": 77.4,
+          "cpu_percent": 27.6
+        },
+        {
+          "timestamp": 1780151243.265178,
+          "used_memory_bytes": 6252347392,
+          "memory_percent": 77.0,
+          "cpu_percent": 27.2
+        },
+        {
+          "timestamp": 1780151243.4653952,
+          "used_memory_bytes": 6170525696,
+          "memory_percent": 76.0,
+          "cpu_percent": 29.1
+        },
+        {
+          "timestamp": 1780151243.6804762,
+          "used_memory_bytes": 6165626880,
+          "memory_percent": 75.9,
+          "cpu_percent": 29.4
+        },
+        {
+          "timestamp": 1780151243.8816707,
+          "used_memory_bytes": 6057869312,
+          "memory_percent": 74.6,
+          "cpu_percent": 30.8
+        },
+        {
+          "timestamp": 1780151244.0974643,
+          "used_memory_bytes": 6056767488,
+          "memory_percent": 74.6,
+          "cpu_percent": 25.9
+        }
+      ],
+      "output": "In order to implement this, we need some knowledge of how our sensors work in real world scenarios (e.g., distance measurements from ultrasonic or"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named update_status_led that chooses LED colors for idle, moving, and error states.",
+      "timestamp_utc": "2026-05-30T14:27:26.592628+00:00",
+      "ttft_seconds": 0.653,
+      "tokens_per_second": 22.008,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 6001672192,
+        "max_ram_gib": 5.589,
+        "avg_cpu_percent": 19.583,
+        "peak_cpu_percent": 25.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpod2z0yhz.py\", line 1\n    Sure! Here's an example of how you might implement this in python using the RPi library to control GPIO pins on your Pi (which is essentially what\n              ^\nSyntaxError: unterminated string literal (detected at line 1)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpod2z0yhz.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2305393800,
+        "load_duration_ns": 82612500,
+        "prompt_eval_count": 110,
+        "prompt_eval_duration_ns": 564929100
+      },
+      "samples": [
+        {
+          "timestamp": 1780151244.205023,
+          "used_memory_bytes": 6001672192,
+          "memory_percent": 73.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151244.3991158,
+          "used_memory_bytes": 5963411456,
+          "memory_percent": 73.4,
+          "cpu_percent": 25.4
+        },
+        {
+          "timestamp": 1780151244.6001678,
+          "used_memory_bytes": 5913432064,
+          "memory_percent": 72.8,
+          "cpu_percent": 25.4
+        },
+        {
+          "timestamp": 1780151244.8146393,
+          "used_memory_bytes": 5863440384,
+          "memory_percent": 72.2,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780151245.0158885,
+          "used_memory_bytes": 5863038976,
+          "memory_percent": 72.2,
+          "cpu_percent": 18.7
+        },
+        {
+          "timestamp": 1780151245.2175815,
+          "used_memory_bytes": 5854195712,
+          "memory_percent": 72.1,
+          "cpu_percent": 23.6
+        },
+        {
+          "timestamp": 1780151245.432049,
+          "used_memory_bytes": 5852901376,
+          "memory_percent": 72.1,
+          "cpu_percent": 23.6
+        },
+        {
+          "timestamp": 1780151245.6320384,
+          "used_memory_bytes": 5852160000,
+          "memory_percent": 72.1,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780151245.8337085,
+          "used_memory_bytes": 5851303936,
+          "memory_percent": 72.0,
+          "cpu_percent": 18.4
+        },
+        {
+          "timestamp": 1780151246.0340395,
+          "used_memory_bytes": 5850529792,
+          "memory_percent": 72.0,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780151246.2340608,
+          "used_memory_bytes": 5853958144,
+          "memory_percent": 72.1,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780151246.4491441,
+          "used_memory_bytes": 5854527488,
+          "memory_percent": 72.1,
+          "cpu_percent": 20.0
+        }
+      ],
+      "output": "Sure! Here's an example of how you might implement this in python using the RPi library to control GPIO pins on your Pi (which is essentially what"
+    },
+    {
+      "model": "DeepSeek-Coder-1.3B",
+      "ollama_tag": "deepseek-coder:1.3b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named toggle_run_mode that switches between pause and run when a button is pressed and returns the new mode.",
+      "timestamp_utc": "2026-05-30T14:27:29.026608+00:00",
+      "ttft_seconds": 0.721,
+      "tokens_per_second": 20.184,
+      "generated_tokens": 32,
+      "resource_summary": {
+        "sample_count": 12,
+        "max_ram_bytes": 5864177664,
+        "max_ram_gib": 5.461,
+        "avg_cpu_percent": 18.15,
+        "peak_cpu_percent": 22.9,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp6wv_9twd.py\", line 1\n    Sure! Here's an example of how you might implement this in python using RPi GPIO pins for buttons, which are connected to physical inputs on your Pi\n              ^\nSyntaxError: unterminated string literal (detected at line 1)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp6wv_9twd.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2343731000,
+        "load_duration_ns": 56737300,
+        "prompt_eval_count": 113,
+        "prompt_eval_duration_ns": 656411700
+      },
+      "samples": [
+        {
+          "timestamp": 1780151246.593015,
+          "used_memory_bytes": 5851992064,
+          "memory_percent": 72.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780151246.8005543,
+          "used_memory_bytes": 5856993280,
+          "memory_percent": 72.1,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780151247.0166347,
+          "used_memory_bytes": 5861490688,
+          "memory_percent": 72.2,
+          "cpu_percent": 21.7
+        },
+        {
+          "timestamp": 1780151247.2178369,
+          "used_memory_bytes": 5864177664,
+          "memory_percent": 72.2,
+          "cpu_percent": 18.7
+        },
+        {
+          "timestamp": 1780151247.4335546,
+          "used_memory_bytes": 5864022016,
+          "memory_percent": 72.2,
+          "cpu_percent": 22.9
+        },
+        {
+          "timestamp": 1780151247.6342254,
+          "used_memory_bytes": 5863161856,
+          "memory_percent": 72.2,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780151247.8356001,
+          "used_memory_bytes": 5859774464,
+          "memory_percent": 72.1,
+          "cpu_percent": 20.7
+        },
+        {
+          "timestamp": 1780151248.0505354,
+          "used_memory_bytes": 5859098624,
+          "memory_percent": 72.1,
+          "cpu_percent": 17.4
+        },
+        {
+          "timestamp": 1780151248.2519538,
+          "used_memory_bytes": 5858263040,
+          "memory_percent": 72.1,
+          "cpu_percent": 22.6
+        },
+        {
+          "timestamp": 1780151248.46645,
+          "used_memory_bytes": 5863100416,
+          "memory_percent": 72.2,
+          "cpu_percent": 17.3
+        },
+        {
+          "timestamp": 1780151248.6677306,
+          "used_memory_bytes": 5862846464,
+          "memory_percent": 72.2,
+          "cpu_percent": 19.6
+        },
+        {
+          "timestamp": 1780151248.8689668,
+          "used_memory_bytes": 5863022592,
+          "memory_percent": 72.2,
+          "cpu_percent": 20.3
+        }
+      ],
+      "output": "Sure! Here's an example of how you might implement this in python using RPi GPIO pins for buttons, which are connected to physical inputs on your Pi"
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named drive_forward that takes speed and seconds, validates both inputs, and returns a simple command string that would make the robot move forward safely.",
+      "timestamp_utc": "2026-05-30T14:28:24.952385+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.82 GiB used at 90.2% total usage."
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named turn_left that accepts a turn angle and returns code that would rotate the robot left in a controlled way.",
+      "timestamp_utc": "2026-05-30T14:28:31.237752+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.15 GiB used at 94.6% total usage."
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named stop_if_obstacle_detected that takes a distance reading and returns whether the robot should stop before collision.",
+      "timestamp_utc": "2026-05-30T14:28:39.143988+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.34 GiB used at 97.0% total usage."
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named follow_line that takes left and right reflectance sensor values and returns the next motion instruction for the robot.",
+      "timestamp_utc": "2026-05-30T14:28:45.734777+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.40 GiB used at 97.9% total usage."
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named update_status_led that chooses LED colors for idle, moving, and error states.",
+      "timestamp_utc": "2026-05-30T14:28:53.859872+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.38 GiB used at 97.5% total usage."
+    },
+    {
+      "model": "Granite-3.0-8B-Code-IQ2",
+      "ollama_tag": "granite-code:8b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write a Python function named toggle_run_mode that switches between pause and run when a button is pressed and returns the new mode.",
+      "timestamp_utc": "2026-05-30T14:29:01.898066+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.38 GiB used at 97.6% total usage."
+    }
+  ]
+}
