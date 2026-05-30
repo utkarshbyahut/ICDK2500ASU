@@ -1,0 +1,30 @@
+[
+  {
+    "name": "StarCoder-1B TunedV3",
+    "ollama_tag": "starcoder:1b",
+    "role": "tuned_v3_accuracy_speed",
+    "context_window": 768,
+    "parameters": {
+      "temperature": 0.0,
+      "num_predict": 12,
+      "num_ctx": 768,
+      "top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.05
+    }
+  },
+  {
+    "name": "Qwen2.5-Coder-0.5B TunedV3",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "tuned_v3_accuracy_speed",
+    "context_window": 768,
+    "parameters": {
+      "temperature": 0.0,
+      "num_predict": 12,
+      "num_ctx": 768,
+      "top_k": 20,
+      "top_p": 0.9,
+      "repeat_penalty": 1.05
+    }
+  }
+]

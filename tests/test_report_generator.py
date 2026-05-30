@@ -43,6 +43,7 @@ class ReportGeneratorTests(unittest.TestCase):
             report = render_markdown(entries)
         self.assertIn("# Benchmark Report", report)
         self.assertIn("Core Assumptions and PM Cues", report)
+        self.assertIn("Abbreviations and Settings Glossary", report)
         self.assertIn("Model Ranking", report)
         self.assertIn("Model A", report)
         self.assertIn("Passes", report)

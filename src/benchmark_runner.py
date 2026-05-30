@@ -169,11 +169,23 @@ def warm_up_model(session: requests.Session, base_url: str, model: Dict[str, Any
     response.raise_for_status()
 
 
+def unload_model(session: requests.Session, base_url: str, model_tag: str) -> None:
+    # Ask Ollama to evict the model from memory so the next model is loaded fresh.
+    payload = {
+        "model": model_tag,
+        "keep_alive": 0,
+        "stream": False,
+    }
+    response = session.post(f"{base_url.rstrip('/')}/api/generate", json=payload, timeout=(10, 60))
+    response.raise_for_status()
+
+
 def benchmark(
     models: Iterable[Dict[str, Any]],
     test_cases: Iterable[Dict[str, Any]],
     base_url: str,
     warmup_each_model: bool = True,
+    unload_after_model: bool = True,
 ) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     session = requests.Session()
@@ -217,6 +229,12 @@ def benchmark(
                         "error": str(exc),
                     }
                 )
+        if unload_after_model:
+            try:
+                unload_model(session, base_url, model["ollama_tag"])
+            except requests.RequestException:
+                # Ignore unload issues so one model does not block the full benchmark.
+                pass
     return results
 
 
@@ -239,6 +257,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--results", type=Path, default=repo_root / "results" / "benchmark_results.json")
     parser.add_argument("--ollama-url", default="http://127.0.0.1:11434")
     parser.add_argument("--no-warmup", action="store_true", help="Disable per-model warmup before measured runs.")
+    parser.add_argument(
+        "--keep-models-loaded",
+        action="store_true",
+        help="Keep models resident between model groups instead of unloading after each model.",
+    )
     return parser.parse_args()
 
 
@@ -246,7 +269,13 @@ def main() -> int:
     args = parse_args()
     models = load_json(args.models)
     test_cases = load_json(args.test_cases)
-    results = benchmark(models, test_cases, args.ollama_url, warmup_each_model=not args.no_warmup)
+    results = benchmark(
+        models,
+        test_cases,
+        args.ollama_url,
+        warmup_each_model=not args.no_warmup,
+        unload_after_model=not args.keep_models_loaded,
+    )
     write_results(results, args.results)
     print(f"Saved benchmark results to {args.results}")
     return 0

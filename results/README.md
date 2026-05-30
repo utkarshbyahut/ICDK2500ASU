@@ -1,5 +1,22 @@
 # Decision Summary
 
+## Abbreviations and Settings Glossary
+
+- TTFT: Time To First Token. Lower means faster visible response.
+- Tokens/s (TPS): Generation throughput after first token. Higher means faster output.
+- Peak RAM (GiB): Highest memory observed during run.
+- Passes: Raw syntax-pass count in passed/total format.
+- Compilation Pass %: Percentage of runs that passed Python syntax compile.
+- Overfit Pass %: Pass percentage on template-like/overfit-tagged tasks.
+- Efficiency Score: Normalized blend of TTFT, TPS, and RAM.
+- Overall Score: 50% Efficiency Score + 50% Compilation Pass %.
+- Temperature: Randomness control for token sampling (lower is more deterministic).
+- num_predict: Max tokens allowed in model output.
+- num_ctx: Context window size (prompt + generation budget).
+- top_k/top_p: Sampling filters controlling token-choice breadth.
+- repeat_penalty: Penalty to reduce repetitive token loops.
+- Warm-up: Small pre-call to reduce cold-start latency variance.
+
 ## Latest Benchmark Status
 
 | Item | Result |
@@ -93,6 +110,67 @@
 | TinyLlama-1.1B Fastlane | 3 | 0/3 | 1.242 | 34.803 | 5.868 | 0 |
 | Gemma3-1B Fastlane | 3 | 0/3 | 1.605 | 22.015 | 6.449 | 0 |
 | Phi Fastlane | 3 | 0/3 | 2.806 | 11.713 | 6.597 | 0 |
+
+## Sequential One-by-One Inference Pass (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Objective | Match real usage by loading one model, running its tests, unloading it, then moving to next model |
+| Runner behavior | Default now unloads each model after its test group |
+| New opt-out switch | `--keep-models-loaded` |
+| Sequential result file | results/benchmark_results_all_usecase_fastlane_sequential_20260530.json |
+
+### Sequential Pass Metrics (Essential3)
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---:|---:|---:|---:|---:|---:|
+| StarCoder-1B Fastlane | 3 | 3/3 | 1.249 | 28.762 | 5.029 | 0 |
+| Qwen2.5-Coder-0.5B Fastlane | 3 | 1/3 | 0.630 | 46.756 | 4.769 | 0 |
+| TinyLlama-1.1B Fastlane | 3 | 0/3 | 1.196 | 32.503 | 4.916 | 0 |
+| Gemma3-1B Fastlane | 3 | 0/3 | 1.574 | 22.354 | 5.401 | 0 |
+| Phi Fastlane | 3 | 0/3 | 2.786 | 11.633 | 5.925 | 0 |
+
+## Additional Optimization Pass (TunedV2, 2026-05-30)
+
+| Item | Value |
+|---|---|
+| Goal | Further increase both pass-rate and speed for top deployment candidates |
+| Models tuned | StarCoder-1B and Qwen2.5-Coder-0.5B |
+| Prompt set | `config/test_cases_usecase_essential3_compact.json` (shorter + stricter) |
+| Model config | `config/models_top2_tuned_v2.json` |
+| Result file | results/benchmark_results_top2_tuned_v2_20260530.json |
+
+### TunedV2 Outcomes vs Sequential Baseline
+
+| Model | Baseline Passes | TunedV2 Passes | Baseline TTFT (s) | TunedV2 TTFT (s) | Baseline Tokens/s | TunedV2 Tokens/s | Baseline RAM (GiB) | TunedV2 RAM (GiB) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| StarCoder-1B | 3/3 | 3/3 | 1.249 | 0.796 | 28.762 | 32.943 | 5.029 | 5.071 |
+| Qwen2.5-Coder-0.5B | 1/3 | 2/3 | 0.630 | 0.516 | 46.756 | 96.689 | 4.769 | 4.786 |
+
+### TunedV2 Recommendation
+
+1. For best accuracy under this essential task set, keep StarCoder-1B (stable 3/3 with faster TTFT than baseline).
+2. For best speed and improved accuracy trade-off, Qwen2.5-Coder-0.5B TunedV2 is now substantially better than its earlier sequential profile.
+
+## TunedV3 Trial Outcome (2026-05-30)
+
+| Item | Value |
+|---|---|
+| TunedV3 model config | `config/models_top2_tuned_v3.json` |
+| TunedV3 prompt set | `config/test_cases_usecase_essential3_tuned_v3.json` |
+| Result file | results/benchmark_results_top2_tuned_v3_20260530.json |
+| Verdict | Rejected: accuracy and speed both regressed vs TunedV2 |
+
+### TunedV2 vs TunedV3
+
+| Model | TunedV2 Passes | TunedV3 Passes | TunedV2 TTFT (s) | TunedV3 TTFT (s) | TunedV2 Tokens/s | TunedV3 Tokens/s | TunedV2 RAM (GiB) | TunedV3 RAM (GiB) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| StarCoder-1B | 3/3 | 1/3 | 0.796 | 1.667 | 32.943 | 30.274 | 5.071 | 4.924 |
+| Qwen2.5-Coder-0.5B | 2/3 | 0/3 | 0.516 | 0.856 | 96.689 | 58.442 | 4.786 | 4.624 |
+
+### Current Best Setting
+
+1. Keep TunedV2 as the production candidate profile for both accuracy and speed.
 
 ### Rerun Metrics
 

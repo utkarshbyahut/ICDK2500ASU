@@ -1,0 +1,557 @@
+{
+  "generated_at": "2026-05-30T16:40:58.457059+00:00",
+  "results": [
+    {
+      "model": "StarCoder-1B TunedV3",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "drive-forward-v3",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef drive_forward(speed, seconds):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if speed <= 0 or seconds <= 0: return 'invalid'\n- else: return f'forward:{speed}:{seconds}'",
+      "timestamp_utc": "2026-05-30T16:40:48.859578+00:00",
+      "ttft_seconds": 1.727,
+      "tokens_per_second": 29.464,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 11,
+        "max_ram_bytes": 5301665792,
+        "max_ram_gib": 4.938,
+        "avg_cpu_percent": 18.064,
+        "peak_cpu_percent": 26.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdscmqrg3.py\", line 3\n    Examples:\n             ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdscmqrg3.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 2193628100,
+        "load_duration_ns": 99791600,
+        "prompt_eval_count": 93,
+        "prompt_eval_duration_ns": 1614756800
+      },
+      "samples": [
+        {
+          "timestamp": 1780159246.5773804,
+          "used_memory_bytes": 5291294720,
+          "memory_percent": 65.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159246.7790782,
+          "used_memory_bytes": 5301665792,
+          "memory_percent": 65.3,
+          "cpu_percent": 20.9
+        },
+        {
+          "timestamp": 1780159246.9945447,
+          "used_memory_bytes": 5283553280,
+          "memory_percent": 65.1,
+          "cpu_percent": 19.7
+        },
+        {
+          "timestamp": 1780159247.1950002,
+          "used_memory_bytes": 5283024896,
+          "memory_percent": 65.0,
+          "cpu_percent": 20.1
+        },
+        {
+          "timestamp": 1780159247.397989,
+          "used_memory_bytes": 5282992128,
+          "memory_percent": 65.0,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780159247.6114876,
+          "used_memory_bytes": 5282385920,
+          "memory_percent": 65.0,
+          "cpu_percent": 13.8
+        },
+        {
+          "timestamp": 1780159247.8118722,
+          "used_memory_bytes": 5282357248,
+          "memory_percent": 65.0,
+          "cpu_percent": 19.3
+        },
+        {
+          "timestamp": 1780159248.0150647,
+          "used_memory_bytes": 5283028992,
+          "memory_percent": 65.0,
+          "cpu_percent": 18.8
+        },
+        {
+          "timestamp": 1780159248.228399,
+          "used_memory_bytes": 5282426880,
+          "memory_percent": 65.0,
+          "cpu_percent": 20.9
+        },
+        {
+          "timestamp": 1780159248.430022,
+          "used_memory_bytes": 5283823616,
+          "memory_percent": 65.1,
+          "cpu_percent": 19.9
+        },
+        {
+          "timestamp": 1780159248.6468368,
+          "used_memory_bytes": 5282705408,
+          "memory_percent": 65.0,
+          "cpu_percent": 26.7
+        }
+      ],
+      "output": "\n\nExamples:\n>>> drive_forward(10"
+    },
+    {
+      "model": "StarCoder-1B TunedV3",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "obstacle-stop-v3",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if distance_cm is None: return True\n- if distance_cm <= 15: return True\n- else: return False",
+      "timestamp_utc": "2026-05-30T16:40:50.884044+00:00",
+      "ttft_seconds": 1.508,
+      "tokens_per_second": 32.893,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 10,
+        "max_ram_bytes": 5296209920,
+        "max_ram_gib": 4.932,
+        "avg_cpu_percent": 17.97,
+        "peak_cpu_percent": 29.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpcef0vhef.py\", line 3\n    def stop_\n             ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpcef0vhef.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1948976800,
+        "load_duration_ns": 90800700,
+        "prompt_eval_count": 96,
+        "prompt_eval_duration_ns": 1411939900
+      },
+      "samples": [
+        {
+          "timestamp": 1780159248.8599138,
+          "used_memory_bytes": 5296209920,
+          "memory_percent": 65.2,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159249.0484416,
+          "used_memory_bytes": 5279567872,
+          "memory_percent": 65.0,
+          "cpu_percent": 20.0
+        },
+        {
+          "timestamp": 1780159249.2491543,
+          "used_memory_bytes": 5279174656,
+          "memory_percent": 65.0,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780159249.463401,
+          "used_memory_bytes": 5278801920,
+          "memory_percent": 65.0,
+          "cpu_percent": 20.3
+        },
+        {
+          "timestamp": 1780159249.6660125,
+          "used_memory_bytes": 5275648000,
+          "memory_percent": 65.0,
+          "cpu_percent": 17.2
+        },
+        {
+          "timestamp": 1780159249.8812926,
+          "used_memory_bytes": 5271756800,
+          "memory_percent": 64.9,
+          "cpu_percent": 19.3
+        },
+        {
+          "timestamp": 1780159250.0813222,
+          "used_memory_bytes": 5278105600,
+          "memory_percent": 65.0,
+          "cpu_percent": 16.1
+        },
+        {
+          "timestamp": 1780159250.2824757,
+          "used_memory_bytes": 5277208576,
+          "memory_percent": 65.0,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780159250.4848669,
+          "used_memory_bytes": 5261361152,
+          "memory_percent": 64.8,
+          "cpu_percent": 29.7
+        },
+        {
+          "timestamp": 1780159250.6986775,
+          "used_memory_bytes": 5260476416,
+          "memory_percent": 64.8,
+          "cpu_percent": 18.3
+        }
+      ],
+      "output": "\n\n\"\"\"\n\nimport math\n\ndef stop_"
+    },
+    {
+      "model": "StarCoder-1B TunedV3",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "button-mode-v3",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if button_pressed is True: switch 'run' <-> 'pause'\n- if button_pressed is False: keep current_mode\n- return only 'run' or 'pause'",
+      "timestamp_utc": "2026-05-30T16:40:53.175106+00:00",
+      "ttft_seconds": 1.765,
+      "tokens_per_second": 28.466,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 11,
+        "max_ram_bytes": 5261983744,
+        "max_ram_gib": 4.901,
+        "avg_cpu_percent": 19.045,
+        "peak_cpu_percent": 27.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpxay7117n.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 2215364800,
+        "load_duration_ns": 93600000,
+        "prompt_eval_count": 113,
+        "prompt_eval_duration_ns": 1660700100
+      },
+      "samples": [
+        {
+          "timestamp": 1780159250.8844907,
+          "used_memory_bytes": 5256609792,
+          "memory_percent": 64.7,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159251.0840862,
+          "used_memory_bytes": 5257699328,
+          "memory_percent": 64.7,
+          "cpu_percent": 14.7
+        },
+        {
+          "timestamp": 1780159251.286699,
+          "used_memory_bytes": 5258416128,
+          "memory_percent": 64.7,
+          "cpu_percent": 19.9
+        },
+        {
+          "timestamp": 1780159251.4984453,
+          "used_memory_bytes": 5258514432,
+          "memory_percent": 64.7,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780159251.7022076,
+          "used_memory_bytes": 5250805760,
+          "memory_percent": 64.6,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780159251.9156656,
+          "used_memory_bytes": 5246726144,
+          "memory_percent": 64.6,
+          "cpu_percent": 20.0
+        },
+        {
+          "timestamp": 1780159252.1186507,
+          "used_memory_bytes": 5261983744,
+          "memory_percent": 64.8,
+          "cpu_percent": 19.8
+        },
+        {
+          "timestamp": 1780159252.3318048,
+          "used_memory_bytes": 5260804096,
+          "memory_percent": 64.8,
+          "cpu_percent": 22.5
+        },
+        {
+          "timestamp": 1780159252.532501,
+          "used_memory_bytes": 5259825152,
+          "memory_percent": 64.8,
+          "cpu_percent": 23.6
+        },
+        {
+          "timestamp": 1780159252.7349417,
+          "used_memory_bytes": 5259325440,
+          "memory_percent": 64.8,
+          "cpu_percent": 24.9
+        },
+        {
+          "timestamp": 1780159252.949758,
+          "used_memory_bytes": 5256966144,
+          "memory_percent": 64.7,
+          "cpu_percent": 27.7
+        }
+      ],
+      "output": "\n\n\"\"\"\n\nimport time\nfrom typing import List"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV3",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "drive-forward-v3",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef drive_forward(speed, seconds):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if speed <= 0 or seconds <= 0: return 'invalid'\n- else: return f'forward:{speed}:{seconds}'",
+      "timestamp_utc": "2026-05-30T16:40:56.058130+00:00",
+      "ttft_seconds": 0.871,
+      "tokens_per_second": 59.751,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 4968513536,
+        "max_ram_gib": 4.627,
+        "avg_cpu_percent": 20.55,
+        "peak_cpu_percent": 26.9,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpns6lgmxr.py\", line 2\n    if\n      ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpns6lgmxr.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1145687900,
+        "load_duration_ns": 223766100,
+        "prompt_eval_count": 110,
+        "prompt_eval_duration_ns": 636518000
+      },
+      "samples": [
+        {
+          "timestamp": 1780159254.8371313,
+          "used_memory_bytes": 4955254784,
+          "memory_percent": 61.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159255.0365772,
+          "used_memory_bytes": 4963016704,
+          "memory_percent": 61.1,
+          "cpu_percent": 23.6
+        },
+        {
+          "timestamp": 1780159255.251468,
+          "used_memory_bytes": 4962279424,
+          "memory_percent": 61.1,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780159255.4515016,
+          "used_memory_bytes": 4963790848,
+          "memory_percent": 61.1,
+          "cpu_percent": 26.6
+        },
+        {
+          "timestamp": 1780159255.6516423,
+          "used_memory_bytes": 4964368384,
+          "memory_percent": 61.1,
+          "cpu_percent": 25.8
+        },
+        {
+          "timestamp": 1780159255.8530495,
+          "used_memory_bytes": 4968513536,
+          "memory_percent": 61.2,
+          "cpu_percent": 26.9
+        }
+      ],
+      "output": "```python\ndef drive_forward(speed, seconds):\n    if"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV3",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "obstacle-stop-v3",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if distance_cm is None: return True\n- if distance_cm <= 15: return True\n- else: return False",
+      "timestamp_utc": "2026-05-30T16:40:57.219858+00:00",
+      "ttft_seconds": 0.817,
+      "tokens_per_second": 60.773,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 4960792576,
+        "max_ram_gib": 4.62,
+        "avg_cpu_percent": 20.55,
+        "peak_cpu_percent": 28.3,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "Sorry: IndentationError: expected an indented block after function definition on line 1 (tmpzpm0uc4_.py, line 1)",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpzpm0uc4_.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1093867100,
+        "load_duration_ns": 226760500,
+        "prompt_eval_count": 111,
+        "prompt_eval_duration_ns": 581951600
+      },
+      "samples": [
+        {
+          "timestamp": 1780159256.0584726,
+          "used_memory_bytes": 4958920704,
+          "memory_percent": 61.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159256.2699628,
+          "used_memory_bytes": 4959244288,
+          "memory_percent": 61.1,
+          "cpu_percent": 22.4
+        },
+        {
+          "timestamp": 1780159256.471496,
+          "used_memory_bytes": 4954873856,
+          "memory_percent": 61.0,
+          "cpu_percent": 21.5
+        },
+        {
+          "timestamp": 1780159256.6858678,
+          "used_memory_bytes": 4955312128,
+          "memory_percent": 61.0,
+          "cpu_percent": 26.2
+        },
+        {
+          "timestamp": 1780159256.8883667,
+          "used_memory_bytes": 4956848128,
+          "memory_percent": 61.0,
+          "cpu_percent": 28.3
+        },
+        {
+          "timestamp": 1780159257.088722,
+          "used_memory_bytes": 4960792576,
+          "memory_percent": 61.1,
+          "cpu_percent": 24.9
+        }
+      ],
+      "output": "```python\ndef stop_if_obstacle_detected(distance_cm):\n"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV3",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "button-mode-v3",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if button_pressed is True: switch 'run' <-> 'pause'\n- if button_pressed is False: keep current_mode\n- return only 'run' or 'pause'",
+      "timestamp_utc": "2026-05-30T16:40:58.448948+00:00",
+      "ttft_seconds": 0.881,
+      "tokens_per_second": 54.801,
+      "generated_tokens": 12,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 4965158912,
+        "max_ram_gib": 4.624,
+        "avg_cpu_percent": 21.417,
+        "peak_cpu_percent": 30.6,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpketyf58k.py\", line 1\n    def toggle_run_mode(current_mode, button_pressed\n                       ^\nSyntaxError: '(' was never closed",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpketyf58k.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1156954900,
+        "load_duration_ns": 228208800,
+        "prompt_eval_count": 121,
+        "prompt_eval_duration_ns": 635252600
+      },
+      "samples": [
+        {
+          "timestamp": 1780159257.2203119,
+          "used_memory_bytes": 4961972224,
+          "memory_percent": 61.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159257.4208367,
+          "used_memory_bytes": 4963110912,
+          "memory_percent": 61.1,
+          "cpu_percent": 24.2
+        },
+        {
+          "timestamp": 1780159257.6229277,
+          "used_memory_bytes": 4962271232,
+          "memory_percent": 61.1,
+          "cpu_percent": 24.2
+        },
+        {
+          "timestamp": 1780159257.8368397,
+          "used_memory_bytes": 4959117312,
+          "memory_percent": 61.1,
+          "cpu_percent": 30.6
+        },
+        {
+          "timestamp": 1780159258.0370672,
+          "used_memory_bytes": 4965158912,
+          "memory_percent": 61.1,
+          "cpu_percent": 29.4
+        },
+        {
+          "timestamp": 1780159258.238211,
+          "used_memory_bytes": 4964204544,
+          "memory_percent": 61.1,
+          "cpu_percent": 20.1
+        }
+      ],
+      "output": "```python\ndef toggle_run_mode(current_mode, button_pressed"
+    }
+  ]
+}

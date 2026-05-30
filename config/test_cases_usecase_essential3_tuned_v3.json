@@ -1,0 +1,29 @@
+[
+  {
+    "id": "drive-forward-v3",
+    "scenario": "movement-basics",
+    "skill_focus": "motor control",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef drive_forward(speed, seconds):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if speed <= 0 or seconds <= 0: return 'invalid'\n- else: return f'forward:{speed}:{seconds}'",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "obstacle-stop-v3",
+    "scenario": "sensor-response",
+    "skill_focus": "ultrasonic sensing",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if distance_cm is None: return True\n- if distance_cm <= 15: return True\n- else: return False",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "button-mode-v3",
+    "scenario": "student-feedback",
+    "skill_focus": "human interaction",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output ONLY Python code. Define exactly one function with this signature:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nHard rules:\n- no markdown\n- no imports\n- no classes\n- no extra functions\n- no print\n- no main block\nBehavior:\n- if button_pressed is True: switch 'run' <-> 'pause'\n- if button_pressed is False: keep current_mode\n- return only 'run' or 'pause'",
+    "validation_command": "python -m py_compile {file_path}"
+  }
+]

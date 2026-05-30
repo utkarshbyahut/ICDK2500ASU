@@ -1,0 +1,29 @@
+[
+  {
+    "id": "drive-forward-compact",
+    "scenario": "movement-basics",
+    "skill_focus": "motor control",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output Python code only. Define exactly:\n\ndef drive_forward(speed, seconds):\n    ...\n\nNo imports, classes, markdown, or extra text. Validate inputs and return one command string.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "obstacle-stop-compact",
+    "scenario": "sensor-response",
+    "skill_focus": "ultrasonic sensing",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output Python code only. Define exactly:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nNo imports, classes, markdown, or extra text. Return True if robot should stop, else False.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "button-mode-compact",
+    "scenario": "student-feedback",
+    "skill_focus": "human interaction",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Output Python code only. Define exactly:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nNo imports, classes, markdown, or extra text. Return only 'run' or 'pause'.",
+    "validation_command": "python -m py_compile {file_path}"
+  }
+]

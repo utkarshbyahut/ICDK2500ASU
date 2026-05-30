@@ -1,0 +1,425 @@
+{
+  "generated_at": "2026-05-30T16:39:21.225565+00:00",
+  "results": [
+    {
+      "model": "StarCoder-1B TunedV2",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "drive-forward-compact",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef drive_forward(speed, seconds):\n    ...\n\nNo imports, classes, markdown, or extra text. Validate inputs and return one command string.",
+      "timestamp_utc": "2026-05-30T16:39:14.020744+00:00",
+      "ttft_seconds": 0.807,
+      "tokens_per_second": 28.417,
+      "generated_tokens": 10,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 5454757888,
+        "max_ram_gib": 5.08,
+        "avg_cpu_percent": 14.683,
+        "peak_cpu_percent": 19.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp9kzt__x6.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 1168931600,
+        "load_duration_ns": 101324600,
+        "prompt_eval_count": 42,
+        "prompt_eval_duration_ns": 700143600
+      },
+      "samples": [
+        {
+          "timestamp": 1780159152.777036,
+          "used_memory_bytes": 5441167360,
+          "memory_percent": 67.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159152.984846,
+          "used_memory_bytes": 5453287424,
+          "memory_percent": 67.1,
+          "cpu_percent": 16.0
+        },
+        {
+          "timestamp": 1780159153.1853154,
+          "used_memory_bytes": 5454757888,
+          "memory_percent": 67.2,
+          "cpu_percent": 18.1
+        },
+        {
+          "timestamp": 1780159153.385937,
+          "used_memory_bytes": 5438988288,
+          "memory_percent": 67.0,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780159153.5867295,
+          "used_memory_bytes": 5439385600,
+          "memory_percent": 67.0,
+          "cpu_percent": 18.7
+        },
+        {
+          "timestamp": 1780159153.8014605,
+          "used_memory_bytes": 5435273216,
+          "memory_percent": 66.9,
+          "cpu_percent": 16.3
+        }
+      ],
+      "output": "\n\n## 2. Write a function that"
+    },
+    {
+      "model": "StarCoder-1B TunedV2",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "obstacle-stop-compact",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nNo imports, classes, markdown, or extra text. Return True if robot should stop, else False.",
+      "timestamp_utc": "2026-05-30T16:39:15.205642+00:00",
+      "ttft_seconds": 0.761,
+      "tokens_per_second": 36.146,
+      "generated_tokens": 10,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 5443166208,
+        "max_ram_gib": 5.069,
+        "avg_cpu_percent": 15.367,
+        "peak_cpu_percent": 20.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp6on87hfi.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 1110480600,
+        "load_duration_ns": 94530000,
+        "prompt_eval_count": 49,
+        "prompt_eval_duration_ns": 650014200
+      },
+      "samples": [
+        {
+          "timestamp": 1780159154.0211723,
+          "used_memory_bytes": 5439987712,
+          "memory_percent": 67.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159154.2339368,
+          "used_memory_bytes": 5443166208,
+          "memory_percent": 67.0,
+          "cpu_percent": 14.9
+        },
+        {
+          "timestamp": 1780159154.4345803,
+          "used_memory_bytes": 5434777600,
+          "memory_percent": 66.9,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780159154.6353908,
+          "used_memory_bytes": 5433229312,
+          "memory_percent": 66.9,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780159154.8376908,
+          "used_memory_bytes": 5430312960,
+          "memory_percent": 66.9,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780159155.0372515,
+          "used_memory_bytes": 5426331648,
+          "memory_percent": 66.8,
+          "cpu_percent": 20.4
+        }
+      ],
+      "output": "\n\n### 3.2.1."
+    },
+    {
+      "model": "StarCoder-1B TunedV2",
+      "ollama_tag": "starcoder:1b",
+      "test_case": "button-mode-compact",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nNo imports, classes, markdown, or extra text. Return only 'run' or 'pause'.",
+      "timestamp_utc": "2026-05-30T16:39:16.448490+00:00",
+      "ttft_seconds": 0.821,
+      "tokens_per_second": 34.265,
+      "generated_tokens": 10,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 5437657088,
+        "max_ram_gib": 5.064,
+        "avg_cpu_percent": 15.217,
+        "peak_cpu_percent": 20.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpaacahbfy.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 1167649600,
+        "load_duration_ns": 100926000,
+        "prompt_eval_count": 51,
+        "prompt_eval_duration_ns": 710844500
+      },
+      "samples": [
+        {
+          "timestamp": 1780159155.2060392,
+          "used_memory_bytes": 5426790400,
+          "memory_percent": 66.8,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159155.4047103,
+          "used_memory_bytes": 5429899264,
+          "memory_percent": 66.9,
+          "cpu_percent": 16.5
+        },
+        {
+          "timestamp": 1780159155.6189878,
+          "used_memory_bytes": 5437657088,
+          "memory_percent": 66.9,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780159155.8347874,
+          "used_memory_bytes": 5437112320,
+          "memory_percent": 66.9,
+          "cpu_percent": 19.2
+        },
+        {
+          "timestamp": 1780159156.0354042,
+          "used_memory_bytes": 5436907520,
+          "memory_percent": 66.9,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780159156.2361274,
+          "used_memory_bytes": 5427761152,
+          "memory_percent": 66.8,
+          "cpu_percent": 16.2
+        }
+      ],
+      "output": "\n\n## How to run the tests?\n"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV2",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "drive-forward-compact",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef drive_forward(speed, seconds):\n    ...\n\nNo imports, classes, markdown, or extra text. Validate inputs and return one command string.",
+      "timestamp_utc": "2026-05-30T16:39:20.047609+00:00",
+      "ttft_seconds": 0.55,
+      "tokens_per_second": 70.314,
+      "generated_tokens": 10,
+      "resource_summary": {
+        "sample_count": 4,
+        "max_ram_bytes": 5130670080,
+        "max_ram_gib": 4.778,
+        "avg_cpu_percent": 11.925,
+        "peak_cpu_percent": 20.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpxwjdz6da.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpxwjdz6da.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 763683400,
+        "load_duration_ns": 231599800,
+        "prompt_eval_count": 65,
+        "prompt_eval_duration_ns": 312722600
+      },
+      "samples": [
+        {
+          "timestamp": 1780159159.20868,
+          "used_memory_bytes": 5130260480,
+          "memory_percent": 63.2,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159159.4216835,
+          "used_memory_bytes": 5130670080,
+          "memory_percent": 63.2,
+          "cpu_percent": 10.1
+        },
+        {
+          "timestamp": 1780159159.6219049,
+          "used_memory_bytes": 5128716288,
+          "memory_percent": 63.1,
+          "cpu_percent": 20.5
+        },
+        {
+          "timestamp": 1780159159.8229997,
+          "used_memory_bytes": 5128761344,
+          "memory_percent": 63.1,
+          "cpu_percent": 17.1
+        }
+      ],
+      "output": "```python\ndrive_forward(10, "
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV2",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "obstacle-stop-compact",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nNo imports, classes, markdown, or extra text. Return True if robot should stop, else False.",
+      "timestamp_utc": "2026-05-30T16:39:20.634945+00:00",
+      "ttft_seconds": 0.498,
+      "tokens_per_second": 132.11,
+      "generated_tokens": 2,
+      "resource_summary": {
+        "sample_count": 3,
+        "max_ram_bytes": 5140385792,
+        "max_ram_gib": 4.787,
+        "avg_cpu_percent": 10.2,
+        "peak_cpu_percent": 18.1,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp8xppr17_.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 529743300,
+        "load_duration_ns": 241467500,
+        "prompt_eval_count": 69,
+        "prompt_eval_duration_ns": 257659000
+      },
+      "samples": [
+        {
+          "timestamp": 1780159160.047938,
+          "used_memory_bytes": 5140385792,
+          "memory_percent": 63.3,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159160.2566538,
+          "used_memory_bytes": 5139742720,
+          "memory_percent": 63.3,
+          "cpu_percent": 12.5
+        },
+        {
+          "timestamp": 1780159160.4583268,
+          "used_memory_bytes": 5139185664,
+          "memory_percent": 63.3,
+          "cpu_percent": 18.1
+        }
+      ],
+      "output": "True"
+    },
+    {
+      "model": "Qwen2.5-Coder-0.5B TunedV2",
+      "ollama_tag": "qwen2.5-coder:0.5b",
+      "test_case": "button-mode-compact",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "Output Python code only. Define exactly:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nNo imports, classes, markdown, or extra text. Return only 'run' or 'pause'.",
+      "timestamp_utc": "2026-05-30T16:39:21.217949+00:00",
+      "ttft_seconds": 0.5,
+      "tokens_per_second": 87.642,
+      "generated_tokens": 2,
+      "resource_summary": {
+        "sample_count": 3,
+        "max_ram_bytes": 5146107904,
+        "max_ram_gib": 4.793,
+        "avg_cpu_percent": 10.167,
+        "peak_cpu_percent": 19.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "passed",
+        "passed": true,
+        "details": "Validation completed without output.",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpp4gnk31m.py"
+        ],
+        "returncode": 0
+      },
+      "response_metadata": {
+        "total_duration_ns": 521756900,
+        "load_duration_ns": 238607800,
+        "prompt_eval_count": 69,
+        "prompt_eval_duration_ns": 247021300
+      },
+      "samples": [
+        {
+          "timestamp": 1780159160.635333,
+          "used_memory_bytes": 5145845760,
+          "memory_percent": 63.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780159160.8406882,
+          "used_memory_bytes": 5146107904,
+          "memory_percent": 63.4,
+          "cpu_percent": 11.5
+        },
+        {
+          "timestamp": 1780159161.0415978,
+          "used_memory_bytes": 5144551424,
+          "memory_percent": 63.3,
+          "cpu_percent": 19.0
+        }
+      ],
+      "output": "run"
+    }
+  ]
+}
