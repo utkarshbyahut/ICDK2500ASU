@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Qwen2.5-Coder-0.5B",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "ultra_light",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 48
+    }
+  },
+  {
+    "name": "StarCoder-1B",
+    "ollama_tag": "starcoder:1b",
+    "role": "tiny_code_candidate",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 48
+    }
+  },
+  {
+    "name": "TinyLlama-1.1B",
+    "ollama_tag": "tinyllama:1.1b",
+    "role": "tiny_general_candidate",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 48
+    }
+  },
+  {
+    "name": "DeepSeek-Coder-1.3B",
+    "ollama_tag": "deepseek-coder:1.3b",
+    "role": "small_code_baseline",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 48
+    }
+  },
+  {
+    "name": "Qwen2.5-Coder-1.5B",
+    "ollama_tag": "qwen2.5-coder:1.5b",
+    "role": "small_code_baseline",
+    "context_window": 4096,
+    "parameters": {
+      "temperature": 0.2,
+      "num_predict": 48
+    }
+  }
+]

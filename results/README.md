@@ -5,10 +5,20 @@
 | Item | Result |
 |---|---:|
 | Repository unit tests | 12 passed / 12 total |
-| Live benchmark runs completed | 2 |
+| Live benchmark runs completed | 3 |
 | Exploratory model set size | 5 models |
 | Task set size | 6 Pololu robot-kit tasks |
 | Exploratory outcomes | 30 |
+
+## Tiny-Focus Results (Newest Run)
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Notes |
+|---|---:|---:|---:|---:|---:|---|
+| StarCoder-1B | 6 | 1/6 | 0.920 | 26.363 | 5.460 | Best tiny-model balance of speed and meaningful syntax-valid output. |
+| Qwen2.5-Coder-0.5B | 6 | 0/6 | 0.985 | 49.088 | 4.765 | Fastest and lowest RAM, but no syntax-valid suggestions in this run. |
+| TinyLlama-1.1B | 6 | 0/6 | 1.147 | 28.947 | 6.049 | Good speed, but no syntax-valid suggestions. |
+| Qwen2.5-Coder-1.5B | 2 | 0/2 | 0.863 | 19.396 | 6.716 | 4/6 memory-threshold aborts under this tiny-focus setup. |
+| DeepSeek-Coder-1.3B | 0 | 0/0 | - | - | - | 6/6 memory-threshold aborts in this run. |
 
 ## Exploratory Results (Fast Sweep)
 
@@ -30,14 +40,15 @@
 
 | Priority | Recommendation | Why |
 |---:|---|---|
-| 1 | Keep CodeGemma-2B in the candidate pool despite slower speed | It is the only model in this rerun with any syntax pass (1/6). |
-| 2 | Keep Qwen2.5-Coder-0.5B as the latency baseline | It is dramatically faster and useful as a responsiveness floor for comparisons. |
-| 3 | Use DeepSeek-Coder-1.3B and Qwen2.5-Coder-1.5B as balanced baselines | They are stable under memory limits and provide mid-tier latency. |
-| 4 | Exclude Stable-Code-3B for this device class | It exceeded memory limits in most cases and did not complete the suite. |
-| 5 | Next optimization target: prompt/format constraints for syntax correctness | Throughput is acceptable, but pass-rate is the current bottleneck for classroom usability. |
+| 1 | Use StarCoder-1B as the primary tiny-model candidate | It is the only tiny model in the newest run with any syntax-valid output while staying within memory limits. |
+| 2 | Use Qwen2.5-Coder-0.5B as the low-latency fallback | It is the fastest model and has the smallest RAM footprint, useful when responsiveness is the top constraint. |
+| 3 | Keep CodeGemma-2B as a secondary quality candidate | It also produced syntax-valid output in the earlier exploratory run, though slower and heavier than StarCoder-1B. |
+| 4 | De-prioritize DeepSeek-Coder-1.3B and Qwen2.5-Coder-1.5B for this exact profile | They showed memory-threshold abort behavior in the tiny-focus run. |
+| 5 | Continue prompt and output-shape tuning | Correctness (pass-rate) remains the main limiting factor for classroom usefulness. |
 
 ## Evidence Files
 
 1. Main run results: results/benchmark_results.json
 2. Exploratory run results: results/benchmark_results_exploratory_fast.json
-3. Aggregated report: results/benchmark_report.md
+3. Tiny-focus run results: results/benchmark_results_tiny_focus.json
+4. Aggregated report: results/benchmark_report.md

@@ -4,11 +4,13 @@
 
 | Model               |   Runs |   Avg TTFT (s) |   Avg Tokens/s |   Avg Peak RAM (GiB) |   Compilation Pass % |   Efficiency Score |   Overall Score |
 |---------------------|--------|----------------|----------------|----------------------|----------------------|--------------------|-----------------|
-| Qwen2.5-Coder-0.5B  |      6 |          1.157 |         46.327 |                5.106 |                 0    |             100    |           50    |
-| Qwen2.5-Coder-1.5B  |     12 |          1.767 |         21.454 |                5.182 |                 0    |              53.55 |           26.77 |
-| DeepSeek-Coder-1.3B |     12 |          1.687 |         21.31  |                5.711 |                 0    |              45.66 |           22.83 |
-| CodeGemma-2B        |      6 |          2.088 |         12.785 |                6.745 |                16.67 |               2.64 |            9.66 |
-| Stable-Code-3B      |      1 |          1.742 |         10.398 |                6.766 |                 0    |              12.39 |            6.2  |
+| Qwen2.5-Coder-0.5B  |     12 |          1.071 |         47.707 |                4.935 |                 0    |              95.69 |           47.84 |
+| StarCoder-1B        |      6 |          0.92  |         26.363 |                5.46  |                16.67 |              71.38 |           44.02 |
+| TinyLlama-1.1B      |      6 |          1.147 |         28.947 |                6.049 |                 0    |              56.46 |           28.23 |
+| Qwen2.5-Coder-1.5B  |     14 |          1.638 |         21.16  |                5.401 |                 0    |              47.31 |           23.66 |
+| DeepSeek-Coder-1.3B |     12 |          1.687 |         21.31  |                5.711 |                 0    |              40.4  |           20.2  |
+| CodeGemma-2B        |      6 |          2.088 |         12.785 |                6.745 |                16.67 |               2.52 |            9.6  |
+| Stable-Code-3B      |      1 |          1.742 |         10.398 |                6.766 |                 0    |               9.87 |            4.93 |
 
 ## Detailed Runs
 
@@ -62,3 +64,33 @@
 | Stable-Code-3B          | pololu-line-following | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json |
 | Stable-Code-3B          | pololu-led-status     | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json |
 | Stable-Code-3B          | pololu-button-control | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_exploratory_fast.json |
+| Qwen2.5-Coder-0.5B      | pololu-drive-forward  | movement-basics  | 3.567      | 49.964     | 4.756            | 14.138      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-0.5B      | pololu-turn-left      | movement-basics  | 0.397      | 56.729     | 4.768            | 17.025      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-0.5B      | pololu-obstacle-stop  | sensor-response  | 0.575      | 44.358     | 4.771            | 23.96       | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-0.5B      | pololu-line-following | sensor-response  | 0.481      | 42.311     | 4.771            | 23.233      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-0.5B      | pololu-led-status     | student-feedback | 0.424      | 47.395     | 4.76             | 18.911      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-0.5B      | pololu-button-control | student-feedback | 0.466      | 53.77      | 4.764            | 16.733      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-drive-forward  | movement-basics  | 2.3        | 23.726     | 5.491            | 16.191      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-turn-left      | movement-basics  | 0.557      | 28.315     | 5.491            | 17.182      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-obstacle-stop  | sensor-response  | 0.795      | 26.366     | 5.487            | 16.507      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-line-following | sensor-response  | 0.669      | 27.071     | 5.431            | 16.586      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-led-status     | student-feedback | 0.494      | 27.228     | 5.431            | 17.115      | failed                   | benchmark_results_tiny_focus.json       |
+| StarCoder-1B            | pololu-button-control | student-feedback | 0.705      | 25.47      | 5.429            | 18.329      | passed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-drive-forward  | movement-basics  | 3.437      | 26.165     | 6.093            | 23.607      | failed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-turn-left      | movement-basics  | 0.602      | 27.157     | 6.043            | 24.6        | failed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-obstacle-stop  | sensor-response  | 0.786      | 29.339     | 6.042            | 20.264      | failed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-line-following | sensor-response  | 0.659      | 30.43      | 6.039            | 17.792      | failed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-led-status     | student-feedback | 0.654      | 30.533     | 6.039            | 17.846      | failed                   | benchmark_results_tiny_focus.json       |
+| TinyLlama-1.1B          | pololu-button-control | student-feedback | 0.747      | 30.058     | 6.039            | 18.536      | failed                   | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-drive-forward  | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-turn-left      | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-obstacle-stop  | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-line-following | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-led-status     | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| DeepSeek-Coder-1.3B     | pololu-button-control | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-drive-forward  | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-turn-left      | movement-basics  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-obstacle-stop  | sensor-response  | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-line-following | sensor-response  | 0.862      | 18.902     | 6.758            | 23.853      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-led-status     | student-feedback | 0.864      | 19.891     | 6.674            | 21.256      | failed                   | benchmark_results_tiny_focus.json       |
+| Qwen2.5-Coder-1.5B      | pololu-button-control | student-feedback | -          | -          | -                | -           | aborted_memory_threshold | benchmark_results_tiny_focus.json       |
