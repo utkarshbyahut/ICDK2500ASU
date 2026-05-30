@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Qwen2.5-Coder-0.5B Fastlane",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "usecase_fastlane",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "StarCoder-1B Fastlane",
+    "ollama_tag": "starcoder:1b",
+    "role": "usecase_fastlane",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "TinyLlama-1.1B Fastlane",
+    "ollama_tag": "tinyllama:1.1b",
+    "role": "usecase_fastlane",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Gemma3-1B Fastlane",
+    "ollama_tag": "gemma3:1b",
+    "role": "usecase_fastlane",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Phi Fastlane",
+    "ollama_tag": "phi:latest",
+    "role": "usecase_fastlane",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  }
+]

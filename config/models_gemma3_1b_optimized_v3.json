@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+    "ollama_tag": "gemma3:1b",
+    "role": "optimized_mobile_proxy_v3",
+    "context_window": 1024,
+    "parameters": {
+      "temperature": 0.0,
+      "num_predict": 4,
+      "num_ctx": 1024,
+      "top_k": 20,
+      "top_p": 0.8
+    }
+  }
+]

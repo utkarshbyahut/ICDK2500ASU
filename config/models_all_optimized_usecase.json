@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Qwen2.5-Coder-0.5B All-Opt",
+    "ollama_tag": "qwen2.5-coder:0.5b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "StarCoder-1B All-Opt",
+    "ollama_tag": "starcoder:1b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "TinyLlama-1.1B All-Opt",
+    "ollama_tag": "tinyllama:1.1b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "DeepSeek-Coder-1.3B All-Opt",
+    "ollama_tag": "deepseek-coder:1.3b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Qwen2.5-Coder-1.5B All-Opt",
+    "ollama_tag": "qwen2.5-coder:1.5b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Phi All-Opt",
+    "ollama_tag": "phi:latest",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Gemma3-1B All-Opt",
+    "ollama_tag": "gemma3:1b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "CodeGemma-2B All-Opt",
+    "ollama_tag": "codegemma:2b",
+    "role": "all_opt",
+    "context_window": 1024,
+    "parameters": {"temperature": 0.0, "num_predict": 6, "num_ctx": 1024, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Stable-Code-3B All-Opt",
+    "ollama_tag": "stable-code:3b",
+    "role": "all_opt",
+    "context_window": 768,
+    "parameters": {"temperature": 0.0, "num_predict": 4, "num_ctx": 768, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Gemma3-4B All-Opt",
+    "ollama_tag": "gemma3:4b",
+    "role": "all_opt",
+    "context_window": 768,
+    "parameters": {"temperature": 0.0, "num_predict": 4, "num_ctx": 768, "top_k": 20, "top_p": 0.8}
+  },
+  {
+    "name": "Granite-Code-8B All-Opt",
+    "ollama_tag": "granite-code:8b",
+    "role": "all_opt",
+    "context_window": 512,
+    "parameters": {"temperature": 0.0, "num_predict": 2, "num_ctx": 512, "top_k": 20, "top_p": 0.8}
+  }
+]

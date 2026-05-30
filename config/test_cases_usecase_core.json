@@ -1,0 +1,56 @@
+[
+  {
+    "id": "pololu-drive-forward-core",
+    "scenario": "movement-basics",
+    "skill_focus": "motor control",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef drive_forward(speed, seconds):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate both inputs and return one safe movement command string.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-turn-left-core",
+    "scenario": "movement-basics",
+    "skill_focus": "direction change",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef turn_left(angle):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Validate input and return one controlled left-turn command string.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-obstacle-stop-core",
+    "scenario": "sensor-response",
+    "skill_focus": "ultrasonic sensing",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef stop_if_obstacle_detected(distance_cm):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return True when robot should stop, else False.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-line-following-core",
+    "scenario": "sensor-response",
+    "skill_focus": "line tracking",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef follow_line(left_sensor, right_sensor):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one motion command string.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-led-status-core",
+    "scenario": "student-feedback",
+    "skill_focus": "status signaling",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef update_status_led(state):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return one color string for idle, moving, or error.",
+    "validation_command": "python -m py_compile {file_path}"
+  },
+  {
+    "id": "pololu-button-control-core",
+    "scenario": "student-feedback",
+    "skill_focus": "human interaction",
+    "language": "python",
+    "file_extension": ".py",
+    "prompt": "Return only Python code. Define exactly one function:\n\ndef toggle_run_mode(current_mode, button_pressed):\n    ...\n\nRules: no markdown, no explanation text, no imports, no class definitions, no main block. Return either 'run' or 'pause'.",
+    "validation_command": "python -m py_compile {file_path}"
+  }
+]

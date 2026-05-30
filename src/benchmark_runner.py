@@ -156,10 +156,34 @@ def run_generation(
     }
 
 
-def benchmark(models: Iterable[Dict[str, Any]], test_cases: Iterable[Dict[str, Any]], base_url: str) -> List[Dict[str, Any]]:
+def warm_up_model(session: requests.Session, base_url: str, model: Dict[str, Any]) -> None:
+    warmup_options = dict(model.get("parameters", {}))
+    warmup_options["num_predict"] = 1
+    payload = {
+        "model": model["ollama_tag"],
+        "prompt": "Return OK.",
+        "stream": False,
+        "options": warmup_options,
+    }
+    response = session.post(f"{base_url.rstrip('/')}/api/generate", json=payload, timeout=(10, 120))
+    response.raise_for_status()
+
+
+def benchmark(
+    models: Iterable[Dict[str, Any]],
+    test_cases: Iterable[Dict[str, Any]],
+    base_url: str,
+    warmup_each_model: bool = True,
+) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     session = requests.Session()
     for model in models:
+        if warmup_each_model:
+            try:
+                warm_up_model(session, base_url, model)
+            except requests.RequestException:
+                # Continue even if warm-up fails; measured runs may still succeed.
+                pass
         for test_case in test_cases:
             try:
                 results.append(run_generation(session, base_url, model, test_case))
@@ -214,6 +238,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--test-cases", type=Path, default=repo_root / "config" / "test_cases.json")
     parser.add_argument("--results", type=Path, default=repo_root / "results" / "benchmark_results.json")
     parser.add_argument("--ollama-url", default="http://127.0.0.1:11434")
+    parser.add_argument("--no-warmup", action="store_true", help="Disable per-model warmup before measured runs.")
     return parser.parse_args()
 
 
@@ -221,7 +246,7 @@ def main() -> int:
     args = parse_args()
     models = load_json(args.models)
     test_cases = load_json(args.test_cases)
-    results = benchmark(models, test_cases, args.ollama_url)
+    results = benchmark(models, test_cases, args.ollama_url, warmup_each_model=not args.no_warmup)
     write_results(results, args.results)
     print(f"Saved benchmark results to {args.results}")
     return 0

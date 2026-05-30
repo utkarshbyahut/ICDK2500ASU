@@ -1,0 +1,875 @@
+{
+  "generated_at": "2026-05-30T16:07:28.642469+00:00",
+  "results": [
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
+      "timestamp_utc": "2026-05-30T16:07:06.897564+00:00",
+      "ttft_seconds": 2.554,
+      "tokens_per_second": 12.602,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 15,
+        "max_ram_bytes": 6864859136,
+        "max_ram_gib": 6.393,
+        "avg_cpu_percent": 18.24,
+        "peak_cpu_percent": 39.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp9037ht33.py\", line 1\n    def drive_forward(speed\n                     ^\nSyntaxError: '(' was never closed",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp9037ht33.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 3053315300,
+        "load_duration_ns": 107645600,
+        "prompt_eval_count": 90,
+        "prompt_eval_duration_ns": 2422773000
+      },
+      "samples": [
+        {
+          "timestamp": 1780157223.702109,
+          "used_memory_bytes": 6859100160,
+          "memory_percent": 84.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157223.9022574,
+          "used_memory_bytes": 6861484032,
+          "memory_percent": 84.5,
+          "cpu_percent": 39.0
+        },
+        {
+          "timestamp": 1780157224.102874,
+          "used_memory_bytes": 6862614528,
+          "memory_percent": 84.5,
+          "cpu_percent": 18.2
+        },
+        {
+          "timestamp": 1780157224.3030899,
+          "used_memory_bytes": 6862651392,
+          "memory_percent": 84.5,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780157224.5165408,
+          "used_memory_bytes": 6864859136,
+          "memory_percent": 84.5,
+          "cpu_percent": 19.4
+        },
+        {
+          "timestamp": 1780157224.7195451,
+          "used_memory_bytes": 6864592896,
+          "memory_percent": 84.5,
+          "cpu_percent": 18.2
+        },
+        {
+          "timestamp": 1780157224.9209251,
+          "used_memory_bytes": 6864560128,
+          "memory_percent": 84.5,
+          "cpu_percent": 19.9
+        },
+        {
+          "timestamp": 1780157225.133643,
+          "used_memory_bytes": 6864392192,
+          "memory_percent": 84.5,
+          "cpu_percent": 19.4
+        },
+        {
+          "timestamp": 1780157225.350438,
+          "used_memory_bytes": 6864314368,
+          "memory_percent": 84.5,
+          "cpu_percent": 17.9
+        },
+        {
+          "timestamp": 1780157225.5519903,
+          "used_memory_bytes": 6864068608,
+          "memory_percent": 84.5,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780157225.7677636,
+          "used_memory_bytes": 6863917056,
+          "memory_percent": 84.5,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780157225.9688718,
+          "used_memory_bytes": 6863781888,
+          "memory_percent": 84.5,
+          "cpu_percent": 18.3
+        },
+        {
+          "timestamp": 1780157226.169151,
+          "used_memory_bytes": 6863581184,
+          "memory_percent": 84.5,
+          "cpu_percent": 18.8
+        },
+        {
+          "timestamp": 1780157226.384274,
+          "used_memory_bytes": 6863511552,
+          "memory_percent": 84.5,
+          "cpu_percent": 12.5
+        },
+        {
+          "timestamp": 1780157226.5887346,
+          "used_memory_bytes": 6864687104,
+          "memory_percent": 84.5,
+          "cpu_percent": 19.7
+        }
+      ],
+      "output": " def drive_forward(speed"
+    },
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
+      "timestamp_utc": "2026-05-30T16:07:08.338925+00:00",
+      "ttft_seconds": 0.893,
+      "tokens_per_second": 13.272,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 7,
+        "max_ram_bytes": 6872870912,
+        "max_ram_gib": 6.401,
+        "avg_cpu_percent": 15.657,
+        "peak_cpu_percent": 22.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpw6pkwl0s.py\", line 1\n    def turn_left(angle\n                 ^\nSyntaxError: '(' was never closed",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpw6pkwl0s.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1364151500,
+        "load_duration_ns": 78592500,
+        "prompt_eval_count": 82,
+        "prompt_eval_duration_ns": 807480000
+      },
+      "samples": [
+        {
+          "timestamp": 1780157226.8979163,
+          "used_memory_bytes": 6872870912,
+          "memory_percent": 84.6,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157227.087874,
+          "used_memory_bytes": 6856798208,
+          "memory_percent": 84.4,
+          "cpu_percent": 22.8
+        },
+        {
+          "timestamp": 1780157227.288735,
+          "used_memory_bytes": 6856482816,
+          "memory_percent": 84.4,
+          "cpu_percent": 14.8
+        },
+        {
+          "timestamp": 1780157227.4897692,
+          "used_memory_bytes": 6856298496,
+          "memory_percent": 84.4,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780157227.7020223,
+          "used_memory_bytes": 6855438336,
+          "memory_percent": 84.4,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780157227.9025943,
+          "used_memory_bytes": 6851211264,
+          "memory_percent": 84.4,
+          "cpu_percent": 20.1
+        },
+        {
+          "timestamp": 1780157228.1027405,
+          "used_memory_bytes": 6851203072,
+          "memory_percent": 84.4,
+          "cpu_percent": 18.3
+        }
+      ],
+      "output": " def turn_left(angle"
+    },
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
+      "timestamp_utc": "2026-05-30T16:07:10.212593+00:00",
+      "ttft_seconds": 1.336,
+      "tokens_per_second": 13.216,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 9,
+        "max_ram_bytes": 6853414912,
+        "max_ram_gib": 6.383,
+        "avg_cpu_percent": 16.556,
+        "peak_cpu_percent": 21.2,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdebu68wj.py\", line 1\n    def stop_if_ob\n                  ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpdebu68wj.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1798084100,
+        "load_duration_ns": 96229000,
+        "prompt_eval_count": 92,
+        "prompt_eval_duration_ns": 1233225500
+      },
+      "samples": [
+        {
+          "timestamp": 1780157228.3393245,
+          "used_memory_bytes": 6852550656,
+          "memory_percent": 84.4,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157228.5403457,
+          "used_memory_bytes": 6853414912,
+          "memory_percent": 84.4,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780157228.7534103,
+          "used_memory_bytes": 6853414912,
+          "memory_percent": 84.4,
+          "cpu_percent": 17.0
+        },
+        {
+          "timestamp": 1780157228.9540968,
+          "used_memory_bytes": 6853410816,
+          "memory_percent": 84.4,
+          "cpu_percent": 17.4
+        },
+        {
+          "timestamp": 1780157229.155473,
+          "used_memory_bytes": 6848389120,
+          "memory_percent": 84.3,
+          "cpu_percent": 19.6
+        },
+        {
+          "timestamp": 1780157229.3556733,
+          "used_memory_bytes": 6848921600,
+          "memory_percent": 84.3,
+          "cpu_percent": 21.2
+        },
+        {
+          "timestamp": 1780157229.5706456,
+          "used_memory_bytes": 6849257472,
+          "memory_percent": 84.3,
+          "cpu_percent": 18.8
+        },
+        {
+          "timestamp": 1780157229.777928,
+          "used_memory_bytes": 6847651840,
+          "memory_percent": 84.3,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780157229.988485,
+          "used_memory_bytes": 6845251584,
+          "memory_percent": 84.3,
+          "cpu_percent": 18.7
+        }
+      ],
+      "output": " def stop_if_ob"
+    },
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
+      "timestamp_utc": "2026-05-30T16:07:11.896386+00:00",
+      "ttft_seconds": 1.136,
+      "tokens_per_second": 12.632,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 8,
+        "max_ram_bytes": 6846787584,
+        "max_ram_gib": 6.377,
+        "avg_cpu_percent": 26.438,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp6xwx47d0.py\", line 1\n    def follow_line(left\n                   ^\nSyntaxError: '(' was never closed",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp6xwx47d0.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1614754800,
+        "load_duration_ns": 78380900,
+        "prompt_eval_count": 88,
+        "prompt_eval_duration_ns": 1050334200
+      },
+      "samples": [
+        {
+          "timestamp": 1780157230.2129128,
+          "used_memory_bytes": 6843908096,
+          "memory_percent": 84.3,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157230.4066753,
+          "used_memory_bytes": 6841528320,
+          "memory_percent": 84.2,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780157230.6208866,
+          "used_memory_bytes": 6841634816,
+          "memory_percent": 84.2,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780157230.8216286,
+          "used_memory_bytes": 6833451008,
+          "memory_percent": 84.1,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780157231.0236387,
+          "used_memory_bytes": 6846787584,
+          "memory_percent": 84.3,
+          "cpu_percent": 18.3
+        },
+        {
+          "timestamp": 1780157231.226482,
+          "used_memory_bytes": 6842789888,
+          "memory_percent": 84.2,
+          "cpu_percent": 16.0
+        },
+        {
+          "timestamp": 1780157231.4283397,
+          "used_memory_bytes": 6842400768,
+          "memory_percent": 84.2,
+          "cpu_percent": 22.2
+        },
+        {
+          "timestamp": 1780157231.631466,
+          "used_memory_bytes": 6839959552,
+          "memory_percent": 84.2,
+          "cpu_percent": 17.5
+        }
+      ],
+      "output": " def follow_line(left"
+    },
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
+      "timestamp_utc": "2026-05-30T16:07:13.571851+00:00",
+      "ttft_seconds": 1.135,
+      "tokens_per_second": 13.621,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 8,
+        "max_ram_bytes": 6848028672,
+        "max_ram_gib": 6.378,
+        "avg_cpu_percent": 15.887,
+        "peak_cpu_percent": 21.3,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp31kdb3hx.py\", line 1\n    def update_status_led\n                         ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp31kdb3hx.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1608449800,
+        "load_duration_ns": 97272800,
+        "prompt_eval_count": 88,
+        "prompt_eval_duration_ns": 1036874800
+      },
+      "samples": [
+        {
+          "timestamp": 1780157231.8967242,
+          "used_memory_bytes": 6836383744,
+          "memory_percent": 84.2,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157232.0906425,
+          "used_memory_bytes": 6848028672,
+          "memory_percent": 84.3,
+          "cpu_percent": 16.4
+        },
+        {
+          "timestamp": 1780157232.2975624,
+          "used_memory_bytes": 6847135744,
+          "memory_percent": 84.3,
+          "cpu_percent": 17.0
+        },
+        {
+          "timestamp": 1780157232.5074124,
+          "used_memory_bytes": 6846185472,
+          "memory_percent": 84.3,
+          "cpu_percent": 20.9
+        },
+        {
+          "timestamp": 1780157232.7085743,
+          "used_memory_bytes": 6842023936,
+          "memory_percent": 84.2,
+          "cpu_percent": 16.9
+        },
+        {
+          "timestamp": 1780157232.9092424,
+          "used_memory_bytes": 6837915648,
+          "memory_percent": 84.2,
+          "cpu_percent": 15.5
+        },
+        {
+          "timestamp": 1780157233.1244974,
+          "used_memory_bytes": 6838013952,
+          "memory_percent": 84.2,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780157233.3277993,
+          "used_memory_bytes": 6837157888,
+          "memory_percent": 84.2,
+          "cpu_percent": 21.3
+        }
+      ],
+      "output": " def update_status_led"
+    },
+    {
+      "model": "Phi Optimized (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
+      "timestamp_utc": "2026-05-30T16:07:15.464991+00:00",
+      "ttft_seconds": 1.341,
+      "tokens_per_second": 12.571,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 9,
+        "max_ram_bytes": 6843416576,
+        "max_ram_gib": 6.373,
+        "avg_cpu_percent": 15.644,
+        "peak_cpu_percent": 19.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmppfs33m10.py\", line 1\n    def toggle_run_mode\n                       ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmppfs33m10.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1821575900,
+        "load_duration_ns": 88380200,
+        "prompt_eval_count": 93,
+        "prompt_eval_duration_ns": 1244078100
+      },
+      "samples": [
+        {
+          "timestamp": 1780157233.5721776,
+          "used_memory_bytes": 6839672832,
+          "memory_percent": 84.2,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157233.7766612,
+          "used_memory_bytes": 6840586240,
+          "memory_percent": 84.2,
+          "cpu_percent": 16.8
+        },
+        {
+          "timestamp": 1780157233.9905918,
+          "used_memory_bytes": 6837387264,
+          "memory_percent": 84.2,
+          "cpu_percent": 18.0
+        },
+        {
+          "timestamp": 1780157234.192063,
+          "used_memory_bytes": 6837186560,
+          "memory_percent": 84.2,
+          "cpu_percent": 14.1
+        },
+        {
+          "timestamp": 1780157234.3930972,
+          "used_memory_bytes": 6837739520,
+          "memory_percent": 84.2,
+          "cpu_percent": 19.4
+        },
+        {
+          "timestamp": 1780157234.5938456,
+          "used_memory_bytes": 6843416576,
+          "memory_percent": 84.3,
+          "cpu_percent": 16.6
+        },
+        {
+          "timestamp": 1780157234.808074,
+          "used_memory_bytes": 6842175488,
+          "memory_percent": 84.2,
+          "cpu_percent": 19.0
+        },
+        {
+          "timestamp": 1780157235.0110846,
+          "used_memory_bytes": 6842019840,
+          "memory_percent": 84.2,
+          "cpu_percent": 18.2
+        },
+        {
+          "timestamp": 1780157235.212386,
+          "used_memory_bytes": 6841905152,
+          "memory_percent": 84.2,
+          "cpu_percent": 18.7
+        }
+      ],
+      "output": " def toggle_run_mode"
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
+      "timestamp_utc": "2026-05-30T16:07:22.664843+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.82 GiB used at 90.1% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
+      "timestamp_utc": "2026-05-30T16:07:24.030750+00:00",
+      "ttft_seconds": 0.987,
+      "tokens_per_second": 23.512,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 7,
+        "max_ram_bytes": 7286124544,
+        "max_ram_gib": 6.786,
+        "avg_cpu_percent": 22.786,
+        "peak_cpu_percent": 35.9,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpprmorwuh.py\", line 1\n    def turn_\n             ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpprmorwuh.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1224632300,
+        "load_duration_ns": 613625300,
+        "prompt_eval_count": 57,
+        "prompt_eval_duration_ns": 347791600
+      },
+      "samples": [
+        {
+          "timestamp": 1780157242.665929,
+          "used_memory_bytes": 7273963520,
+          "memory_percent": 89.6,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157242.8792562,
+          "used_memory_bytes": 7282176000,
+          "memory_percent": 89.7,
+          "cpu_percent": 35.9
+        },
+        {
+          "timestamp": 1780157243.0821073,
+          "used_memory_bytes": 7282446336,
+          "memory_percent": 89.7,
+          "cpu_percent": 20.8
+        },
+        {
+          "timestamp": 1780157243.2874386,
+          "used_memory_bytes": 7281938432,
+          "memory_percent": 89.7,
+          "cpu_percent": 19.3
+        },
+        {
+          "timestamp": 1780157243.4982095,
+          "used_memory_bytes": 7279427584,
+          "memory_percent": 89.6,
+          "cpu_percent": 30.1
+        },
+        {
+          "timestamp": 1780157243.6987941,
+          "used_memory_bytes": 7279759360,
+          "memory_percent": 89.6,
+          "cpu_percent": 19.5
+        },
+        {
+          "timestamp": 1780157243.8991323,
+          "used_memory_bytes": 7286124544,
+          "memory_percent": 89.7,
+          "cpu_percent": 33.9
+        }
+      ],
+      "output": "```python\ndef turn_"
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
+      "timestamp_utc": "2026-05-30T16:07:25.375123+00:00",
+      "ttft_seconds": 0.991,
+      "tokens_per_second": 24.46,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 7,
+        "max_ram_bytes": 7293509632,
+        "max_ram_gib": 6.793,
+        "avg_cpu_percent": 19.614,
+        "peak_cpu_percent": 24.9,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5iow1tf9.py\", line 1\n    def stop_\n             ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmp5iow1tf9.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1236992400,
+        "load_duration_ns": 618672900,
+        "prompt_eval_count": 64,
+        "prompt_eval_duration_ns": 365498800
+      },
+      "samples": [
+        {
+          "timestamp": 1780157244.0312653,
+          "used_memory_bytes": 7293509632,
+          "memory_percent": 89.8,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157244.2323,
+          "used_memory_bytes": 7292256256,
+          "memory_percent": 89.8,
+          "cpu_percent": 22.0
+        },
+        {
+          "timestamp": 1780157244.4333048,
+          "used_memory_bytes": 7287087104,
+          "memory_percent": 89.7,
+          "cpu_percent": 18.6
+        },
+        {
+          "timestamp": 1780157244.635181,
+          "used_memory_bytes": 7282503680,
+          "memory_percent": 89.7,
+          "cpu_percent": 23.0
+        },
+        {
+          "timestamp": 1780157244.8499715,
+          "used_memory_bytes": 7279828992,
+          "memory_percent": 89.6,
+          "cpu_percent": 24.9
+        },
+        {
+          "timestamp": 1780157245.0515585,
+          "used_memory_bytes": 7279833088,
+          "memory_percent": 89.6,
+          "cpu_percent": 24.4
+        },
+        {
+          "timestamp": 1780157245.2618966,
+          "used_memory_bytes": 7287721984,
+          "memory_percent": 89.7,
+          "cpu_percent": 24.4
+        }
+      ],
+      "output": "```python\ndef stop_"
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
+      "timestamp_utc": "2026-05-30T16:07:26.691212+00:00",
+      "ttft_seconds": 0.952,
+      "tokens_per_second": 24.217,
+      "generated_tokens": 6,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 7303598080,
+        "max_ram_gib": 6.802,
+        "avg_cpu_percent": 18.267,
+        "peak_cpu_percent": 26.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpwrrm5pm0.py\", line 1\n    def follow_\n               ^\nSyntaxError: expected '('",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpwrrm5pm0.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1208152600,
+        "load_duration_ns": 610175100,
+        "prompt_eval_count": 61,
+        "prompt_eval_duration_ns": 345489600
+      },
+      "samples": [
+        {
+          "timestamp": 1780157245.3756137,
+          "used_memory_bytes": 7300681728,
+          "memory_percent": 89.9,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157245.5685234,
+          "used_memory_bytes": 7302336512,
+          "memory_percent": 89.9,
+          "cpu_percent": 18.9
+        },
+        {
+          "timestamp": 1780157245.772338,
+          "used_memory_bytes": 7300403200,
+          "memory_percent": 89.9,
+          "cpu_percent": 16.4
+        },
+        {
+          "timestamp": 1780157245.9860098,
+          "used_memory_bytes": 7299883008,
+          "memory_percent": 89.9,
+          "cpu_percent": 22.9
+        },
+        {
+          "timestamp": 1780157246.2009165,
+          "used_memory_bytes": 7298912256,
+          "memory_percent": 89.9,
+          "cpu_percent": 24.6
+        },
+        {
+          "timestamp": 1780157246.40245,
+          "used_memory_bytes": 7303598080,
+          "memory_percent": 89.9,
+          "cpu_percent": 26.8
+        }
+      ],
+      "output": "```python\ndef follow_"
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
+      "timestamp_utc": "2026-05-30T16:07:27.612045+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.81 GiB used at 90.0% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
+      "timestamp_utc": "2026-05-30T16:07:28.640769+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.80 GiB used at 90.0% total usage."
+    }
+  ]
+}

@@ -37,6 +37,63 @@
 | Phi (phi:latest) | 6 | 0/6 | 2.781 | 12.483 | 6.632 | 0 |
 | Gemma 4B (gemma3:4b) | 0 | 0/0 | - | - | - | 6 |
 
+## Gemma Mobile-Line Follow-up (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Intended model line | Gemma 3n (mobile/on-device line often referenced for phone-class hardware) |
+| Ollama probe result | `gemma3n:e2b` not found in local Ollama registry (v0.24.0) |
+| Proxy benchmark model | Gemma 3 1B (`gemma3:1b`) |
+| Proxy result file | results/benchmark_results_gemma3_1b_mobile_proxy_20260530.json |
+
+### Gemma 3 1B Proxy Metrics
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---:|---:|---:|---:|---:|---:|
+| Gemma 3 1B (gemma3:1b) | 6 | 0/6 | 1.343 | 23.880 | 6.170 | 0 |
+
+## Inference Optimization Log (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Code change | Added per-model warm-up in benchmark runner to reduce cold-start TTFT bias |
+| New runner option | `--no-warmup` to disable warm-up when needed |
+| Primary optimized file | results/benchmark_results_phi_gemma_optimized_20260530.json |
+| Gemma-focused optimized file | results/benchmark_results_gemma3_1b_optimized_v3_20260530.json |
+
+### Optimization Outcomes
+
+| Model | Baseline File | Optimized File | Completed Runs | Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| Phi (phi:latest) | benchmark_results_phi_gemma4_20260530.json | benchmark_results_phi_gemma_optimized_20260530.json | 6 | 0/6 | 2.781 -> 1.399 | 12.483 -> 12.986 | 6.632 -> 6.384 | 0 -> 0 |
+| Gemma 3 1B (gemma3:1b) | benchmark_results_gemma3_1b_mobile_proxy_20260530.json | benchmark_results_gemma3_1b_optimized_v3_20260530.json | 6 | 0/6 | 1.343 -> 1.082 | 23.880 -> 27.592 | 6.170 -> 5.677 | 0 -> 0 |
+
+### Notes
+
+1. A stricter v2 config caused full memory-threshold aborts and was discarded.
+2. Best Gemma result used isolated single-model execution plus tighter generation limits.
+
+## Use-Case Cleanup + Fastlane Pass (2026-05-30)
+
+| Item | Value |
+|---|---|
+| Goal | Remove redundant/non-essential tasks and run a fresh consolidated pass |
+| Kept task set | `config/test_cases_usecase_essential3.json` |
+| Removed from this pass | duplicate prompt variants and lower-value overlap tasks |
+| Model set used | `config/models_all_usecase_fastlane.json` |
+| Result file | results/benchmark_results_all_usecase_fastlane_20260530.json |
+| Total outcomes | 15 |
+
+### Essential3 Fastlane Metrics
+
+| Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |
+|---|---:|---:|---:|---:|---:|---:|
+| StarCoder-1B Fastlane | 3 | 3/3 | 1.005 | 29.371 | 5.814 | 0 |
+| Qwen2.5-Coder-0.5B Fastlane | 3 | 1/3 | 0.603 | 60.377 | 5.131 | 0 |
+| TinyLlama-1.1B Fastlane | 3 | 0/3 | 1.242 | 34.803 | 5.868 | 0 |
+| Gemma3-1B Fastlane | 3 | 0/3 | 1.605 | 22.015 | 6.449 | 0 |
+| Phi Fastlane | 3 | 0/3 | 2.806 | 11.713 | 6.597 | 0 |
+
 ### Rerun Metrics
 
 | Model | Completed Runs | Validation Passes | Avg TTFT (s) | Avg Tokens/s | Avg Peak RAM (GiB) | Aborts |

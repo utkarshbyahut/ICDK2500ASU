@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Phi Optimized (phi:latest)",
+    "ollama_tag": "phi:latest",
+    "role": "optimized_small",
+    "context_window": 1024,
+    "parameters": {
+      "temperature": 0.0,
+      "num_predict": 6,
+      "num_ctx": 1024,
+      "top_k": 20,
+      "top_p": 0.8
+    }
+  },
+  {
+    "name": "Gemma 3 1B Optimized (gemma3:1b)",
+    "ollama_tag": "gemma3:1b",
+    "role": "optimized_mobile_proxy",
+    "context_window": 1024,
+    "parameters": {
+      "temperature": 0.0,
+      "num_predict": 6,
+      "num_ctx": 1024,
+      "top_k": 20,
+      "top_p": 0.8
+    }
+  }
+]

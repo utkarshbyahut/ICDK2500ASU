@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-05-30T16:12:28.055347+00:00",
+  "results": [
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
+      "timestamp_utc": "2026-05-30T16:12:10.439328+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.84 GiB used at 90.5% total usage."
+    },
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
+      "timestamp_utc": "2026-05-30T16:12:11.542883+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.87 GiB used at 90.9% total usage."
+    },
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
+      "timestamp_utc": "2026-05-30T16:12:12.947993+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.89 GiB used at 91.0% total usage."
+    },
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
+      "timestamp_utc": "2026-05-30T16:12:14.103850+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.89 GiB used at 91.1% total usage."
+    },
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
+      "timestamp_utc": "2026-05-30T16:12:15.285614+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.90 GiB used at 91.2% total usage."
+    },
+    {
+      "model": "Phi Optimized v2 (phi:latest)",
+      "ollama_tag": "phi:latest",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
+      "timestamp_utc": "2026-05-30T16:12:16.601166+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 6.89 GiB used at 91.0% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
+      "timestamp_utc": "2026-05-30T16:12:22.737604+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.02 GiB used at 92.8% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
+      "timestamp_utc": "2026-05-30T16:12:23.793408+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.03 GiB used at 93.0% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
+      "timestamp_utc": "2026-05-30T16:12:25.013665+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.04 GiB used at 93.0% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
+      "timestamp_utc": "2026-05-30T16:12:26.005856+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.02 GiB used at 92.9% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
+      "timestamp_utc": "2026-05-30T16:12:27.007159+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.03 GiB used at 93.0% total usage."
+    },
+    {
+      "model": "Gemma 3 1B Optimized v2 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
+      "timestamp_utc": "2026-05-30T16:12:28.053576+00:00",
+      "status": "aborted_memory_threshold",
+      "error": "Emergency stop triggered because RAM usage exceeded the safe limit: 7.01 GiB used at 92.7% total usage."
+    }
+  ]
+}

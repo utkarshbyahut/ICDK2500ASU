@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Gemma 3 1B (gemma3:1b)",
+    "ollama_tag": "gemma3:1b",
+    "role": "mobile_proxy",
+    "context_window": 2048,
+    "parameters": {
+      "temperature": 0.1,
+      "num_predict": 8
+    }
+  }
+]

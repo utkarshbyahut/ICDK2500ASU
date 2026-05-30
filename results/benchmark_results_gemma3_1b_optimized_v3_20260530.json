@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-05-30T16:13:01.369275+00:00",
+  "results": [
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-drive-forward",
+      "scenario": "movement-basics",
+      "skill_focus": "motor control",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named drive_forward(speed, seconds). It must validate both inputs and return a simple command string for safe forward movement.",
+      "timestamp_utc": "2026-05-30T16:12:55.206625+00:00",
+      "ttft_seconds": 1.489,
+      "tokens_per_second": 27.557,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 8,
+        "max_ram_bytes": 6098059264,
+        "max_ram_gib": 5.679,
+        "avg_cpu_percent": 22.212,
+        "peak_cpu_percent": 28.7,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpc_v5vb3h.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpc_v5vb3h.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1629238400,
+        "load_duration_ns": 673704000,
+        "prompt_eval_count": 65,
+        "prompt_eval_duration_ns": 807831600
+      },
+      "samples": [
+        {
+          "timestamp": 1780157573.4791944,
+          "used_memory_bytes": 6013063168,
+          "memory_percent": 74.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157573.6880322,
+          "used_memory_bytes": 6048473088,
+          "memory_percent": 74.5,
+          "cpu_percent": 28.7
+        },
+        {
+          "timestamp": 1780157573.8887515,
+          "used_memory_bytes": 6070845440,
+          "memory_percent": 74.7,
+          "cpu_percent": 21.9
+        },
+        {
+          "timestamp": 1780157574.089224,
+          "used_memory_bytes": 6098059264,
+          "memory_percent": 75.1,
+          "cpu_percent": 19.1
+        },
+        {
+          "timestamp": 1780157574.3045344,
+          "used_memory_bytes": 6091079680,
+          "memory_percent": 75.0,
+          "cpu_percent": 27.9
+        },
+        {
+          "timestamp": 1780157574.5066957,
+          "used_memory_bytes": 6092193792,
+          "memory_percent": 75.0,
+          "cpu_percent": 27.4
+        },
+        {
+          "timestamp": 1780157574.7229571,
+          "used_memory_bytes": 6092873728,
+          "memory_percent": 75.0,
+          "cpu_percent": 24.5
+        },
+        {
+          "timestamp": 1780157574.93574,
+          "used_memory_bytes": 6092763136,
+          "memory_percent": 75.0,
+          "cpu_percent": 28.2
+        }
+      ],
+      "output": "```python\ndef"
+    },
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-turn-left",
+      "scenario": "movement-basics",
+      "skill_focus": "direction change",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named turn_left(angle). It should return a controlled left-turn command.",
+      "timestamp_utc": "2026-05-30T16:12:56.410634+00:00",
+      "ttft_seconds": 0.97,
+      "tokens_per_second": 28.07,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 6099107840,
+        "max_ram_gib": 5.68,
+        "avg_cpu_percent": 20.017,
+        "peak_cpu_percent": 28.8,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpyy97uo3r.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpyy97uo3r.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1112974500,
+        "load_duration_ns": 667625200,
+        "prompt_eval_count": 57,
+        "prompt_eval_duration_ns": 296468800
+      },
+      "samples": [
+        {
+          "timestamp": 1780157575.2071946,
+          "used_memory_bytes": 6098735104,
+          "memory_percent": 75.1,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157575.4213653,
+          "used_memory_bytes": 6099107840,
+          "memory_percent": 75.1,
+          "cpu_percent": 21.4
+        },
+        {
+          "timestamp": 1780157575.623505,
+          "used_memory_bytes": 6085861376,
+          "memory_percent": 74.9,
+          "cpu_percent": 24.6
+        },
+        {
+          "timestamp": 1780157575.829369,
+          "used_memory_bytes": 6086762496,
+          "memory_percent": 74.9,
+          "cpu_percent": 21.2
+        },
+        {
+          "timestamp": 1780157576.0406115,
+          "used_memory_bytes": 6082981888,
+          "memory_percent": 74.9,
+          "cpu_percent": 24.1
+        },
+        {
+          "timestamp": 1780157576.2566812,
+          "used_memory_bytes": 6087077888,
+          "memory_percent": 74.9,
+          "cpu_percent": 28.8
+        }
+      ],
+      "output": "```python\ndef"
+    },
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-obstacle-stop",
+      "scenario": "sensor-response",
+      "skill_focus": "ultrasonic sensing",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named stop_if_obstacle_detected(distance_cm). It should return whether the robot must stop before collision.",
+      "timestamp_utc": "2026-05-30T16:12:57.687357+00:00",
+      "ttft_seconds": 1.042,
+      "tokens_per_second": 27.49,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 6097870848,
+        "max_ram_gib": 5.679,
+        "avg_cpu_percent": 36.583,
+        "peak_cpu_percent": 100.0,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmprl4n1kfh.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmprl4n1kfh.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1185202900,
+        "load_duration_ns": 653382400,
+        "prompt_eval_count": 64,
+        "prompt_eval_duration_ns": 384546700
+      },
+      "samples": [
+        {
+          "timestamp": 1780157576.4111447,
+          "used_memory_bytes": 6080937984,
+          "memory_percent": 74.9,
+          "cpu_percent": 100.0
+        },
+        {
+          "timestamp": 1780157576.6124003,
+          "used_memory_bytes": 6086602752,
+          "memory_percent": 74.9,
+          "cpu_percent": 19.6
+        },
+        {
+          "timestamp": 1780157576.8241024,
+          "used_memory_bytes": 6096715776,
+          "memory_percent": 75.1,
+          "cpu_percent": 26.1
+        },
+        {
+          "timestamp": 1780157577.0405898,
+          "used_memory_bytes": 6097870848,
+          "memory_percent": 75.1,
+          "cpu_percent": 24.5
+        },
+        {
+          "timestamp": 1780157577.2411087,
+          "used_memory_bytes": 6080368640,
+          "memory_percent": 74.9,
+          "cpu_percent": 25.1
+        },
+        {
+          "timestamp": 1780157577.4505289,
+          "used_memory_bytes": 6079365120,
+          "memory_percent": 74.8,
+          "cpu_percent": 24.2
+        }
+      ],
+      "output": "```python\ndef"
+    },
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-line-following",
+      "scenario": "sensor-response",
+      "skill_focus": "line tracking",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named follow_line(left_sensor, right_sensor). It should return the next motion instruction.",
+      "timestamp_utc": "2026-05-30T16:12:58.891268+00:00",
+      "ttft_seconds": 0.963,
+      "tokens_per_second": 27.001,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 6095945728,
+        "max_ram_gib": 5.677,
+        "avg_cpu_percent": 25.95,
+        "peak_cpu_percent": 37.4,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpyt0ybqht.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpyt0ybqht.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1109771100,
+        "load_duration_ns": 591041400,
+        "prompt_eval_count": 61,
+        "prompt_eval_duration_ns": 367424100
+      },
+      "samples": [
+        {
+          "timestamp": 1780157577.6876812,
+          "used_memory_bytes": 6072401920,
+          "memory_percent": 74.8,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157577.8895926,
+          "used_memory_bytes": 6065360896,
+          "memory_percent": 74.7,
+          "cpu_percent": 21.3
+        },
+        {
+          "timestamp": 1780157578.1053221,
+          "used_memory_bytes": 6073413632,
+          "memory_percent": 74.8,
+          "cpu_percent": 29.0
+        },
+        {
+          "timestamp": 1780157578.3206828,
+          "used_memory_bytes": 6083739648,
+          "memory_percent": 74.9,
+          "cpu_percent": 31.5
+        },
+        {
+          "timestamp": 1780157578.5257237,
+          "used_memory_bytes": 6095945728,
+          "memory_percent": 75.1,
+          "cpu_percent": 37.4
+        },
+        {
+          "timestamp": 1780157578.7266214,
+          "used_memory_bytes": 6091657216,
+          "memory_percent": 75.0,
+          "cpu_percent": 36.5
+        }
+      ],
+      "output": "```python\ndef"
+    },
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-led-status",
+      "scenario": "student-feedback",
+      "skill_focus": "status signaling",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named update_status_led(state). It should map idle, moving, and error states to LED colors.",
+      "timestamp_utc": "2026-05-30T16:13:00.100168+00:00",
+      "ttft_seconds": 0.981,
+      "tokens_per_second": 27.302,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 6100725760,
+        "max_ram_gib": 5.682,
+        "avg_cpu_percent": 19.583,
+        "peak_cpu_percent": 28.6,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpfqp22nf2.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpfqp22nf2.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1126798500,
+        "load_duration_ns": 587100500,
+        "prompt_eval_count": 63,
+        "prompt_eval_duration_ns": 389964600
+      },
+      "samples": [
+        {
+          "timestamp": 1780157578.8916,
+          "used_memory_bytes": 6091776000,
+          "memory_percent": 75.0,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157579.1055598,
+          "used_memory_bytes": 6096859136,
+          "memory_percent": 75.1,
+          "cpu_percent": 24.4
+        },
+        {
+          "timestamp": 1780157579.3088567,
+          "used_memory_bytes": 6100725760,
+          "memory_percent": 75.1,
+          "cpu_percent": 24.0
+        },
+        {
+          "timestamp": 1780157579.5234194,
+          "used_memory_bytes": 6085185536,
+          "memory_percent": 74.9,
+          "cpu_percent": 28.6
+        },
+        {
+          "timestamp": 1780157579.7267811,
+          "used_memory_bytes": 6072340480,
+          "memory_percent": 74.8,
+          "cpu_percent": 22.5
+        },
+        {
+          "timestamp": 1780157579.9382012,
+          "used_memory_bytes": 6077186048,
+          "memory_percent": 74.8,
+          "cpu_percent": 18.0
+        }
+      ],
+      "output": "```python\ndef"
+    },
+    {
+      "model": "Gemma 3 1B Optimized v3 (gemma3:1b)",
+      "ollama_tag": "gemma3:1b",
+      "test_case": "pololu-button-control",
+      "scenario": "student-feedback",
+      "skill_focus": "human interaction",
+      "language": "python",
+      "prompt": "You are helping a K-12 student program a Pololu robot kit. Write only valid Python code (no markdown, no explanations) for one function named toggle_run_mode(current_mode, button_pressed). It should switch between pause and run and return the new mode.",
+      "timestamp_utc": "2026-05-30T16:13:01.368820+00:00",
+      "ttft_seconds": 1.045,
+      "tokens_per_second": 28.131,
+      "generated_tokens": 4,
+      "resource_summary": {
+        "sample_count": 6,
+        "max_ram_bytes": 6084042752,
+        "max_ram_gib": 5.666,
+        "avg_cpu_percent": 14.317,
+        "peak_cpu_percent": 20.5,
+        "threshold_exceeded": false
+      },
+      "validation": {
+        "status": "failed",
+        "passed": false,
+        "details": "File \"C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpjw7nzpnc.py\", line 1\n    ```python\n    ^\nSyntaxError: invalid syntax",
+        "command": [
+          "python",
+          "-m",
+          "py_compile",
+          "C:\\Users\\icdk2\\AppData\\Local\\Temp\\tmpjw7nzpnc.py"
+        ],
+        "returncode": 1
+      },
+      "response_metadata": {
+        "total_duration_ns": 1184780700,
+        "load_duration_ns": 608745100,
+        "prompt_eval_count": 68,
+        "prompt_eval_duration_ns": 430762400
+      },
+      "samples": [
+        {
+          "timestamp": 1780157580.1004994,
+          "used_memory_bytes": 6077575168,
+          "memory_percent": 74.8,
+          "cpu_percent": 0.0
+        },
+        {
+          "timestamp": 1780157580.3107007,
+          "used_memory_bytes": 6084042752,
+          "memory_percent": 74.9,
+          "cpu_percent": 15.2
+        },
+        {
+          "timestamp": 1780157580.5115657,
+          "used_memory_bytes": 6069796864,
+          "memory_percent": 74.7,
+          "cpu_percent": 14.2
+        },
+        {
+          "timestamp": 1780157580.7274277,
+          "used_memory_bytes": 6073573376,
+          "memory_percent": 74.8,
+          "cpu_percent": 20.4
+        },
+        {
+          "timestamp": 1780157580.9435735,
+          "used_memory_bytes": 6073090048,
+          "memory_percent": 74.8,
+          "cpu_percent": 20.5
+        },
+        {
+          "timestamp": 1780157581.1439066,
+          "used_memory_bytes": 6070251520,
+          "memory_percent": 74.7,
+          "cpu_percent": 15.6
+        }
+      ],
+      "output": "```python\ndef"
+    }
+  ]
+}
