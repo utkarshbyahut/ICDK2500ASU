@@ -10,6 +10,7 @@ class ReportGeneratorTests(unittest.TestCase):
         entries = [
             {
                 "model": "Model A",
+                "test_case": "case-template-1",
                 "ttft_seconds": 0.8,
                 "tokens_per_second": 40.0,
                 "resource_summary": {"max_ram_gib": 2.0},
@@ -17,6 +18,7 @@ class ReportGeneratorTests(unittest.TestCase):
             },
             {
                 "model": "Model B",
+                "test_case": "case-2",
                 "ttft_seconds": 1.2,
                 "tokens_per_second": 20.0,
                 "resource_summary": {"max_ram_gib": 3.0},
@@ -26,6 +28,7 @@ class ReportGeneratorTests(unittest.TestCase):
         summaries = summarize_models(entries)
         self.assertEqual(summaries[0]["Model"], "Model A")
         self.assertGreater(summaries[0]["Overall Score"], summaries[1]["Overall Score"])
+        self.assertIn("Overfit Pass %", summaries[0])
 
     def test_load_and_render_report_from_results_directory(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -39,6 +42,7 @@ class ReportGeneratorTests(unittest.TestCase):
         self.assertIn("# Benchmark Report", report)
         self.assertIn("Model Ranking", report)
         self.assertIn("Model A", report)
+        self.assertIn("Overfit Pass %", report)
 
 
 if __name__ == "__main__":

@@ -48,6 +48,8 @@ def summarize_models(entries: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "tokens_per_second_total": 0.0,
                 "peak_ram_gib_total": 0.0,
                 "validation_passes": 0,
+                "overfit_runs": 0,
+                "overfit_passes": 0,
             },
         )
         group["runs"] += 1
@@ -56,6 +58,11 @@ def summarize_models(entries: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
         group["peak_ram_gib_total"] += float(entry.get("resource_summary", {}).get("max_ram_gib", 0.0))
         if entry.get("validation", {}).get("passed") is True:
             group["validation_passes"] += 1
+        is_overfit_case = bool(entry.get("overfit_case")) or "template" in str(entry.get("test_case", ""))
+        if is_overfit_case:
+            group["overfit_runs"] += 1
+            if entry.get("validation", {}).get("passed") is True:
+                group["overfit_passes"] += 1
 
     if not grouped:
         return []
@@ -73,6 +80,9 @@ def summarize_models(entries: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for model, data in grouped.items():
         efficiency_score = round((tps_score[model] + ttft_score[model] + ram_score[model]) / 3, 2)
         accuracy_score = round(accuracy[model], 2)
+        overfit_pass_percent = (
+            round((data["overfit_passes"] / data["overfit_runs"]) * 100, 2) if data["overfit_runs"] else 0.0
+        )
         overall_score = round((efficiency_score * 0.5) + (accuracy_score * 0.5), 2)
         summaries.append(
             {
@@ -82,6 +92,7 @@ def summarize_models(entries: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "Avg Tokens/s": round(avg_tps[model], 3),
                 "Avg Peak RAM (GiB)": round(avg_ram[model], 3),
                 "Compilation Pass %": accuracy_score,
+                "Overfit Pass %": overfit_pass_percent,
                 "Efficiency Score": efficiency_score,
                 "Overall Score": overall_score,
             }
